@@ -1,0 +1,135 @@
+---
+const skills = {
+  frontend: [
+    { name: "Vue.js", level: 90 },
+    { name: "Nuxt.js", level: 90 },
+    { name: "JavaScript", level: 85 },
+    { name: "HTML5", level: 95 },
+    { name: "CSS3 / Tailwind", level: 90 },
+    { name: "Astro", level: 75 },
+    { name: "Git", level: 85 }
+  ],
+  seo: [
+    { name: "SEO Técnico", level: 90 },
+    { name: "Análisis de palabras clave", level: 85 },
+    { name: "Optimización de rendimiento", level: 88 },
+    { name: "Search Console", level: 80 },
+    { name: "Google Analytics", level: 80 },
+    { name: "Mailerlite", level: 100 }
+  ],
+  tools: [
+    { name: "Scrum / Agile", level: 85 },
+    { name: "Jira / Taiga", level: 80 },
+    { name: "Slack", level: 100 },
+    { name: "VS Code", level: 95 },
+    { name: "APIs REST", level: 80 },
+    { name: "Figma", level: 50 }
+  ]
+};
+
+const certifications = [
+  "Ciberseguridad en puesto de trabajo",
+  "Curso de SEO y Posicionamiento web para Desarrolladores web",
+  "Digitalización de negocio con Google y comunicación YouTube y Google Forms",
+  "Curso de Introducción al Desarrollo Web: HTML y CSS"
+];
+---
+
+<section id="habilidades" class="section bg-dark-lighter">
+  <div class="container-custom">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">
+      Habilidades & <span class="gradient-text">Tecnologías</span>
+    </h2>
+    
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <!-- Frontend -->
+      <div class="card">
+        <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+          <span class="text-3xl">⚡</span>
+          Frontend
+        </h3>
+        <div class="space-y-4">
+          {skills.frontend.map((skill) => (
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-300">{skill.name}</span>
+                <span class="text-primary font-semibold">{skill.level}%</span>
+              </div>
+              <div class="h-2 bg-dark rounded-full overflow-hidden">
+                <div 
+                  class="h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-1000"
+                  style={`width: ${skill.level}%`}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- SEO & Marketing -->
+      <div class="card">
+        <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+          <span class="text-3xl">📈</span>
+          SEO & Marketing
+        </h3>
+        <div class="space-y-4">
+          {skills.seo.map((skill) => (
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-300">{skill.name}</span>
+                <span class="text-secondary font-semibold">{skill.level}%</span>
+              </div>
+              <div class="h-2 bg-dark rounded-full overflow-hidden">
+                <div 
+                  class="h-full bg-gradient-to-r from-secondary to-primary rounded-full transition-all duration-1000"
+                  style={`width: ${skill.level}%`}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Herramientas & Metodologías -->
+      <div class="card">
+        <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+          <span class="text-3xl">🛠️</span>
+          Herramientas & Metodologías
+        </h3>
+        <div class="space-y-4">
+          {skills.tools.map((skill) => (
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="text-gray-300">{skill.name}</span>
+                <span class="text-secondary font-semibold">{skill.level}%</span>
+              </div>
+              <div class="h-2 bg-dark rounded-full overflow-hidden">
+                <div 
+                  class="h-full bg-gradient-to-r from-secondary to-primary rounded-full transition-all duration-1000"
+                  style={`width: ${skill.level}%`}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificaciones -->
+    <div class="card max-w-4xl mx-auto">
+      <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+        <span class="text-3xl">🏆</span>
+        Certificaciones
+      </h3>
+      <div class="grid md:grid-cols-2 gap-4">
+        {certifications.map((cert) => (
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">✓</span>
+            <span class="text-gray-300">{cert}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+

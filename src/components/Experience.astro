@@ -1,0 +1,73 @@
+---
+const experiences = [
+  {
+    company: "Wegow",
+    position: "Desarrollador de Front-end",
+    period: "Noviembre 2025 - Presente",
+    location: "Granada, Andalucía, España",
+    description: [
+      "Desarrollo frontend utilizando Vue.js y Nuxt.js, creando interfaces orientadas al usuario y herramientas internas de backoffice.",
+      "Mejora del SEO y rendimiento mediante técnicas de Server-Side Rendering (SSR) con Nuxt, contribuyendo al crecimiento del tráfico orgánico.",
+      "Gestión de tareas con Jira y Taiga, trabajando en equipos ágiles y multidisciplinares.",
+      "Implementación de píxeles de seguimiento para redes sociales (Meta, TikTok) para optimizar campañas y mejorar trazabilidad.",
+      "Integración de Stay22, aumentando la rentabilidad y mejorando la conversión de usuarios a ventas."
+    ],
+    current: true
+  },
+  {
+    company: "BuyBack s.l.",
+    position: "Desarrollador Full Stack",
+    period: "Febrero 2025 - Mayo 2025 / Prácticas",
+    location: "Granada, Andalucía, España",
+    description: [
+      "Desarrollo full stack de aplicaciones web.",
+      "Implementación de funcionalidades frontend y backend.",
+      "Colaboración en equipo para el desarrollo de proyectos."
+    ],
+    current: false
+  }
+];
+---
+
+<section id="experiencia" class="section">
+  <div class="container-custom">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">
+      Mi <span class="gradient-text">Experiencia</span>
+    </h2>
+    
+    <div class="max-w-4xl mx-auto space-y-8">
+      {experiences.map((exp, index) => (
+        <div class="card relative">
+          {exp.current && (
+            <div class="absolute -top-3 -right-3">
+              <span class="bg-gradient-to-r from-primary to-secondary px-4 py-1 rounded-full text-sm font-semibold">
+                Actual
+              </span>
+            </div>
+          )}
+          
+          <div class="flex flex-col md:flex-row md:items-start gap-4 mb-4">
+            <div class="flex-1">
+              <h3 class="text-2xl font-bold text-white mb-1">{exp.position}</h3>
+              <p class="text-xl text-primary font-semibold mb-2">{exp.company}</p>
+            </div>
+            <div class="text-gray-400 text-sm md:text-right">
+              <p class="font-semibold">{exp.period}</p>
+              <p>{exp.location}</p>
+            </div>
+          </div>
+          
+          <ul class="space-y-2">
+            {exp.description.map((item) => (
+              <li class="text-gray-300 flex items-start gap-2">
+                <span class="text-primary mt-1">▹</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+

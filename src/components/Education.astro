@@ -1,0 +1,40 @@
+---
+const education = [
+  {
+    institution: "Escuela Arte Granada (EAG)",
+    degree: "Grado Superior Técnico en Desarrollo de Aplicaciones Multiplataforma (TDAM)",
+    period: "Septiembre 2022 - Junio 2025",
+    icon: "🎓"
+  },
+  {
+    institution: "Udemy",
+    degree: "Máster en SEO y SEM, Marketing/Gestión de marketing",
+    period: "Septiembre 2025 - Octubre 2025",
+    icon: "📚"
+  },
+];
+---
+
+<section id="educacion" class="section">
+  <div class="container-custom">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">
+      <span class="gradient-text">Formación</span> Académica
+    </h2>
+    
+    <div class="max-w-4xl mx-auto space-y-6">
+      {education.map((edu) => (
+        <div class="card hover:scale-[1.02] transition-transform duration-300">
+          <div class="flex items-start gap-4">
+            <div class="text-5xl">{edu.icon}</div>
+            <div class="flex-1">
+              <h3 class="text-xl font-bold text-white mb-1">{edu.degree}</h3>
+              <p class="text-lg text-primary font-semibold mb-2">{edu.institution}</p>
+              <p class="text-gray-400 text-sm">{edu.period}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
