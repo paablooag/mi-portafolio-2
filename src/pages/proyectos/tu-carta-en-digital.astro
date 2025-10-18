@@ -1,0 +1,294 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FloatingButtons from '../../components/FloatingButtons.astro';
+
+const project = {
+  title: "Tu Carta en Digital",
+  description: "Plataforma gratuita para digitalizar cartas de bares y restaurantes con gestión completa de establecimientos.",
+  longDescription: "Tu Carta en Digital es una plataforma innovadora que permite a bares y restaurantes digitalizar sus cartas de forma gratuita. Desarrollada con las últimas tecnologías, ofrece una solución completa para modernizar la hostelería y hacerla más accesible.",
+  url: "https://tucartaendigital.es",
+  image: "/projects/tucartaendigital.jpg",
+  technologies: ["Nuxt.js", "FastAPI", "Google Analytics", "APIs", "Tokens de seguridad", "Python", "PostgreSQL"],
+  features: [
+    "Digitalización de cartas en segundos",
+    "Personalización completa de colores y estilo",
+    "Gestión de múltiples establecimientos desde una cuenta",
+    "Actualización de precios y platos al instante",
+    "Integración con Google Analytics",
+    "Sistema de tokens para gestión segura",
+    "Panel de administración intuitivo",
+    "Soporte para múltiples idiomas",
+    "Exportación de cartas en PDF",
+    "Sistema de respaldo automático"
+  ],
+  category: "Plataforma Web",
+  results: [
+    "Ahorro de costes para establecimientos",
+    "Modernización de la experiencia del cliente",
+    "Hostelería más accesible y digital",
+    "Gestión centralizada de múltiples locales",
+    "Reducción del tiempo de actualización de cartas",
+    "Mejora en la presentación de productos"
+  ],
+  challenge: "Crear una plataforma que simplifique la digitalización de cartas para el sector hostelería, reduciendo costes operativos y mejorando la experiencia tanto del cliente como del establecimiento.",
+  solution: "Desarrollamos una solución completa con frontend en Nuxt.js y backend en FastAPI, incluyendo sistema de gestión multi-establecimiento, personalización avanzada y herramientas de análisis para optimizar el rendimiento del negocio.",
+  timeline: "Desarrollo completado en 6 semanas",
+  target: "Bares y restaurantes de España"
+};
+---
+
+<Layout 
+  title="Tu Carta en Digital - Plataforma Web | Pablo Alcalde | Desarrollador Front-end"
+  description="Desarrollo de Tu Carta en Digital, plataforma gratuita para digitalizar cartas de bares y restaurantes. Proyecto realizado con Nuxt.js, FastAPI y Google Analytics."
+  tags={["tu carta en digital", "digitalización cartas", "hostelería digital", "desarrollo web", "Nuxt.js", "FastAPI", "plataforma web", "bares restaurantes"]}
+>
+  <Header />
+  
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section class="section">
+      <div class="container-custom">
+        <div class="text-center mb-16">
+          <div class="mb-6">
+            <span class="text-sm px-4 py-2 bg-primary/20 text-primary rounded-full">
+              {project.category}
+            </span>
+          </div>
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">
+            {project.title}
+          </h1>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
+            {project.longDescription}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary flex items-center justify-center gap-2"
+            >
+              <span>Ver plataforma</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+            </a>
+            <a href="/proyectos" class="btn-outline">
+              Ver todos los proyectos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="section bg-dark-lighter">
+      <div class="container-custom">
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+          <!-- Project Info -->
+          <div>
+            <h2 class="text-3xl font-bold text-white mb-6">Detalles del proyecto</h2>
+            
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-3">Desafío:</h3>
+                <p class="text-gray-300 leading-relaxed">{project.challenge}</p>
+              </div>
+              
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-3">Solución implementada:</h3>
+                <p class="text-gray-300 leading-relaxed">{project.solution}</p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-3">Información del proyecto:</h3>
+                <ul class="space-y-2 text-gray-300">
+                  <li><strong class="text-white">Timeline:</strong> {project.timeline}</li>
+                  <li><strong class="text-white">Público objetivo:</strong> {project.target}</li>
+                  <li><strong class="text-white">Categoría:</strong> {project.category}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Features -->
+          <div>
+            <h3 class="text-2xl font-semibold text-white mb-6">Características implementadas:</h3>
+            <ul class="space-y-3">
+              {project.features.map((feature) => (
+                <li class="text-gray-300 flex items-start gap-3">
+                  <span class="text-primary mt-1">▹</span>
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-8">
+              <h3 class="text-xl font-semibold text-white mb-4">Tecnologías utilizadas:</h3>
+              <div class="flex flex-wrap gap-3">
+                {project.technologies.map((tech) => (
+                  <span class="text-sm px-4 py-2 bg-dark border border-gray-700 rounded-lg text-gray-300 hover:border-primary transition-colors">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="section">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-white mb-4">Impacto en el sector</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Los resultados del proyecto demuestran el valor aportado al sector hostelería
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {project.results.map((result, index) => (
+            <div class="card text-center">
+              <div class="text-3xl mb-4">✓</div>
+              <p class="text-gray-300">{result}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Architecture -->
+    <section class="section bg-dark-lighter">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-white mb-8 text-center">Arquitectura técnica</h2>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="card">
+              <h3 class="text-xl font-semibold text-white mb-4">Frontend (Nuxt.js)</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li>• Interfaz de usuario intuitiva</li>
+                <li>• Componentes reutilizables</li>
+                <li>• Optimización SEO integrada</li>
+                <li>• Responsive design</li>
+                <li>• PWA capabilities</li>
+                <li>• Integración con APIs</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3 class="text-xl font-semibold text-white mb-4">Backend (FastAPI)</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li>• API REST robusta</li>
+                <li>• Autenticación segura</li>
+                <li>• Base de datos PostgreSQL</li>
+                <li>• Sistema de tokens</li>
+                <li>• Análisis con Google Analytics</li>
+                <li>• Escalabilidad horizontal</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Showcase -->
+    <section class="section">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-white mb-4">Funcionalidades clave</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Características que hacen de Tu Carta en Digital una solución única
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="card">
+            <h3 class="text-xl font-semibold text-white mb-4">🎨 Personalización</h3>
+            <p class="text-gray-300">
+              Los establecimientos pueden personalizar completamente el diseño de sus cartas, 
+              eligiendo colores, fuentes y estilos que reflejen su identidad de marca.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="text-xl font-semibold text-white mb-4">🏢 Multi-establecimiento</h3>
+            <p class="text-gray-300">
+              Gestión centralizada de múltiples locales desde una sola cuenta, 
+              permitiendo a cadenas de restaurantes administrar todas sus cartas eficientemente.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="text-xl font-semibold text-white mb-4">⚡ Actualizaciones en tiempo real</h3>
+            <p class="text-gray-300">
+              Cambios de precios y platos se reflejan instantáneamente en la carta digital, 
+              eliminando la necesidad de imprimir nuevas cartas físicas.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="text-xl font-semibold text-white mb-4">📊 Analytics integrado</h3>
+            <p class="text-gray-300">
+              Google Analytics integrado para que los establecimientos puedan 
+              analizar el comportamiento de sus clientes y optimizar sus cartas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-dark-lighter">
+      <div class="container-custom">
+        <div class="card bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/30 text-center max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-6">¿Necesitas una plataforma similar?</h2>
+          <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+            Puedo ayudarte a desarrollar una plataforma web personalizada para tu sector. 
+            Con experiencia en desarrollo full-stack y soluciones escalables.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/#contacto" class="btn-primary">
+              Hablemos de tu proyecto
+            </a>
+            <a href="/proyectos" class="btn-outline">
+              Ver más proyectos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <FloatingButtons />
+</Layout>
+
+<!-- Structured Data for Tu Carta en Digital -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Tu Carta en Digital",
+  "description": "Plataforma gratuita para digitalizar cartas de bares y restaurantes",
+  "url": "https://tucartaendigital.es",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Pablo Alcalde García",
+    "url": "https://pabloalcalde.dev"
+  },
+  "keywords": "digitalización cartas, hostelería, restaurantes, bares, plataforma web",
+  "dateCreated": "2024",
+  "inLanguage": "es"
+}
+</script>

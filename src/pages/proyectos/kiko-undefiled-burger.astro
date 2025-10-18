@@ -1,0 +1,247 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FloatingButtons from '../../components/FloatingButtons.astro';
+
+const project = {
+  title: "Kiko Undefiled Burger",
+  description: "Sitio web para hamburguesería en Granada con optimización SEO y rendimiento excepcional.",
+  longDescription: "Sitio web corporativo para una nueva hamburguesería en el centro de Granada. Desarrollado con Vue.js y Nuxt.js, optimizado para SEO y rendimiento para maximizar la visibilidad online del negocio.",
+  url: "https://kikoundefiledburger.com",
+  image: "/projects/kikoundefiledburger.jpg",
+  technologies: ["Vue.js", "Nuxt.js", "SSR", "SEO", "JavaScript", "Tailwind CSS"],
+  features: [
+    "Renderizado del lado del servidor (SSR)",
+    "Optimización SEO avanzada",
+    "Experiencia de usuario fluida y rápida",
+    "Estructura escalable para futuras funcionalidades",
+    "Diseño responsive y moderno",
+    "Carga rápida y rendimiento optimizado",
+    "Integración con sistemas de reservas",
+    "Optimización para dispositivos móviles"
+  ],
+  category: "Sitio Web Comercial",
+  results: [
+    "Mejor visibilidad en buscadores",
+    "Experiencia de usuario excepcional",
+    "Carga rápida y rendimiento optimizado",
+    "Base sólida para crecimiento del negocio",
+    "Aumento del tráfico orgánico",
+    "Mejor conversión de visitantes a clientes"
+  ],
+  challenge: "Crear una presencia web sólida para una nueva hamburguesería que destaque en el competitivo mercado de Granada, con especial enfoque en SEO local y rendimiento.",
+  solution: "Implementamos una solución con Nuxt.js que aprovecha el SSR para mejorar el SEO y la velocidad, creando una experiencia web excepcional que refleja la calidad del negocio y atrae clientes locales.",
+  timeline: "Desarrollo completado en 3 semanas",
+  location: "Granada, Andalucía"
+};
+---
+
+<Layout 
+  title="Kiko Undefiled Burger - Proyecto Web | Pablo Alcalde | Desarrollador Front-end"
+  description="Desarrollo del sitio web para Kiko Undefiled Burger en Granada. Proyecto realizado con Vue.js, Nuxt.js y optimización SEO avanzada para hamburguesería local."
+  tags={["kiko undefiled burger", "hamburguesería granada", "desarrollo web", "Vue.js", "Nuxt.js", "SEO local", "sitio web comercial", "restaurante granada"]}
+>
+  <Header />
+  
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section class="section">
+      <div class="container-custom">
+        <div class="text-center mb-16">
+          <div class="mb-6">
+            <span class="text-sm px-4 py-2 bg-primary/20 text-primary rounded-full">
+              {project.category}
+            </span>
+          </div>
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">
+            {project.title}
+          </h1>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
+            {project.longDescription}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary flex items-center justify-center gap-2"
+            >
+              <span>Ver sitio web</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+              </svg>
+            </a>
+            <a href="/proyectos" class="btn-outline">
+              Ver todos los proyectos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="section bg-dark-lighter">
+      <div class="container-custom">
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+          <!-- Project Info -->
+          <div>
+            <h2 class="text-3xl font-bold text-white mb-6">Detalles del proyecto</h2>
+            
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-3">Desafío:</h3>
+                <p class="text-gray-300 leading-relaxed">{project.challenge}</p>
+              </div>
+              
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-3">Solución implementada:</h3>
+                <p class="text-gray-300 leading-relaxed">{project.solution}</p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold text-white mb-3">Información del proyecto:</h3>
+                <ul class="space-y-2 text-gray-300">
+                  <li><strong class="text-white">Timeline:</strong> {project.timeline}</li>
+                  <li><strong class="text-white">Ubicación:</strong> {project.location}</li>
+                  <li><strong class="text-white">Categoría:</strong> {project.category}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Features -->
+          <div>
+            <h3 class="text-2xl font-semibold text-white mb-6">Características implementadas:</h3>
+            <ul class="space-y-3">
+              {project.features.map((feature) => (
+                <li class="text-gray-300 flex items-start gap-3">
+                  <span class="text-primary mt-1">▹</span>
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-8">
+              <h3 class="text-xl font-semibold text-white mb-4">Tecnologías utilizadas:</h3>
+              <div class="flex flex-wrap gap-3">
+                {project.technologies.map((tech) => (
+                  <span class="text-sm px-4 py-2 bg-dark border border-gray-700 rounded-lg text-gray-300 hover:border-primary transition-colors">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="section">
+      <div class="container-custom">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-white mb-4">Resultados obtenidos</h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Los resultados del proyecto demuestran el impacto positivo en el negocio
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {project.results.map((result, index) => (
+            <div class="card text-center">
+              <div class="text-3xl mb-4">✓</div>
+              <p class="text-gray-300">{result}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="section bg-dark-lighter">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-white mb-8 text-center">Detalles técnicos</h2>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="card">
+              <h3 class="text-xl font-semibold text-white mb-4">Frontend</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li>• Vue.js 3 con Composition API</li>
+                <li>• Nuxt.js para SSR y optimización SEO</li>
+                <li>• Tailwind CSS para estilos</li>
+                <li>• Componentes reutilizables</li>
+                <li>• Optimización de imágenes</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3 class="text-xl font-semibold text-white mb-4">SEO & Performance</h3>
+              <ul class="space-y-2 text-gray-300">
+                <li>• Meta tags optimizados</li>
+                <li>• Schema.org markup</li>
+                <li>• Core Web Vitals optimizados</li>
+                <li>• Sitemap XML generado</li>
+                <li>• SEO local para Granada</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+      <div class="container-custom">
+        <div class="card bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/30 text-center max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-6">¿Necesitas un sitio web similar?</h2>
+          <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+            Puedo ayudarte a crear un sitio web profesional y optimizado para tu negocio. 
+            Con experiencia en SEO local y desarrollo de sitios web comerciales.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/#contacto" class="btn-primary">
+              Hablemos de tu proyecto
+            </a>
+            <a href="/proyectos" class="btn-outline">
+              Ver más proyectos
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <FloatingButtons />
+</Layout>
+
+<!-- Structured Data for Kiko Undefiled Burger -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Kiko Undefiled Burger - Sitio Web",
+  "description": "Desarrollo del sitio web para hamburguesería Kiko Undefiled Burger en Granada",
+  "url": "https://kikoundefiledburger.com",
+  "creator": {
+    "@type": "Person",
+    "name": "Pablo Alcalde García",
+    "url": "https://pabloalcalde.dev"
+  },
+  "about": {
+    "@type": "Restaurant",
+    "name": "Kiko Undefiled Burger",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Granada",
+      "addressRegion": "Andalucía",
+      "addressCountry": "ES"
+    }
+  },
+  "keywords": "hamburguesería, granada, sitio web, desarrollo web, SEO local",
+  "dateCreated": "2024",
+  "inLanguage": "es"
+}
+</script>

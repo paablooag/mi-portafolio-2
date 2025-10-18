@@ -9,7 +9,7 @@ export default defineConfig({
     sitemap({
       filter: (page) => !page.includes('404'),
       changefreq: 'weekly',
-      priority: 0.7,
+      priority: 0.8,
       lastmod: new Date(),
       i18n: {
         defaultLocale: 'es',

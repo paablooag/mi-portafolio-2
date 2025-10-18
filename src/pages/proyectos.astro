@@ -1,0 +1,244 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import FloatingButtons from '../components/FloatingButtons.astro';
+
+const projects = [
+  {
+    title: "Tu Carta en Digital",
+    description: "Plataforma gratuita para digitalizar cartas de bares y restaurantes con gestión completa de establecimientos.",
+    longDescription: "Tu Carta en Digital es una plataforma innovadora que permite a bares y restaurantes digitalizar sus cartas de forma gratuita. Desarrollada con las últimas tecnologías, ofrece una solución completa para modernizar la hostelería.",
+    url: "https://tucartaendigital.es",
+    image: "/projects/tucartaendigital.jpg",
+    technologies: ["Nuxt.js", "FastAPI", "Google Analytics", "APIs", "Tokens de seguridad"],
+    features: [
+      "Digitalización de cartas en segundos",
+      "Personalización completa de colores y estilo",
+      "Gestión de múltiples establecimientos desde una cuenta",
+      "Actualización de precios y platos al instante",
+      "Integración con Google Analytics",
+      "Sistema de tokens para gestión segura"
+    ],
+    category: "Plataforma Web",
+    results: [
+      "Ahorro de costes para establecimientos",
+      "Modernización de la experiencia del cliente",
+      "Hostelería más accesible y digital",
+      "Gestión centralizada de múltiples locales"
+    ],
+    challenge: "Crear una plataforma que simplifique la digitalización de cartas para el sector hostelería, reduciendo costes y mejorando la experiencia del cliente.",
+    solution: "Desarrollamos una solución completa con frontend en Nuxt.js y backend en FastAPI, incluyendo sistema de gestión multi-establecimiento y personalización avanzada."
+  },
+  {
+    title: "Kiko Undefiled Burger",
+    description: "Sitio web para hamburguesería en Granada con optimización SEO y rendimiento excepcional.",
+    longDescription: "Sitio web corporativo para una nueva hamburguesería en el centro de Granada. Desarrollado con Vue.js y Nuxt.js, optimizado para SEO y rendimiento para maximizar la visibilidad online del negocio.",
+    url: "https://kikoundefiledburger.com",
+    image: "/projects/kikoundefiledburger.jpg",
+    technologies: ["Vue.js", "Nuxt.js", "SSR", "SEO", "JavaScript"],
+    features: [
+      "Renderizado del lado del servidor (SSR)",
+      "Optimización SEO avanzada",
+      "Experiencia de usuario fluida y rápida",
+      "Estructura escalable para futuras funcionalidades",
+      "Diseño responsive y moderno",
+      "Carga rápida y rendimiento optimizado"
+    ],
+    team: "",
+    category: "Sitio Web Comercial",
+    results: [
+      "Mejor visibilidad en buscadores",
+      "Experiencia de usuario excepcional",
+      "Carga rápida y rendimiento optimizado",
+      "Base sólida para crecimiento del negocio"
+    ],
+    challenge: "Crear una presencia web sólida para una nueva hamburguesería que destaque en el competitivo mercado de Granada.",
+    solution: "Implementamos una solución con Nuxt.js que aprovecha el SSR para mejorar el SEO y la velocidad, creando una experiencia web excepcional que refleja la calidad del negocio."
+  }
+];
+---
+
+<Layout 
+  title="Proyectos - Pablo Alcalde | Desarrollador Front-end | Vue.js, Nuxt.js"
+  description="Proyectos reales desarrollados para clientes: Tu Carta en Digital y Kikoundefiledburger. Desarrollo web con Vue.js, Nuxt.js, optimización SEO y rendimiento excepcional."
+  tags={["proyectos", "desarrollo web", "Vue.js", "Nuxt.js", "SEO", "JavaScript", "tucartaendigital", "kikoundefiledburger", "portafolio"]}
+>
+  <Header />
+  
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section class="section">
+      <div class="container-custom">
+        <div class="text-center mb-16">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6">
+            Mis <span class="gradient-text">Proyectos</span>
+          </h1>
+          <p class="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            Proyectos reales desarrollados para clientes, enfocados en rendimiento, 
+            SEO y experiencia de usuario excepcional. Cada proyecto representa 
+            una solución única a desafíos específicos del mercado.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="section bg-dark-lighter">
+      <div class="container-custom">
+        <div class="space-y-20">
+          {projects.map((project, index) => (
+            <article class="card">
+              <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Project Info -->
+                <div>
+                  <div class="flex items-center gap-4 mb-6">
+                    <span class="text-sm px-3 py-1 bg-primary/20 text-primary rounded-full">
+                      {project.category}
+                    </span>
+                    <span class="text-sm text-gray-400">{project.team}</span>
+                  </div>
+                  
+                  <h2 class="text-3xl font-bold text-white mb-4">
+                    {project.title}
+                  </h2>
+                  
+                  <p class="text-gray-300 mb-6 leading-relaxed text-lg">
+                    {project.longDescription}
+                  </p>
+
+                  <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-white mb-4">Desafío:</h3>
+                    <p class="text-gray-300 mb-4">{project.challenge}</p>
+                    
+                    <h3 class="text-xl font-semibold text-white mb-4">Solución:</h3>
+                    <p class="text-gray-300">{project.solution}</p>
+                  </div>
+
+                  <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-white mb-4">Resultados:</h3>
+                    <ul class="space-y-2">
+                      {project.results.map((result) => (
+                        <li class="text-gray-300 flex items-start gap-2">
+                          <span class="text-primary mt-1">✓</span>
+                          <span>{result}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                   <div class="flex flex-col sm:flex-row gap-3">
+                     <a 
+                       href={project.url}
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn-primary flex items-center justify-center gap-2"
+                     >
+                       <span>Ver proyecto</span>
+                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                       </svg>
+                     </a>
+                     <a 
+                       href={project.title === "Tu Carta en Digital" ? "/proyectos/tu-carta-en-digital" : "/proyectos/kiko-undefiled-burger"}
+                       class="btn-outline flex items-center justify-center gap-2"
+                     >
+                       <span>Ver detalles técnicos</span>
+                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                       </svg>
+                     </a>
+                   </div>
+                </div>
+
+                <!-- Project Details -->
+                <div class="space-y-8">
+                  <div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Características principales:</h3>
+                    <ul class="space-y-3">
+                      {project.features.map((feature) => (
+                        <li class="text-gray-300 flex items-start gap-3">
+                          <span class="text-primary mt-1">▹</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Tecnologías utilizadas:</h3>
+                    <div class="flex flex-wrap gap-3">
+                      {project.technologies.map((tech) => (
+                        <span class="text-sm px-4 py-2 bg-dark border border-gray-700 rounded-lg text-gray-300 hover:border-primary transition-colors">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+      <div class="container-custom">
+        <div class="card bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/30 text-center max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold mb-6">¿Tienes un proyecto en mente?</h2>
+          <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+            Estoy disponible para nuevos proyectos. Trabajemos juntos para crear 
+            algo increíble que destaque en el mercado y genere resultados reales.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/#contacto" class="btn-primary">
+              Hablemos de tu proyecto
+            </a>
+            <a href="/#experiencia" class="btn-outline">
+              Ver mi experiencia
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <FloatingButtons />
+</Layout>
+
+<!-- Structured Data for Projects -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Proyectos de Pablo Alcalde",
+  "description": "Proyectos reales desarrollados para clientes con Vue.js, Nuxt.js y optimización SEO",
+  "itemListElement": [
+    {
+      "@type": "CreativeWork",
+      "name": "Tu Carta en Digital",
+      "description": "Plataforma gratuita para digitalizar cartas de bares y restaurantes",
+      "url": "https://tucartaendigital.es",
+      "creator": {
+        "@type": "Person",
+        "name": "Pablo Alcalde García"
+      },
+      "about": "Digitalización de cartas para hostelería"
+    },
+    {
+      "@type": "CreativeWork", 
+      "name": "Kikoundefiledburger",
+      "description": "Sitio web para hamburguesería en Granada con optimización SEO",
+      "url": "https://kikoundefiledburger.com",
+      "creator": {
+        "@type": "Person",
+        "name": "Pablo Alcalde García"
+      },
+      "about": "Sitio web comercial para hamburguesería"
+    }
+  ]
+}
+</script>
