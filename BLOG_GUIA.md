@@ -282,7 +282,7 @@ Puedes añadir más redes editando `src/pages/blog/[...slug].astro`
 ### 2. Descripciones persuasivas
 
 ❌ "Un artículo sobre SEO"  
-✅ "Descubre las técnicas que usé en Wegow para aumentar el tráfico orgánico en un 60%"
+✅ "Descubre las técnicas que usé en [Wegow](https://wegow.com) para aumentar el tráfico orgánico en un 60%"
 
 ### 3. Estructura clara
 

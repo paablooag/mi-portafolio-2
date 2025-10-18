@@ -128,7 +128,7 @@ No hace falta mutations, solo actions que modifican state directamente.
 
 ## Mi experiencia
 
-Migré 15 stores de Vuex a Pinia en Wegow:
+Migré 15 stores de Vuex a Pinia en [Wegow](https://wegow.com):
 
 - 40% menos código
 - TypeScript sin configuración extra

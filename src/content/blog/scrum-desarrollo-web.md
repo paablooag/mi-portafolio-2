@@ -7,7 +7,7 @@ tags: ["Scrum", "Agile", "Team", "Workflow"]
 
 # Scrum en desarrollo web: Mi experiencia en Wegow
 
-Así aplicamos Scrum en Wegow y cómo mejoró nuestra productividad.
+Así aplicamos Scrum en [Wegow](https://wegow.com) y cómo mejoró nuestra productividad.
 
 ## Nuestro Sprint
 

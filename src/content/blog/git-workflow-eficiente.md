@@ -7,7 +7,7 @@ tags: ["Git", "Workflow", "Team", "Best Practices"]
 
 # Git workflow eficiente para equipos ágiles
 
-Este es el workflow de Git que usamos en Wegow y funciona perfectamente.
+Este es el workflow de Git que usamos en [Wegow](https://wegow.com) y funciona perfectamente.
 
 ## Estructura de branches
 

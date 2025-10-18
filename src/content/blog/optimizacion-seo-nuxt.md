@@ -8,7 +8,7 @@ image: "/blog/seo-nuxt.jpg"
 
 # Optimización SEO en Nuxt.js: Guía Práctica
 
-Como Front-end Developer especializado en SEO, he trabajado extensamente con Nuxt.js para mejorar el posicionamiento de aplicaciones web. En este artículo, comparto las mejores prácticas que he implementado en Wegow.
+Como Front-end Developer especializado en SEO, he trabajado extensamente con Nuxt.js para mejorar el posicionamiento de aplicaciones web. En este artículo, comparto las mejores prácticas que he implementado en [Wegow](https://wegow.com).
 
 ## ¿Por qué Nuxt.js es ideal para SEO?
 

@@ -7,7 +7,7 @@ tags: ["SEO", "Content Strategy", "Marketing", "Growth"]
 
 # Estrategia de contenido SEO que funciona en 2024
 
-Así es como aumentamos el tráfico orgánico en un 60% en Wegow.
+Así es como aumentamos el tráfico orgánico en un 60% en [Wegow](https://wegow.com).
 
 ## 1. Investigación de palabras clave
 
@@ -327,7 +327,7 @@ Pillar: "Guía completa de Nuxt.js"
 - Cluster pages: Específicos, 1500+ palabras
 - Internal linking bidireccional
 
-## Resultados en Wegow
+## Resultados en [Wegow](https://wegow.com)
 
 Después de 6 meses de estrategia de contenido:
 

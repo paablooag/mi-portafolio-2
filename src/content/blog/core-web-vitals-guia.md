@@ -129,7 +129,7 @@ export default {
 }
 ```
 
-## Resultados en Wegow
+## Resultados en [Wegow](https://wegow.com)
 
 Después de optimizar Core Web Vitals:
 

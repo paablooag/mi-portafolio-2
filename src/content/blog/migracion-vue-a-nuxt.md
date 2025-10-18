@@ -8,7 +8,7 @@ image: "/blog/vue-to-nuxt.jpg"
 
 # Mi experiencia migrando de Vue.js a Nuxt.js
 
-Durante mi tiempo en Wegow, lideré la migración de aplicaciones Vue.js a Nuxt.js. Aquí comparto mi experiencia y los desafíos que enfrenté.
+Durante mi tiempo en [Wegow](https://wegow.com), lideré la migración de aplicaciones Vue.js a Nuxt.js. Aquí comparto mi experiencia y los desafíos que enfrenté.
 
 ## ¿Por qué migrar?
 

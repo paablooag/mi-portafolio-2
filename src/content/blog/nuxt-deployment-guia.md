@@ -458,7 +458,7 @@ export default defineNuxtConfig({
 
 ## Mi stack en producción
 
-En Wegow usamos:
+En [Wegow](https://wegow.com) usamos:
 
 - **Hosting**: Netlify
 - **CDN**: Cloudflare

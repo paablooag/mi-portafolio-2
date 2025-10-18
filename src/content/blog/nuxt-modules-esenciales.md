@@ -7,7 +7,7 @@ tags: ["Nuxt.js", "Tools", "Performance", "SEO"]
 
 # Top 10 módulos de Nuxt que debes conocer
 
-En mi experiencia con Nuxt en Wegow, estos son los módulos que no pueden faltar.
+En mi experiencia con Nuxt en [Wegow](https://wegow.com), estos son los módulos que no pueden faltar.
 
 ## 1. @nuxtjs/tailwindcss
 
@@ -55,7 +55,7 @@ Headers de seguridad y protección CSRF.
 
 ## Mi stack en producción
 
-En Wegow usamos una combinación de estos módulos para:
+En [Wegow](https://wegow.com) usamos una combinación de estos módulos para:
 
 - Mejorar el SEO (+60% tráfico orgánico)
 - Optimizar performance (Core Web Vitals)
