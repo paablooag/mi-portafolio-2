@@ -29,10 +29,44 @@ function formatDate(date: Date): string {
 ---
 
 <Layout 
-  title={`${entry.data.title} - Pablo Alcalde`}
+  title={`${entry.data.title} - Pablo Alcalde | Front-end Developer`}
   description={entry.data.description}
+  type="article"
+  publishedTime={entry.data.pubDate.toISOString()}
+  modifiedTime={entry.data.pubDate.toISOString()}
+  tags={entry.data.tags}
 >
   <Header />
+  
+  <!-- Structured Data for Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{entry.data.title}",
+    "description": "{entry.data.description}",
+    "image": "https://pabloalcalde.dev/og-image.svg",
+    "author": {
+      "@type": "Person",
+      "name": "Pablo Alcalde García",
+      "url": "https://pabloalcalde.dev"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Pablo Alcalde García",
+      "url": "https://pabloalcalde.dev"
+    },
+    "datePublished": "{entry.data.pubDate.toISOString()}",
+    "dateModified": "{entry.data.pubDate.toISOString()}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{Astro.url.href}"
+    },
+    "keywords": "{entry.data.tags.join(', ')}",
+    "articleSection": "Technology",
+    "wordCount": "{entry.body.split(' ').length}"
+  }
+  </script>
   
   <main class="pt-24">
     <article class="section">

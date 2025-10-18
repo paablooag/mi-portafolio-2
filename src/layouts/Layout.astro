@@ -2,9 +2,29 @@
 interface Props {
   title: string;
   description?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  tags?: string[];
 }
 
-const { title, description = "Front-end Developer y SEO Specialist especializado en Vue.js, Nuxt.js y optimización web" } = Astro.props;
+const { 
+  title, 
+  description = "Front-end Developer y SEO Specialist especializado en Vue.js, Nuxt.js y optimización web. Desarrollador en Wegow con experiencia en migración de aplicaciones y mejora del SEO.",
+  image = "https://pabloalcalde.dev/og-image.svg",
+  url = Astro.url.href,
+  type = "website",
+  publishedTime,
+  modifiedTime,
+  author = "Pablo Alcalde García",
+  tags = ["front-end developer", "SEO specialist", "Vue.js", "Nuxt.js", "desarrollador web", "Granada", "Wegow"]
+} = Astro.props;
+
+const canonicalURL = new URL(url, Astro.site);
+const imageURL = new URL(image, Astro.site);
 ---
 
 <!doctype html>
@@ -12,30 +32,124 @@ const { title, description = "Front-end Developer y SEO Specialist especializado
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="/logo-png-negro.png" />
     <link rel="icon" type="image/png" sizes="64x64" href="/logo-png-negro.png" />
     <link rel="icon" type="image/png" sizes="128x128" href="/logo-png-negro.png" />
+    <link rel="apple-touch-icon" href="/logo-png-negro.png" />
+    <meta name="theme-color" content="#3b82f6" />
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Generator -->
     <meta name="generator" content={Astro.generator} />
     
-    <!-- SEO -->
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- SEO Meta Tags -->
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="author" content="Pablo Alcalde García" />
-    <meta name="keywords" content="front-end developer, SEO specialist, Vue.js, Nuxt.js, desarrollador web, Granada" />
+    <meta name="author" content={author} />
+    <meta name="keywords" content={tags.join(", ")} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
     
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <!-- Language -->
+    <meta name="language" content="Spanish" />
+    <meta name="geo.region" content="ES-AN" />
+    <meta name="geo.placename" content="Granada" />
+    <meta name="geo.position" content="37.1773;-3.5986" />
+    <meta name="ICBM" content="37.1773, -3.5986" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:image" content={imageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:site_name" content="Pablo Alcalde - Front-end Developer" />
     <meta property="og:locale" content="es_ES" />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    {tags.map(tag => <meta property="article:tag" content={tag} />)}
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageURL} />
+    <meta name="twitter:image:alt" content={title} />
+    <meta name="twitter:creator" content="@pabloalcalde" />
+    <meta name="twitter:site" content="@pabloalcalde" />
+    
+    <!-- Additional SEO -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Pablo Alcalde" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://wegow.com" />
+    <link rel="preconnect" href="https://www.linkedin.com" />
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="//formspree.io" />
+    <link rel="dns-prefetch" href="//wa.me" />
     
     <!-- Estilos globales -->
     <link rel="stylesheet" href="/src/styles/global.css" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Pablo Alcalde García",
+      "jobTitle": "Front-end Developer & SEO Specialist",
+      "description": "Desarrollador front-end especializado en Vue.js, Nuxt.js y optimización SEO. Trabajando en Wegow con experiencia en migración de aplicaciones y mejora del rendimiento web.",
+      "url": "https://pabloalcalde.dev",
+      "image": "https://pabloalcalde.dev/og-image.svg",
+      "sameAs": [
+        "https://www.linkedin.com/in/pabloalcaldegarcia",
+        "https://github.com/paablooag"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Granada",
+        "addressRegion": "Andalucía",
+        "addressCountry": "ES"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Wegow",
+        "url": "https://wegow.com"
+      },
+      "knowsAbout": [
+        "Vue.js",
+        "Nuxt.js",
+        "JavaScript",
+        "TypeScript",
+        "SEO",
+        "Front-end Development",
+        "Web Performance",
+        "Core Web Vitals"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma"
+      }
+    }
+    </script>
   </head>
   <body>
     <slot />

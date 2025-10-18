@@ -1,0 +1,27 @@
+{
+  "name": "Pablo Alcalde - Front-end Developer",
+  "short_name": "Pablo Alcalde",
+  "description": "Front-end Developer & SEO Specialist especializado en Vue.js, Nuxt.js y optimización web",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo-png-negro.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo-png-negro.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["developer", "portfolio", "technology"],
+  "lang": "es",
+  "dir": "ltr"
+}
