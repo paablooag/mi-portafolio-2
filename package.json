@@ -7,7 +7,11 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "index": "node scripts/auto-index.js",
+    "index:gsc": "node scripts/google-search-console.js",
+    "index:daily": "./scripts/daily-index.sh",
+    "setup:cron": "./scripts/setup-cron.sh"
   },
   "dependencies": {
     "astro": "^4.0.0",
