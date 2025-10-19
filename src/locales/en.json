@@ -80,7 +80,25 @@
     "subtitle": "Sharing knowledge about frontend development, SEO and the latest web technologies",
     "readMore": "Read article",
     "viewAll": "View all articles",
-    "published": "Published on"
+    "published": "Published on",
+    "filters": {
+      "title": "Filter by category",
+      "all": "All",
+      "vue": "Vue.js",
+      "nuxt": "Nuxt.js",
+      "javascript": "JavaScript",
+      "seo": "SEO",
+      "frontend": "Frontend",
+      "css": "CSS",
+      "tools": "Tools",
+      "testing": "Testing",
+      "performance": "Performance",
+      "accessibility": "Accessibility",
+      "design": "Design",
+      "git": "Git"
+    },
+    "noResults": "No articles found for this category.",
+    "showingResults": "Showing {count} articles"
   },
   "contact": {
     "title": "Let's talk about your",

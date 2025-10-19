@@ -17,6 +17,25 @@ const sortedPosts = allPosts.sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
+// Obtener todas las categorías únicas
+const allCategories = [...new Set(allPosts.flatMap(post => post.data.tags))].sort();
+
+// Mapeo de categorías a las claves de traducción
+const categoryMap: Record<string, string> = {
+  'Vue.js': 'vue',
+  'Nuxt.js': 'nuxt',
+  'JavaScript': 'javascript',
+  'SEO': 'seo',
+  'Frontend': 'frontend',
+  'CSS': 'css',
+  'Git': 'git',
+  'Testing': 'testing',
+  'Performance': 'performance',
+  'Accessibility': 'accessibility',
+  'Design': 'design',
+  'Tools': 'tools'
+};
+
 function formatDate(date: Date): string {
   return new Date(date).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -57,14 +76,48 @@ function formatDate(date: Date): string {
           </div>
         </div>
 
+        <!-- Filters -->
+        <div class="mb-12">
+          <h2 class="text-lg font-semibold mb-4 text-gray-300">{t('blog.filters.title')}</h2>
+          <div class="flex flex-wrap gap-3">
+            <button 
+              data-filter="all" 
+              class="filter-btn active px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-primary text-white hover:bg-secondary"
+            >
+              {t('blog.filters.all')}
+              <span class="ml-2 text-xs opacity-75">({sortedPosts.length})</span>
+            </button>
+            {allCategories.map((category: string) => {
+              const count = sortedPosts.filter(post => post.data.tags.includes(category)).length;
+              const filterKey = categoryMap[category as keyof typeof categoryMap] || category.toLowerCase();
+              return (
+                <button 
+                  data-filter={category} 
+                  class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  {t(`blog.filters.${filterKey}`) || category}
+                  <span class="ml-2 text-xs opacity-75">({count})</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <!-- Results counter -->
+        <div class="mb-6">
+          <p id="results-count" class="text-gray-400 text-sm">
+            {t('blog.showingResults').replace('{count}', sortedPosts.length.toString())}
+          </p>
+        </div>
+
         <!-- Articles Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div id="articles-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sortedPosts.map((post) => (
-            <article class="card group hover:scale-[1.02] transition-all duration-300">
+            <article class="blog-post card group hover:scale-[1.02] transition-all duration-300" data-tags={post.data.tags.join(',')}>
               <div class="mb-4">
                 <div class="flex flex-wrap gap-2 mb-3">
                   {post.data.tags.map((tag) => (
-                    <span class="text-xs px-3 py-1 bg-primary/20 text-primary rounded-full">
+                    <span class="post-tag text-xs px-3 py-1 bg-primary/20 text-primary rounded-full">
                       {tag}
                     </span>
                   ))}
@@ -99,14 +152,16 @@ function formatDate(date: Date): string {
           ))}
         </div>
 
-        <!-- Message if no posts -->
-        {sortedPosts.length === 0 && (
-          <div class="card text-center py-12">
-            <p class="text-gray-400 text-lg">
-              New articles coming soon. Check back later!
-            </p>
-          </div>
-        )}
+        <!-- No results message -->
+        <div id="no-results" class="card text-center py-12 hidden">
+          <div class="mb-4 text-5xl">🔍</div>
+          <p class="text-gray-400 text-lg mb-2">
+            {t('blog.noResults')}
+          </p>
+          <button id="reset-filters" class="mt-4 text-primary hover:text-secondary transition-colors">
+            {t('blog.filters.all')}
+          </button>
+        </div>
       </div>
     </section>
   </main>
@@ -115,3 +170,88 @@ function formatDate(date: Date): string {
   <FloatingButtons />
 </Layout>
 
+<script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const blogPosts = document.querySelectorAll('.blog-post');
+  const resultsCount = document.getElementById('results-count');
+  const noResults = document.getElementById('no-results');
+  const articlesGrid = document.getElementById('articles-grid');
+  const resetButton = document.getElementById('reset-filters');
+  
+  // Textos de traducción (inyectados desde el servidor)
+  const lang = document.documentElement.lang || 'es';
+  const showingText = lang === 'es' ? 'Mostrando {count} artículos' : 'Showing {count} articles';
+
+  function filterPosts(category: string) {
+    let visibleCount = 0;
+    
+    blogPosts.forEach((post) => {
+      const tags = (post as HTMLElement).dataset.tags?.split(',') || [];
+      
+      if (category === 'all' || tags.includes(category)) {
+        (post as HTMLElement).style.display = 'block';
+        setTimeout(() => {
+          (post as HTMLElement).style.opacity = '1';
+          (post as HTMLElement).style.transform = 'scale(1)';
+        }, 10);
+        visibleCount++;
+      } else {
+        (post as HTMLElement).style.opacity = '0';
+        (post as HTMLElement).style.transform = 'scale(0.95)';
+        setTimeout(() => {
+          (post as HTMLElement).style.display = 'none';
+        }, 300);
+      }
+    });
+    
+    // Actualizar contador
+    if (resultsCount) {
+      resultsCount.textContent = showingText.replace('{count}', visibleCount.toString());
+    }
+    
+    // Mostrar/ocultar mensaje de sin resultados
+    if (noResults && articlesGrid) {
+      if (visibleCount === 0) {
+        articlesGrid.style.display = 'none';
+        noResults.classList.remove('hidden');
+      } else {
+        articlesGrid.style.display = 'grid';
+        noResults.classList.add('hidden');
+      }
+    }
+  }
+
+  // Event listeners para botones de filtro
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      // Remover clase active de todos los botones
+      filterButtons.forEach((btn) => {
+        btn.classList.remove('active', 'bg-primary', 'text-white');
+        btn.classList.add('bg-gray-800', 'text-gray-300');
+      });
+      
+      // Añadir clase active al botón clickeado
+      button.classList.add('active', 'bg-primary', 'text-white');
+      button.classList.remove('bg-gray-800', 'text-gray-300');
+      
+      // Filtrar posts
+      const category = (button as HTMLElement).dataset.filter || 'all';
+      filterPosts(category);
+    });
+  });
+
+  // Event listener para botón reset
+  if (resetButton) {
+    resetButton.addEventListener('click', () => {
+      const allButton = document.querySelector('[data-filter="all"]');
+      if (allButton) {
+        (allButton as HTMLElement).click();
+      }
+    });
+  }
+
+  // Estilos para transiciones suaves
+  blogPosts.forEach((post) => {
+    (post as HTMLElement).style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+  });
+</script>
