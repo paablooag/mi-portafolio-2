@@ -11,7 +11,8 @@
     "index": "node scripts/auto-index.js",
     "index:gsc": "node scripts/google-search-console.js",
     "index:daily": "./scripts/daily-index.sh",
-    "setup:cron": "./scripts/setup-cron.sh"
+    "setup:cron": "./scripts/setup-cron.sh",
+    "translate:blogs": "node scripts/translate-blogs.js"
   },
   "dependencies": {
     "astro": "^4.0.0",
