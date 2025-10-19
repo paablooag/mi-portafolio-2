@@ -1,5 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
+import { getLangFromUrl, useTranslations } from '../utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 // Obtener los posts del blog
 const allPosts = await getCollection('blog', ({ data }) => {
@@ -16,7 +20,7 @@ const hasMorePosts = sortedPosts.length > 10;
 
 // Función para formatear fecha
 function formatDate(date: Date): string {
-  return new Date(date).toLocaleDateString('es-ES', {
+  return new Date(date).toLocaleDateString(lang === 'es' ? 'es-ES' : 'en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
@@ -28,10 +32,10 @@ function formatDate(date: Date): string {
   <div class="container-custom">
     <div class="text-center mb-12">
       <h2 class="text-4xl md:text-5xl font-bold mb-4">
-        Blog & <span class="gradient-text">Artículos</span>
+        {t('blog.title')} <span class="gradient-text">{t('blog.titleHighlight')}</span>
       </h2>
       <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-        Comparto conocimientos sobre desarrollo frontend, SEO y las últimas tecnologías web
+        {t('blog.subtitle')}
       </p>
     </div>
 
@@ -67,7 +71,7 @@ function formatDate(date: Date): string {
             href={`/blog/${post.slug}`}
             class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all duration-300"
           >
-            Leer artículo
+            {t('blog.readMore')}
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
@@ -80,7 +84,7 @@ function formatDate(date: Date): string {
     {hasMorePosts && (
       <div class="text-center">
         <a href="/blog" class="btn-outline">
-          Ver todos los artículos ({sortedPosts.length})
+          {t('blog.viewAll')} ({sortedPosts.length})
         </a>
       </div>
     )}

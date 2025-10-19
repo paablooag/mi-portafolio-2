@@ -1,6 +1,11 @@
 ---
+import { getLangFromUrl, useTranslations } from '../utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const whatsappNumber = "34687361991"; // Formato internacional sin + ni espacios
-const whatsappMessage = "Hola Pablo, vi tu portafolio y me gustaría hablar contigo.";
+const whatsappMessage = t('floating.whatsappMessage');
 ---
 
 <!-- Botón de WhatsApp -->
@@ -18,7 +23,7 @@ const whatsappMessage = "Hola Pablo, vi tu portafolio y me gustaría hablar cont
   
   <!-- Tooltip -->
   <span class="absolute left-full ml-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-    Escríbeme por WhatsApp
+    {t('floating.whatsapp')}
   </span>
 </a>
 
@@ -26,7 +31,7 @@ const whatsappMessage = "Hola Pablo, vi tu portafolio y me gustaría hablar cont
 <button
   id="scroll-to-top"
   class="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-primary to-secondary text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 opacity-0 pointer-events-none group"
-  aria-label="Volver arriba"
+  aria-label={t('floating.scrollTop')}
 >
   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
@@ -34,7 +39,7 @@ const whatsappMessage = "Hola Pablo, vi tu portafolio y me gustaría hablar cont
   
   <!-- Tooltip -->
   <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-    Volver arriba
+    {t('floating.scrollTop')}
   </span>
 </button>
 

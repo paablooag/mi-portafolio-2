@@ -1,27 +1,30 @@
 ---
+import { getLangFromUrl, useTranslations } from '../utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="contacto" class="section bg-dark-lighter">
   <div class="container-custom">
     <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">
-      Hablemos de tu <span class="gradient-text">Proyecto</span>
+      {t('contact.title')} <span class="gradient-text">{t('contact.titleHighlight')}</span>
     </h2>
     
     <div class="max-w-6xl mx-auto">
       <p class="text-xl text-gray-300 text-center mb-12">
-        ¿Tienes un proyecto en mente o quieres colaborar? No dudes en contactarme. 
-        Siempre estoy abierto a nuevas oportunidades y conversaciones interesantes.
+        {t('contact.subtitle')}
       </p>
 
       <div class="grid lg:grid-cols-2 gap-12">
         <!-- Formulario de Contacto -->
         <div class="card">
-          <h3 class="text-2xl font-bold mb-6">Envíame un mensaje</h3>
+          <h3 class="text-2xl font-bold mb-6">{t('contact.formTitle')}</h3>
           
           <form id="contact-form" class="space-y-6">
             <div>
               <label for="name" class="block text-sm font-medium text-gray-300 mb-2">
-                Nombre completo *
+                {t('contact.name')} *
               </label>
               <input
                 type="text"
@@ -29,13 +32,13 @@
                 name="name"
                 required
                 class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors"
-                placeholder="Tu nombre"
+                placeholder={t('contact.placeholders.name')}
               />
             </div>
 
             <div>
               <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
-                Email *
+                {t('contact.email')} *
               </label>
               <input
                 type="email"
@@ -43,26 +46,26 @@
                 name="email"
                 required
                 class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors"
-                placeholder="tu@email.com"
+                placeholder={t('contact.placeholders.email')}
               />
             </div>
 
             <div>
               <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">
-                Teléfono
+                {t('contact.phone')}
               </label>
               <input
                 type="tel"
                 id="phone"
                 name="phone"
                 class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors"
-                placeholder="+34 123 456 789"
+                placeholder={t('contact.placeholders.phone')}
               />
             </div>
 
             <div>
               <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">
-                Asunto *
+                {t('contact.subject')} *
               </label>
               <input
                 type="text"
@@ -70,13 +73,13 @@
                 name="subject"
                 required
                 class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors"
-                placeholder="¿En qué puedo ayudarte?"
+                placeholder={t('contact.placeholders.subject')}
               />
             </div>
 
             <div>
               <label for="message" class="block text-sm font-medium text-gray-300 mb-2">
-                Mensaje *
+                {t('contact.message')} *
               </label>
               <textarea
                 id="message"
@@ -84,7 +87,7 @@
                 required
                 rows="5"
                 class="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary transition-colors resize-none"
-                placeholder="Cuéntame sobre tu proyecto..."
+                placeholder={t('contact.placeholders.message')}
               ></textarea>
             </div>
 
@@ -94,7 +97,7 @@
               type="submit"
               class="btn-primary w-full justify-center flex items-center gap-2"
             >
-              <span id="button-text">Enviar mensaje</span>
+              <span id="button-text">{t('contact.send')}</span>
               <svg id="button-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
               </svg>
@@ -109,7 +112,7 @@
         <!-- Información de Contacto -->
         <div class="space-y-6">
           <div class="card">
-            <h3 class="text-2xl font-bold mb-6">Información de contacto</h3>
+            <h3 class="text-2xl font-bold mb-6">{t('contact.infoTitle')}</h3>
             
             <div class="space-y-4">
               <a 
@@ -118,7 +121,7 @@
               >
                 <div class="text-3xl group-hover:scale-110 transition-transform">📧</div>
                 <div>
-                  <h4 class="font-semibold text-white mb-1">Email</h4>
+                  <h4 class="font-semibold text-white mb-1">{t('contact.info.email')}</h4>
                   <p class="text-gray-400 text-sm break-all group-hover:text-primary transition-colors">
                     pablooalcaldegarcia@gmail.com
                   </p>
@@ -131,7 +134,7 @@
               >
                 <div class="text-3xl group-hover:scale-110 transition-transform">📱</div>
                 <div>
-                  <h4 class="font-semibold text-white mb-1">Teléfono</h4>
+                  <h4 class="font-semibold text-white mb-1">{t('contact.info.phone')}</h4>
                   <p class="text-gray-400 text-sm group-hover:text-primary transition-colors">
                     687 361 991
                   </p>
@@ -146,9 +149,9 @@
               >
                 <div class="text-3xl group-hover:scale-110 transition-transform">💬</div>
                 <div>
-                  <h4 class="font-semibold text-white mb-1">WhatsApp</h4>
+                  <h4 class="font-semibold text-white mb-1">{t('contact.info.whatsapp')}</h4>
                   <p class="text-gray-400 text-sm group-hover:text-primary transition-colors">
-                    Enviar mensaje
+                    {t('contact.info.whatsappText')}
                   </p>
                 </div>
               </a>
@@ -161,7 +164,7 @@
               >
                 <div class="text-3xl group-hover:scale-110 transition-transform">💼</div>
                 <div>
-                  <h4 class="font-semibold text-white mb-1">LinkedIn</h4>
+                  <h4 class="font-semibold text-white mb-1">{t('contact.info.linkedin')}</h4>
                   <p class="text-gray-400 text-sm group-hover:text-primary transition-colors">
                     /pabloalcaldegarcia
                   </p>
@@ -171,9 +174,9 @@
               <div class="flex items-start gap-4 p-4 rounded-lg">
                 <div class="text-3xl">📍</div>
                 <div>
-                  <h4 class="font-semibold text-white mb-1">Ubicación</h4>
+                  <h4 class="font-semibold text-white mb-1">{t('contact.info.location')}</h4>
                   <p class="text-gray-400 text-sm">
-                    Granada, Andalucía, España
+                    {t('contact.info.locationText')}
                   </p>
                 </div>
               </div>
@@ -182,16 +185,16 @@
 
           <!-- CTA Card -->
           <div class="card bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/30">
-            <h3 class="text-xl font-bold mb-3">¿Prefieres un contacto directo?</h3>
+            <h3 class="text-xl font-bold mb-3">{t('contact.directContact.title')}</h3>
             <p class="text-gray-300 mb-4 text-sm">
-              También puedes escribirme directamente por email o conectar conmigo en LinkedIn.
+              {t('contact.directContact.description')}
             </p>
             <div class="flex flex-col sm:flex-row gap-3">
               <a 
                 href="mailto:pablooalcaldegarcia@gmail.com"
                 class="btn-primary text-sm"
               >
-                Enviar Email
+                {t('contact.directContact.email')}
               </a>
               <a 
                 href="https://www.linkedin.com/in/pabloalcaldegarcia"
@@ -199,7 +202,7 @@
                 rel="noopener noreferrer"
                 class="btn-outline text-sm"
               >
-                LinkedIn
+                {t('contact.directContact.linkedin')}
               </a>
             </div>
           </div>
@@ -208,11 +211,10 @@
           <div class="card">
             <div class="flex items-center gap-3 mb-3">
               <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              <h3 class="text-lg font-bold">Disponible para proyectos</h3>
+              <h3 class="text-lg font-bold">{t('contact.availability.title')}</h3>
             </div>
             <p class="text-gray-400 text-sm">
-              Actualmente abierto a nuevas oportunidades y colaboraciones. 
-              Tiempo de respuesta: 24-48 horas.
+              {t('contact.availability.description')}
             </p>
           </div>
         </div>
@@ -221,8 +223,8 @@
   </div>
 </section>
 
-<script>
-  const form = document.getElementById('contact-form') as HTMLFormElement;
+<script define:vars={{ t_sending: t('contact.sending'), t_send: t('contact.send'), t_success: t('contact.success'), t_error: t('contact.error') }}>
+  const form = document.getElementById('contact-form');
   const formMessage = document.getElementById('form-message');
   const buttonText = document.getElementById('button-text');
   const buttonIcon = document.getElementById('button-icon');
@@ -232,7 +234,7 @@
     e.preventDefault();
 
     // Mostrar estado de carga
-    if (buttonText) buttonText.textContent = 'Enviando...';
+    if (buttonText) buttonText.textContent = t_sending;
     buttonIcon?.classList.add('hidden');
     buttonLoading?.classList.remove('hidden');
     formMessage?.classList.add('hidden');
@@ -260,7 +262,7 @@
       if (response.ok) {
         // Éxito
         if (formMessage) {
-          formMessage.textContent = '¡Mensaje enviado con éxito! Te responderé pronto.';
+          formMessage.textContent = t_success;
           formMessage.className = 'p-4 rounded-lg bg-green-500/20 border border-green-500 text-green-400';
           formMessage.classList.remove('hidden');
         }
@@ -272,14 +274,14 @@
     } catch (error) {
       // Error
       if (formMessage) {
-        formMessage.textContent = 'Hubo un error al enviar el mensaje. Por favor, intenta de nuevo o contáctame directamente por email.';
+        formMessage.textContent = t_error;
         formMessage.className = 'p-4 rounded-lg bg-red-500/20 border border-red-500 text-red-400';
         formMessage.classList.remove('hidden');
       }
       console.error('Error:', error);
     } finally {
       // Restaurar botón
-      if (buttonText) buttonText.textContent = 'Enviar mensaje';
+      if (buttonText) buttonText.textContent = t_send;
       buttonIcon?.classList.remove('hidden');
       buttonLoading?.classList.add('hidden');
     }

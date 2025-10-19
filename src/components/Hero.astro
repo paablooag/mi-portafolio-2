@@ -1,4 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from '../utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="inicio" class="min-h-screen flex items-center justify-center section pt-32">
@@ -6,36 +10,34 @@
     <div class="text-center">
       <div class="mb-8">
         <h1 class="text-5xl md:text-7xl font-bold mb-4">
-          Hola, soy <span class="gradient-text">Pablo Alcalde</span>
+          {t('hero.greeting')} <span class="gradient-text">{t('hero.name')}</span>
         </h1>
         <p class="text-xl md:text-2xl text-gray-400 mb-2">
-          Front-end Developer & SEO Specialist
+          {t('hero.role')}
         </p>
         <p class="text-lg text-gray-500">
-          📍 Granada, Andalucía, España
+          {t('hero.location')}
         </p>
       </div>
       
       <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
-        Desarrollador especializado en <span class="text-primary font-semibold">Vue.js</span> y 
-        <span class="text-primary font-semibold">Nuxt.js</span>, con pasión por crear 
-        interfaces intuitivas y optimizadas para SEO. Actualmente trabajando en 
+        <Fragment set:html={t('hero.description')} />
         <a 
           href="https://wegow.com" 
           target="_blank" 
           rel="noopener noreferrer"
           class="text-secondary font-semibold hover:text-primary transition-colors duration-300"
         >
-          Wegow
+          {t('hero.company')}
         </a>.
       </p>
       
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
         <a href="/#contacto" class="btn-primary">
-          Contáctame
+          {t('hero.cta.contact')}
         </a>
         <a href="/#experiencia" class="btn-outline">
-          Ver experiencia
+          {t('hero.cta.experience')}
         </a>
       </div>
 

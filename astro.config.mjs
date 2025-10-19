@@ -4,6 +4,13 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://pabloalcalde.dev',
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'en'],
+    routing: {
+      prefixDefaultLocale: false
+    }
+  },
   integrations: [
     tailwind(),
     sitemap({
@@ -14,7 +21,8 @@ export default defineConfig({
       i18n: {
         defaultLocale: 'es',
         locales: {
-          es: 'es-ES'
+          es: 'es-ES',
+          en: 'en-US'
         }
       }
     })

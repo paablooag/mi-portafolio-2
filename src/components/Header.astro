@@ -1,4 +1,9 @@
 ---
+import LanguageSelector from './LanguageSelector.astro';
+import { getLangFromUrl, useTranslations } from '../utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-dark/80 backdrop-blur-md border-b border-gray-800">
@@ -8,14 +13,15 @@
         <img src="/logo-png.png" alt="Pablo Alcalde - Front-end Developer Logo" class="h-12 w-12" width="48" height="48" />
       </a>
       
-      <div class="hidden md:flex space-x-8">
-        <a href="/#inicio" class="nav-link">Inicio</a>
-        <a href="/#sobre-mi" class="nav-link">Sobre mí</a>
-        <a href="/#experiencia" class="nav-link">Experiencia</a>
-        <a href="/#habilidades" class="nav-link">Habilidades</a>
-        <a href="/#proyectos" class="nav-link">Proyectos</a>
-        <a href="/#blog" class="nav-link">Blog</a>
-        <a href="/#contacto" class="nav-link">Contacto</a>
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="/#inicio" class="nav-link">{t('nav.home')}</a>
+        <a href="/#sobre-mi" class="nav-link">{t('nav.about')}</a>
+        <a href="/#experiencia" class="nav-link">{t('nav.experience')}</a>
+        <a href="/#habilidades" class="nav-link">{t('nav.skills')}</a>
+        <a href="/#proyectos" class="nav-link">{t('nav.projects')}</a>
+        <a href="/#blog" class="nav-link">{t('nav.blog')}</a>
+        <a href="/#contacto" class="nav-link">{t('nav.contact')}</a>
+        <LanguageSelector />
       </div>
 
       <!-- Mobile menu button -->
@@ -29,13 +35,16 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
       <div class="flex flex-col space-y-4">
-        <a href="/#inicio" class="nav-link">Inicio</a>
-        <a href="/#sobre-mi" class="nav-link">Sobre mí</a>
-        <a href="/#experiencia" class="nav-link">Experiencia</a>
-        <a href="/#habilidades" class="nav-link">Habilidades</a>
-        <a href="/#proyectos" class="nav-link">Proyectos</a>
-        <a href="/#blog" class="nav-link">Blog</a>
-        <a href="/#contacto" class="nav-link">Contacto</a>
+        <a href="/#inicio" class="nav-link">{t('nav.home')}</a>
+        <a href="/#sobre-mi" class="nav-link">{t('nav.about')}</a>
+        <a href="/#experiencia" class="nav-link">{t('nav.experience')}</a>
+        <a href="/#habilidades" class="nav-link">{t('nav.skills')}</a>
+        <a href="/#proyectos" class="nav-link">{t('nav.projects')}</a>
+        <a href="/#blog" class="nav-link">{t('nav.blog')}</a>
+        <a href="/#contacto" class="nav-link">{t('nav.contact')}</a>
+        <div class="pt-4 border-t border-gray-700">
+          <LanguageSelector />
+        </div>
       </div>
     </div>
   </nav>

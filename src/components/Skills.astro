@@ -1,4 +1,9 @@
 ---
+import { getLangFromUrl, useTranslations } from '../utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const skills = {
   frontend: [
     { name: "Vue.js", level: 90 },
@@ -38,7 +43,7 @@ const certifications = [
 <section id="habilidades" class="section bg-dark-lighter">
   <div class="container-custom">
     <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">
-      Habilidades & <span class="gradient-text">Tecnologías</span>
+      {t('skills.title')} <span class="gradient-text">{t('skills.titleHighlight')}</span>
     </h2>
     
     <div class="grid md:grid-cols-2 gap-8 mb-12">
@@ -46,7 +51,7 @@ const certifications = [
       <div class="card">
         <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
           <span class="text-3xl">⚡</span>
-          Frontend
+          {t('skills.frontend')}
         </h3>
         <div class="space-y-4">
           {skills.frontend.map((skill) => (
@@ -70,7 +75,7 @@ const certifications = [
       <div class="card">
         <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
           <span class="text-3xl">📈</span>
-          SEO & Marketing
+          {t('skills.seo')}
         </h3>
         <div class="space-y-4">
           {skills.seo.map((skill) => (
@@ -94,7 +99,7 @@ const certifications = [
       <div class="card">
         <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
           <span class="text-3xl">🛠️</span>
-          Herramientas & Metodologías
+          {t('skills.tools')}
         </h3>
         <div class="space-y-4">
           {skills.tools.map((skill) => (

@@ -1,0 +1,153 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Pablo Alcalde",
+    "role": "Front-end Developer & SEO Specialist",
+    "location": "📍 Granada, Andalusia, Spain",
+    "description": "Developer specialized in <span class='text-primary font-semibold'>Vue.js</span> and <span class='text-primary font-semibold'>Nuxt.js</span>, with a passion for creating intuitive and SEO-optimized interfaces. Currently working at",
+    "company": "Wegow",
+    "cta": {
+      "contact": "Contact me",
+      "experience": "View experience"
+    }
+  },
+  "about": {
+    "title": "About",
+    "titleHighlight": "me",
+    "greeting": "Hello! 👋",
+    "paragraph1": "I'm Pablo, I'm 21 years old and I'm a front-end developer passionate about creating exceptional web experiences. I specialize in <strong class='text-white'>Vue.js</strong> and <strong class='text-white'>Nuxt.js</strong>, and I have solid experience in <strong class='text-white'>SEO optimization</strong>.",
+    "paragraph2": "Programming and front-end development are my true passion. I love creating intuitive and visually appealing interfaces that provide an excellent user experience.",
+    "paragraph3": "I'm always motivated to learn new technologies and frameworks that allow me to take my projects to the next level. Seeing a design come to life through code is something that always inspires me and challenges me to keep improving.",
+    "cards": {
+      "experience": {
+        "title": "Experience",
+        "description": "Developer at <a href='https://wegow.com' target='_blank' rel='noopener noreferrer' class='text-primary hover:text-secondary transition-colors duration-300'>Wegow</a>, migrating applications from Vue.js to Nuxt.js and optimizing SEO to improve positioning."
+      },
+      "education": {
+        "title": "Education",
+        "description": "Higher Technician in Multi-platform Application Development + Master's in SEO and Web Positioning."
+      },
+      "methodologies": {
+        "title": "Methodologies",
+        "description": "Experience in SCRUM, working with tools like Jira, Taiga, Git and Slack in agile teams."
+      },
+      "learning": {
+        "title": "Continuous Learning",
+        "description": "Committed to constant learning through online courses on new technologies and best practices."
+      }
+    }
+  },
+  "experience": {
+    "title": "Professional",
+    "titleHighlight": "Experience"
+  },
+  "skills": {
+    "title": "Technical",
+    "titleHighlight": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools",
+    "seo": "SEO & Marketing"
+  },
+  "projects": {
+    "title": "My",
+    "titleHighlight": "Projects",
+    "subtitle": "Real projects developed for clients, focused on performance, SEO and exceptional user experience.",
+    "viewMore": "View more projects",
+    "seeProject": "View project",
+    "viewDetails": "View more details",
+    "technologies": "Technologies",
+    "features": "Key features",
+    "category": "Category",
+    "cta": {
+      "title": "Do you have a project in mind?",
+      "description": "I'm available for new projects. Let's work together to create something amazing that stands out in the market.",
+      "button": "Let's talk about your project"
+    }
+  },
+  "blog": {
+    "title": "Blog &",
+    "titleHighlight": "Articles",
+    "subtitle": "Sharing knowledge about frontend development, SEO and the latest web technologies",
+    "readMore": "Read article",
+    "viewAll": "View all articles",
+    "published": "Published on"
+  },
+  "contact": {
+    "title": "Let's talk about your",
+    "titleHighlight": "Project",
+    "subtitle": "Do you have a project in mind or want to collaborate? Feel free to contact me. I'm always open to new opportunities and interesting conversations.",
+    "formTitle": "Send me a message",
+    "infoTitle": "Contact information",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send message",
+    "sending": "Sending...",
+    "success": "Message sent successfully! I'll respond soon.",
+    "error": "There was an error sending the message. Please try again or contact me directly by email.",
+    "placeholders": {
+      "name": "Your name",
+      "email": "your@email.com",
+      "phone": "+34 123 456 789",
+      "subject": "How can I help you?",
+      "message": "Tell me about your project..."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "whatsappText": "Send message",
+      "linkedin": "LinkedIn",
+      "location": "Location",
+      "locationText": "Granada, Andalusia, Spain"
+    },
+    "directContact": {
+      "title": "Prefer direct contact?",
+      "description": "You can also write to me directly by email or connect with me on LinkedIn.",
+      "email": "Send Email",
+      "linkedin": "LinkedIn"
+    },
+    "availability": {
+      "title": "Available for projects",
+      "description": "Currently open to new opportunities and collaborations. Response time: 24-48 hours."
+    }
+  },
+  "footer": {
+    "about": "Front-end Developer and SEO Specialist passionate about creating exceptional web experiences.",
+    "links": "Links",
+    "contact": "Contact",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "madeWith": "Developed with",
+    "using": "using Astro and Tailwind CSS"
+  },
+  "education": {
+    "title": "Academic",
+    "titleHighlight": "Education"
+  },
+  "language": {
+    "select": "Select language",
+    "spanish": "Español",
+    "english": "English"
+  },
+  "floating": {
+    "whatsapp": "Write me on WhatsApp",
+    "scrollTop": "Back to top",
+    "whatsappMessage": "Hi Pablo, I saw your portfolio and would like to talk to you."
+  }
+}
+

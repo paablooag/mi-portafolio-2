@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import About from '../../components/About.astro';
+import Experience from '../../components/Experience.astro';
+import Skills from '../../components/Skills.astro';
+import Education from '../../components/Education.astro';
+import Blog from '../../components/Blog.astro';
+import Projects from '../../components/Projects.astro';
+import Contact from '../../components/Contact.astro';
+import Footer from '../../components/Footer.astro';
+import FloatingButtons from '../../components/FloatingButtons.astro';
+import '../../styles/global.css';
+---
+
+<Layout 
+  title="Pablo Alcalde García - Front-end Developer | Granada"
+  description="Front-end developer specialized in Vue.js, Nuxt.js and SEO optimization. Working at Wegow with experience in application migration and web performance improvement. Contact for projects."
+  tags={["front-end developer", "SEO specialist", "Vue.js", "Nuxt.js", "web developer", "Granada", "Wegow", "JavaScript", "TypeScript", "Core Web Vitals"]}
+  lang="en"
+>
+  <Header />
+  <main>
+    <Hero />
+    <About />
+    <Experience />
+    <Skills />
+    <Education />
+    <Projects />
+    <Blog />
+    <Contact />
+  </main>
+  <Footer />
+  <FloatingButtons />
+</Layout>
+

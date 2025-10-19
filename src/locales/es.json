@@ -1,0 +1,153 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Pablo Alcalde",
+    "role": "Front-end Developer & SEO Specialist",
+    "location": "📍 Granada, Andalucía, España",
+    "description": "Desarrollador especializado en <span class='text-primary font-semibold'>Vue.js</span> y <span class='text-primary font-semibold'>Nuxt.js</span>, con pasión por crear interfaces intuitivas y optimizadas para SEO. Actualmente trabajando en",
+    "company": "Wegow",
+    "cta": {
+      "contact": "Contáctame",
+      "experience": "Ver experiencia"
+    }
+  },
+  "about": {
+    "title": "Sobre",
+    "titleHighlight": "mí",
+    "greeting": "¡Hola! 👋",
+    "paragraph1": "Soy Pablo, tengo 21 años y soy un desarrollador front-end apasionado por crear experiencias web excepcionales. Me especializo en <strong class='text-white'>Vue.js</strong> y <strong class='text-white'>Nuxt.js</strong>, y tengo una sólida experiencia en <strong class='text-white'>optimización SEO</strong>.",
+    "paragraph2": "La programación y el desarrollo front-end son mi verdadera pasión. Me encanta crear interfaces intuitivas y visualmente atractivas que proporcionen una experiencia de usuario excelente.",
+    "paragraph3": "Siempre estoy motivado por aprender nuevas tecnologías y frameworks que me permitan llevar mis proyectos al siguiente nivel. Ver cómo un diseño cobra vida a través del código es algo que siempre me inspira y me reta a seguir mejorando.",
+    "cards": {
+      "experience": {
+        "title": "Experiencia",
+        "description": "Desarrollador en <a href='https://wegow.com' target='_blank' rel='noopener noreferrer' class='text-primary hover:text-secondary transition-colors duration-300'>Wegow</a>, migrando aplicaciones de Vue.js a Nuxt.js y optimizando el SEO para mejorar el posicionamiento."
+      },
+      "education": {
+        "title": "Formación",
+        "description": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma + Máster en SEO y Posicionamiento Web."
+      },
+      "methodologies": {
+        "title": "Metodologías",
+        "description": "Experiencia en SCRUM, trabajando con herramientas como Jira, Taiga, Git y Slack en equipos ágiles."
+      },
+      "learning": {
+        "title": "Aprendizaje Continuo",
+        "description": "Comprometido con el aprendizaje constante a través de cursos online en nuevas tecnologías y mejores prácticas."
+      }
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "titleHighlight": "Profesional"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "titleHighlight": "Técnicas",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Herramientas",
+    "seo": "SEO & Marketing"
+  },
+  "projects": {
+    "title": "Mis",
+    "titleHighlight": "Proyectos",
+    "subtitle": "Proyectos reales desarrollados para clientes, enfocados en rendimiento, SEO y experiencia de usuario excepcional.",
+    "viewMore": "Ver más proyectos",
+    "seeProject": "Ver proyecto",
+    "viewDetails": "Ver más detalles",
+    "technologies": "Tecnologías",
+    "features": "Características principales",
+    "category": "Categoría",
+    "cta": {
+      "title": "¿Tienes un proyecto en mente?",
+      "description": "Estoy disponible para nuevos proyectos. Trabajemos juntos para crear algo increíble que destaque en el mercado.",
+      "button": "Hablemos de tu proyecto"
+    }
+  },
+  "blog": {
+    "title": "Blog &",
+    "titleHighlight": "Artículos",
+    "subtitle": "Comparto conocimientos sobre desarrollo frontend, SEO y las últimas tecnologías web",
+    "readMore": "Leer artículo",
+    "viewAll": "Ver todos los artículos",
+    "published": "Publicado el"
+  },
+  "contact": {
+    "title": "Hablemos de tu",
+    "titleHighlight": "Proyecto",
+    "subtitle": "¿Tienes un proyecto en mente o quieres colaborar? No dudes en contactarme. Siempre estoy abierto a nuevas oportunidades y conversaciones interesantes.",
+    "formTitle": "Envíame un mensaje",
+    "infoTitle": "Información de contacto",
+    "name": "Nombre completo",
+    "email": "Email",
+    "phone": "Teléfono",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "send": "Enviar mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado con éxito! Te responderé pronto.",
+    "error": "Hubo un error al enviar el mensaje. Por favor, intenta de nuevo o contáctame directamente por email.",
+    "placeholders": {
+      "name": "Tu nombre",
+      "email": "tu@email.com",
+      "phone": "+34 123 456 789",
+      "subject": "¿En qué puedo ayudarte?",
+      "message": "Cuéntame sobre tu proyecto..."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Teléfono",
+      "whatsapp": "WhatsApp",
+      "whatsappText": "Enviar mensaje",
+      "linkedin": "LinkedIn",
+      "location": "Ubicación",
+      "locationText": "Granada, Andalucía, España"
+    },
+    "directContact": {
+      "title": "¿Prefieres un contacto directo?",
+      "description": "También puedes escribirme directamente por email o conectar conmigo en LinkedIn.",
+      "email": "Enviar Email",
+      "linkedin": "LinkedIn"
+    },
+    "availability": {
+      "title": "Disponible para proyectos",
+      "description": "Actualmente abierto a nuevas oportunidades y colaboraciones. Tiempo de respuesta: 24-48 horas."
+    }
+  },
+  "footer": {
+    "about": "Front-end Developer y SEO Specialist apasionado por crear experiencias web excepcionales.",
+    "links": "Enlaces",
+    "contact": "Contacto",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "phone": "Teléfono",
+    "whatsapp": "WhatsApp",
+    "madeWith": "Desarrollado con",
+    "using": "usando Astro y Tailwind CSS"
+  },
+  "education": {
+    "title": "Formación",
+    "titleHighlight": "Académica"
+  },
+  "language": {
+    "select": "Seleccionar idioma",
+    "spanish": "Español",
+    "english": "English"
+  },
+  "floating": {
+    "whatsapp": "Escríbeme por WhatsApp",
+    "scrollTop": "Volver arriba",
+    "whatsappMessage": "Hola Pablo, vi tu portafolio y me gustaría hablar contigo."
+  }
+}
+

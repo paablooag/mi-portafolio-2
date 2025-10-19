@@ -1,4 +1,9 @@
 ---
+import { getLangFromUrl, useTranslations } from '../utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const education = [
   {
     institution: "Escuela Arte Granada (EAG)",
@@ -18,7 +23,7 @@ const education = [
 <section id="educacion" class="section">
   <div class="container-custom">
     <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">
-      <span class="gradient-text">Formación</span> Académica
+      <span class="gradient-text">{t('education.title')}</span> {t('education.titleHighlight')}
     </h2>
     
     <div class="max-w-4xl mx-auto space-y-6">
