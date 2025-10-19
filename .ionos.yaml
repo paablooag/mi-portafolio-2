@@ -1,0 +1,12 @@
+---
+distFolder: dist
+setup:
+  - name: Setup Node
+    action: actions/setup-node@v3
+    properties:
+      node-version: v18.x
+  - name: Install dependencies
+    action: npm ci
+  - name: Build
+    action: npm run build
+
