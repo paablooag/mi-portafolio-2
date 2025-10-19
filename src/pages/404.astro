@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getLangFromUrl, useTranslations } from '../utils/i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout 
+  title={lang === 'es' ? '404 - Página no encontrada | Pablo Alcalde' : '404 - Page not found | Pablo Alcalde'}
+  description={lang === 'es' ? 'La página que buscas no existe.' : 'The page you are looking for does not exist.'}
+>
+  <Header />
+  
+  <main class="min-h-screen flex items-center justify-center pt-24 pb-12">
+    <div class="container-custom">
+      <div class="text-center max-w-2xl mx-auto">
+        <!-- Número 404 animado -->
+        <div class="mb-8 relative">
+          <h1 class="text-9xl md:text-[12rem] font-bold gradient-text opacity-20 select-none">
+            404
+          </h1>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-6xl animate-bounce">
+              🔍
+            </div>
+          </div>
+        </div>
+
+        <!-- Mensaje -->
+        <div class="card mb-8">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+            {lang === 'es' ? '¡Ups! Página no encontrada' : 'Oops! Page not found'}
+          </h2>
+          <p class="text-xl text-gray-400 mb-6">
+            {lang === 'es' 
+              ? 'La página que estás buscando no existe o ha sido movida.'
+              : 'The page you are looking for does not exist or has been moved.'
+            }
+          </p>
+          <p class="text-gray-500">
+            {lang === 'es'
+              ? 'Puede que hayas escrito mal la URL o que el enlace esté desactualizado.'
+              : 'You may have mistyped the URL or the link is outdated.'
+            }
+          </p>
+        </div>
+
+        <!-- Acciones -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={lang === 'es' ? '/' : '/en/'} class="btn-primary">
+            <svg class="w-5 h-5 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+            </svg>
+            {lang === 'es' ? 'Volver al inicio' : 'Back to home'}
+          </a>
+          <a href={lang === 'es' ? '/blog' : '/en/blog'} class="btn-outline">
+            <svg class="w-5 h-5 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+            {lang === 'es' ? 'Ver blog' : 'View blog'}
+          </a>
+          <a href={lang === 'es' ? '/#contacto' : '/en/#contacto'} class="btn-outline">
+            <svg class="w-5 h-5 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            {lang === 'es' ? 'Contacto' : 'Contact'}
+          </a>
+        </div>
+
+        <!-- Enlaces útiles -->
+        <div class="mt-12 pt-8 border-t border-gray-800">
+          <p class="text-gray-500 mb-4">
+            {lang === 'es' ? 'Enlaces útiles:' : 'Useful links:'}
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center text-sm">
+            <a href={lang === 'es' ? '/#sobre-mi' : '/en/#sobre-mi'} class="text-primary hover:text-secondary transition-colors">
+              {t('nav.about')}
+            </a>
+            <span class="text-gray-700">•</span>
+            <a href={lang === 'es' ? '/#experiencia' : '/en/#experiencia'} class="text-primary hover:text-secondary transition-colors">
+              {t('nav.experience')}
+            </a>
+            <span class="text-gray-700">•</span>
+            <a href={lang === 'es' ? '/#proyectos' : '/en/#proyectos'} class="text-primary hover:text-secondary transition-colors">
+              {t('nav.projects')}
+            </a>
+            <span class="text-gray-700">•</span>
+            <a href={lang === 'es' ? '/#habilidades' : '/en/#habilidades'} class="text-primary hover:text-secondary transition-colors">
+              {t('nav.skills')}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-bounce {
+    animation: float 3s ease-in-out infinite;
+  }
+</style>
+

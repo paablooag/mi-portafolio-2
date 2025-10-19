@@ -1,9 +1,12 @@
 ---
-import { getLangFromUrl, useTranslations } from '../utils/i18n';
+import { getLangFromUrl, useTranslations, localizeUrl } from '../utils/i18n';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const currentYear = new Date().getFullYear();
+
+// Helper para crear URLs localizadas
+const getUrl = (path: string) => localizeUrl(path, lang);
 ---
 
 <footer class="bg-dark-lighter border-t border-gray-800 py-12 px-4">
@@ -21,11 +24,11 @@ const currentYear = new Date().getFullYear();
       <div>
         <h3 class="text-lg font-semibold mb-4">{t('footer.links')}</h3>
         <ul class="space-y-2 text-gray-400">
-          <li><a href="/#inicio" class="hover:text-primary transition-colors">{t('nav.home')}</a></li>
-          <li><a href="/#sobre-mi" class="hover:text-primary transition-colors">{t('nav.about')}</a></li>
-          <li><a href="/#experiencia" class="hover:text-primary transition-colors">{t('nav.experience')}</a></li>
-          <li><a href="/blog" class="hover:text-primary transition-colors">{t('nav.blog')}</a></li>
-          <li><a href="/#contacto" class="hover:text-primary transition-colors">{t('nav.contact')}</a></li>
+          <li><a href={getUrl('/#inicio')} class="hover:text-primary transition-colors">{t('nav.home')}</a></li>
+          <li><a href={getUrl('/#sobre-mi')} class="hover:text-primary transition-colors">{t('nav.about')}</a></li>
+          <li><a href={getUrl('/#experiencia')} class="hover:text-primary transition-colors">{t('nav.experience')}</a></li>
+          <li><a href={getUrl('/blog')} class="hover:text-primary transition-colors">{t('nav.blog')}</a></li>
+          <li><a href={getUrl('/#contacto')} class="hover:text-primary transition-colors">{t('nav.contact')}</a></li>
         </ul>
       </div>
 

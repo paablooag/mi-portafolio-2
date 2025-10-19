@@ -1,9 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
-import { getLangFromUrl, useTranslations } from '../utils/i18n';
+import { getLangFromUrl, useTranslations, localizeUrl } from '../utils/i18n';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+// Helper para crear URLs localizadas
+const getUrl = (path: string) => localizeUrl(path, lang);
 
 // Obtener los posts del blog
 const allPosts = await getCollection('blog', ({ data }) => {
@@ -51,7 +54,7 @@ function formatDate(date: Date): string {
               ))}
             </div>
             <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
-              <a href={`/blog/${post.slug}`}>
+              <a href={getUrl(`/blog/${post.slug}`)}>
                 {post.data.title}
               </a>
             </h3>
@@ -68,7 +71,7 @@ function formatDate(date: Date): string {
             </div>
           </div>
           <a 
-            href={`/blog/${post.slug}`}
+            href={getUrl(`/blog/${post.slug}`)}
             class="inline-flex items-center gap-2 text-primary hover:gap-3 transition-all duration-300"
           >
             {t('blog.readMore')}
@@ -83,7 +86,7 @@ function formatDate(date: Date): string {
     <!-- CTA para ver todos los artículos -->
     {hasMorePosts && (
       <div class="text-center">
-        <a href="/blog" class="btn-outline">
+        <a href={getUrl('/blog')} class="btn-outline">
           {t('blog.viewAll')} ({sortedPosts.length})
         </a>
       </div>

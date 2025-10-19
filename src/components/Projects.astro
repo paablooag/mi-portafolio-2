@@ -1,8 +1,11 @@
 ---
-import { getLangFromUrl, useTranslations } from '../utils/i18n';
+import { getLangFromUrl, useTranslations, localizeUrl } from '../utils/i18n';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+// Helper para crear URLs localizadas
+const getUrl = (path: string) => localizeUrl(path, lang);
 
 const projects = [
   {
@@ -124,7 +127,7 @@ const projects = [
         <p class="text-gray-300 mb-6">
           {t('projects.cta.description')}
         </p>
-        <a href="/#contacto" class="btn-primary">
+        <a href={getUrl('/#contacto')} class="btn-primary">
           {t('projects.cta.button')}
         </a>
       </div>

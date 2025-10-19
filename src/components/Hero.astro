@@ -1,8 +1,11 @@
 ---
-import { getLangFromUrl, useTranslations } from '../utils/i18n';
+import { getLangFromUrl, useTranslations, localizeUrl } from '../utils/i18n';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+// Helper para crear URLs localizadas
+const getUrl = (path: string) => localizeUrl(path, lang);
 ---
 
 <section id="inicio" class="min-h-screen flex items-center justify-center section pt-32">
@@ -33,10 +36,10 @@ const t = useTranslations(lang);
       </p>
       
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-        <a href="/#contacto" class="btn-primary">
+        <a href={getUrl('/#contacto')} class="btn-primary">
           {t('hero.cta.contact')}
         </a>
-        <a href="/#experiencia" class="btn-outline">
+        <a href={getUrl('/#experiencia')} class="btn-outline">
           {t('hero.cta.experience')}
         </a>
       </div>

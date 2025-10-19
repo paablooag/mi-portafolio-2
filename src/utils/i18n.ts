@@ -57,3 +57,11 @@ export function getLocalizedPath(path: string, lang: string) {
   return `/${lang}${path}`;
 }
 
+// Helper para obtener una URL localizada basada en el idioma actual
+export function localizeUrl(url: string, currentLang: keyof typeof translations) {
+  if (currentLang === defaultLang) {
+    return url;
+  }
+  return `/${currentLang}${url}`;
+}
+

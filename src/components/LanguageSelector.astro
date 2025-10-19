@@ -2,7 +2,11 @@
 import { languages, getLangFromUrl } from '../utils/i18n';
 
 const currentLang = getLangFromUrl(Astro.url);
-const currentPath = Astro.url.pathname.replace(`/${currentLang}`, '') || '/';
+// Obtener la ruta sin el prefijo de idioma
+let currentPath = Astro.url.pathname;
+if (currentLang === 'en') {
+  currentPath = currentPath.replace(/^\/en/, '') || '/';
+}
 ---
 
 <div class="language-selector relative">
