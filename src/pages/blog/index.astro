@@ -33,7 +33,41 @@ const categoryMap: Record<string, string> = {
   'Performance': 'performance',
   'Accessibility': 'accessibility',
   'Design': 'design',
-  'Tools': 'tools'
+  'Tools': 'tools',
+  'Best Practices': 'bestpractices',
+  'Deployment': 'deployment',
+  'API': 'api',
+  'Composition API': 'composition',
+  'ES6+': 'es6+',
+  'A11Y': 'a11y',
+  'Figma': 'figma',
+  'Tailwind CSS': 'tailwind',
+  'VS Code': 'vscode',
+  'Tips': 'tips',
+  'Content Strategy': 'contentstrategy',
+  'Marketing': 'marketing',
+  'Growth': 'growth',
+  'Scrum': 'scrum',
+  'Agile': 'agile',
+  'Team': 'team',
+  'Workflow': 'workflow',
+  'Pinia': 'pinia',
+  'State Management': 'statemanagement',
+  'Web Development': 'webdevelopment',
+  'DevOps': 'devops',
+  'Production': 'production',
+  'Migración': 'migracion',
+  'Google': 'google',
+  'Architecture': 'architecture',
+  'Quality': 'quality',
+  'Components': 'components',
+  'Grid': 'grid',
+  'Layout': 'layout',
+  'Responsive Design': 'responsivedesign',
+  'Modern CSS': 'moderncss',
+  'Productivity': 'productivity',
+  'Lighthouse': 'lighthouse',
+  'Optimization': 'optimization'
 };
 
 function formatDate(date: Date): string {
@@ -66,37 +100,41 @@ function formatDate(date: Date): string {
         </div>
 
         <!-- Filtros -->
-        <div class="mb-12">
-          <h2 class="text-lg font-semibold mb-4 text-gray-300">{t('blog.filters.title')}</h2>
-          <div class="flex flex-wrap gap-3">
-            <button 
-              data-filter="all" 
-              class="filter-btn active px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-primary text-white hover:bg-secondary"
-            >
-              {t('blog.filters.all')}
-              <span class="ml-2 text-xs opacity-75">({sortedPosts.length})</span>
-            </button>
-            {allCategories.map((category: string) => {
-              const count = sortedPosts.filter(post => post.data.tags.includes(category)).length;
-              const filterKey = categoryMap[category as keyof typeof categoryMap] || category.toLowerCase();
-              return (
-                <button 
-                  data-filter={category} 
-                  class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white"
-                >
-                  {t(`blog.filters.${filterKey}`) || category}
-                  <span class="ml-2 text-xs opacity-75">({count})</span>
-                </button>
-              );
-            })}
+        <div class="mb-12 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+          <div class="w-full md:w-auto md:min-w-[300px]">
+            <label for="category-filter" class="block text-sm font-medium text-gray-300 mb-2">
+              {t('blog.filters.title')}
+            </label>
+            <div class="relative">
+              <select 
+                id="category-filter"
+                class="w-full appearance-none bg-gray-800 border border-gray-700 text-white px-4 py-3 pr-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 cursor-pointer hover:border-gray-600"
+              >
+                <option value="all">{t('blog.filters.all')} ({sortedPosts.length})</option>
+                {allCategories.map((category: string) => {
+                  const count = sortedPosts.filter(post => post.data.tags.includes(category)).length;
+                  const filterKey = categoryMap[category as keyof typeof categoryMap] || category.toLowerCase();
+                  return (
+                    <option value={category}>
+                      {t(`blog.filters.${filterKey}`) || category} ({count})
+                    </option>
+                  );
+                })}
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-400">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <!-- Contador de resultados -->
-        <div class="mb-6">
-          <p id="results-count" class="text-gray-400 text-sm">
-            {t('blog.showingResults').replace('{count}', sortedPosts.length.toString())}
-          </p>
+          
+          <!-- Contador de resultados -->
+          <div class="flex items-center gap-3">
+            <p id="results-count" class="text-gray-400 text-sm">
+              {t('blog.showingResults').replace('{count}', sortedPosts.length.toString())}
+            </p>
+          </div>
         </div>
 
         <!-- Grid de artículos -->
@@ -160,7 +198,7 @@ function formatDate(date: Date): string {
 </Layout>
 
 <script>
-  const filterButtons = document.querySelectorAll('.filter-btn');
+  const categoryFilter = document.getElementById('category-filter') as HTMLSelectElement;
   const blogPosts = document.querySelectorAll('.blog-post');
   const resultsCount = document.getElementById('results-count');
   const noResults = document.getElementById('no-results');
@@ -210,31 +248,20 @@ function formatDate(date: Date): string {
     }
   }
 
-  // Event listeners para botones de filtro
-  filterButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      // Remover clase active de todos los botones
-      filterButtons.forEach((btn) => {
-        btn.classList.remove('active', 'bg-primary', 'text-white');
-        btn.classList.add('bg-gray-800', 'text-gray-300');
-      });
-      
-      // Añadir clase active al botón clickeado
-      button.classList.add('active', 'bg-primary', 'text-white');
-      button.classList.remove('bg-gray-800', 'text-gray-300');
-      
-      // Filtrar posts
-      const category = (button as HTMLElement).dataset.filter || 'all';
+  // Event listener para el selector
+  if (categoryFilter) {
+    categoryFilter.addEventListener('change', (e) => {
+      const category = (e.target as HTMLSelectElement).value;
       filterPosts(category);
     });
-  });
+  }
 
   // Event listener para botón reset
   if (resetButton) {
     resetButton.addEventListener('click', () => {
-      const allButton = document.querySelector('[data-filter="all"]');
-      if (allButton) {
-        (allButton as HTMLElement).click();
+      if (categoryFilter) {
+        categoryFilter.value = 'all';
+        filterPosts('all');
       }
     });
   }
