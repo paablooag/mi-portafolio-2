@@ -1,0 +1,4 @@
+# Netlify redirects
+# Redirige todas las páginas no encontradas a 404.html
+/*    /404.html    404
+
