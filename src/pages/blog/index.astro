@@ -129,47 +129,75 @@ function formatDate(date: Date): string {
         </div>
 
         <!-- Filtros -->
-        <div class="mb-12 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
-          <div class="w-full md:w-auto md:min-w-[300px]">
-            <label for="category-filter" class="block text-sm font-medium text-gray-300 mb-2">
-              {t('blog.filters.title')}
+        <div class="mb-12 space-y-6">
+          <!-- Buscador -->
+          <div class="w-full">
+            <label for="search-input" class="block text-sm font-medium text-gray-300 mb-2">
+              {t('blog.filters.search')}
             </label>
             <div class="relative">
-              <select 
-                id="category-filter"
-                class="w-full appearance-none bg-gray-800 border border-gray-700 text-white px-4 py-3 pr-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 cursor-pointer hover:border-gray-600"
-              >
-                <option value="all">{t('blog.filters.all')} ({sortedPosts.length})</option>
-                {allCategories.map((category: string) => {
-                  const count = sortedPosts.filter(post => post.data.tags.includes(category)).length;
-                  const filterKey = categoryMap[category as keyof typeof categoryMap] || category.toLowerCase();
-                  return (
-                    <option value={category}>
-                      {t(`blog.filters.${filterKey}`) || category} ({count})
-                    </option>
-                  );
-                })}
-              </select>
-              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-400">
+              <input 
+                type="text"
+                id="search-input"
+                placeholder={t('blog.filters.searchPlaceholder')}
+                class="w-full bg-gray-800 border border-gray-700 text-white px-4 py-3 pl-12 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 hover:border-gray-600"
+              />
+              <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-gray-400">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                 </svg>
               </div>
             </div>
           </div>
-          
-          <!-- Contador de resultados -->
-          <div class="flex items-center gap-3">
-            <p id="results-count" class="text-gray-400 text-sm">
-              {t('blog.showingResults').replace('{count}', sortedPosts.length.toString())}
-            </p>
+
+          <!-- Filtros y contador -->
+          <div class="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
+            <div class="w-full md:w-auto md:min-w-[300px]">
+              <label for="category-filter" class="block text-sm font-medium text-gray-300 mb-2">
+                {t('blog.filters.title')}
+              </label>
+              <div class="relative">
+                <select 
+                  id="category-filter"
+                  class="w-full appearance-none bg-gray-800 border border-gray-700 text-white px-4 py-3 pr-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 cursor-pointer hover:border-gray-600"
+                >
+                  <option value="all">{t('blog.filters.all')} ({sortedPosts.length})</option>
+                  {allCategories.map((category: string) => {
+                    const count = sortedPosts.filter(post => post.data.tags.includes(category)).length;
+                    const filterKey = categoryMap[category as keyof typeof categoryMap] || category.toLowerCase();
+                    return (
+                      <option value={category}>
+                        {t(`blog.filters.${filterKey}`) || category} ({count})
+                      </option>
+                    );
+                  })}
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-400">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Contador de resultados -->
+            <div class="flex items-center gap-3">
+              <p id="results-count" class="text-gray-400 text-sm">
+                {t('blog.showingResults').replace('{count}', sortedPosts.length.toString())}
+              </p>
+            </div>
           </div>
         </div>
 
         <!-- Grid de artículos -->
         <div id="articles-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sortedPosts.map((post) => (
-            <article class="blog-post card group hover:scale-[1.02] transition-all duration-300" data-tags={post.data.tags.join(',')}>
+            <article 
+              class="blog-post card group hover:scale-[1.02] transition-all duration-300" 
+              data-tags={post.data.tags.join(',')}
+              data-title={post.data.title.toLowerCase()}
+              data-description={post.data.description.toLowerCase()}
+            >
               <div class="mb-4">
                 <div class="flex flex-wrap gap-2 mb-3">
                   {post.data.tags.map((tag) => (
@@ -228,6 +256,7 @@ function formatDate(date: Date): string {
 
 <script>
   const categoryFilter = document.getElementById('category-filter') as HTMLSelectElement;
+  const searchInput = document.getElementById('search-input') as HTMLInputElement;
   const blogPosts = document.querySelectorAll('.blog-post');
   const resultsCount = document.getElementById('results-count');
   const noResults = document.getElementById('no-results');
@@ -238,24 +267,37 @@ function formatDate(date: Date): string {
   const lang = document.documentElement.lang || 'es';
   const showingText = lang === 'es' ? 'Mostrando {count} artículos' : 'Showing {count} articles';
 
-  function filterPosts(category: string) {
+  function filterPosts() {
+    const category = categoryFilter ? categoryFilter.value : 'all';
+    const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
     let visibleCount = 0;
     
     blogPosts.forEach((post) => {
-      const tags = (post as HTMLElement).dataset.tags?.split(',') || [];
+      const element = post as HTMLElement;
+      const tags = element.dataset.tags?.split(',') || [];
+      const title = element.dataset.title || '';
+      const description = element.dataset.description || '';
       
-      if (category === 'all' || tags.includes(category)) {
-        (post as HTMLElement).style.display = 'block';
+      // Filtrar por categoría
+      const matchesCategory = category === 'all' || tags.includes(category);
+      
+      // Filtrar por búsqueda (título o descripción)
+      const matchesSearch = searchTerm === '' || 
+        title.includes(searchTerm) || 
+        description.includes(searchTerm);
+      
+      if (matchesCategory && matchesSearch) {
+        element.style.display = 'block';
         setTimeout(() => {
-          (post as HTMLElement).style.opacity = '1';
-          (post as HTMLElement).style.transform = 'scale(1)';
+          element.style.opacity = '1';
+          element.style.transform = 'scale(1)';
         }, 10);
         visibleCount++;
       } else {
-        (post as HTMLElement).style.opacity = '0';
-        (post as HTMLElement).style.transform = 'scale(0.95)';
+        element.style.opacity = '0';
+        element.style.transform = 'scale(0.95)';
         setTimeout(() => {
-          (post as HTMLElement).style.display = 'none';
+          element.style.display = 'none';
         }, 300);
       }
     });
@@ -277,11 +319,17 @@ function formatDate(date: Date): string {
     }
   }
 
-  // Event listener para el selector
+  // Event listener para el selector de categorías
   if (categoryFilter) {
-    categoryFilter.addEventListener('change', (e) => {
-      const category = (e.target as HTMLSelectElement).value;
-      filterPosts(category);
+    categoryFilter.addEventListener('change', () => {
+      filterPosts();
+    });
+  }
+
+  // Event listener para el buscador
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      filterPosts();
     });
   }
 
@@ -290,8 +338,11 @@ function formatDate(date: Date): string {
     resetButton.addEventListener('click', () => {
       if (categoryFilter) {
         categoryFilter.value = 'all';
-        filterPosts('all');
       }
+      if (searchInput) {
+        searchInput.value = '';
+      }
+      filterPosts();
     });
   }
 

@@ -85,6 +85,8 @@
       "title": "Filter by category",
       "placeholder": "Select a category...",
       "all": "All categories",
+      "search": "Search articles",
+      "searchPlaceholder": "Search by title or description...",
       "vue": "Vue.js",
       "nuxt": "Nuxt.js",
       "javascript": "JavaScript",
