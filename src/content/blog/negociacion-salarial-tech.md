@@ -2,7 +2,7 @@
 title: "Negociación Salarial en Tech: Guía Completa para Desarrolladores"
 description: "Estrategias probadas para negociar tu salario en la industria tecnológica y conseguir la compensación que mereces."
 pubDate: 2025-01-15T00:00:00.000Z
-tags: ["Salary Negotiation", "Career", "Tech Jobs", "Compensation", "Professional Development"]
+tags: ["Salary", "Career", "Tech", "Compensation", "Professional Development"]
 ---
 
 # Negociación Salarial en Tech: Guía Completa para Desarrolladores

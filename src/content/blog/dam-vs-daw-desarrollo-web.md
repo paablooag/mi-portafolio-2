@@ -2,7 +2,7 @@
 title: "DAM vs DAW: Desarrollo Multiplataforma vs Desarrollo Web"
 description: "Guía completa para entender las diferencias entre DAM (Desarrollo de Aplicaciones Multiplataforma) y DAW (Desarrollo de Aplicaciones Web) y elegir la especialización correcta."
 pubDate: 2025-01-15T00:00:00.000Z
-tags: ["Web Development", "Mobile Development", "Career", "Programming", "Multiplatform"]
+tags: ["Web Development", "Mobile", "Career", "Programming", "Multiplatform"]
 ---
 
 # DAM vs DAW: Desarrollo Multiplataforma vs Desarrollo Web
@@ -18,7 +18,7 @@ const DAM = {
   name: "Desarrollo de Aplicaciones Multiplataforma",
   definition: "Desarrollo de aplicaciones que funcionan en múltiples plataformas",
   purpose: "Crear una sola aplicación que funcione en iOS, Android y web",
-  context: "Mobile development, cross-platform, desarrollo híbrido"
+  context: "Mobile, cross-platform, desarrollo híbrido"
 }
 ```
 

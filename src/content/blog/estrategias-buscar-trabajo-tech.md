@@ -2,7 +2,7 @@
 title: "Estrategias Efectivas para Encontrar Trabajo en Tech"
 description: "Guía completa con estrategias probadas para conseguir trabajo como desarrollador, desde la preparación hasta la negociación salarial."
 pubDate: 2025-01-15T00:00:00.000Z
-tags: ["Job Search", "Career", "Tech Jobs", "Interview", "Networking"]
+tags: ["Job Search", "Career", "Tech", "Interview", "Networking"]
 ---
 
 # Estrategias Efectivas para Encontrar Trabajo en Tech

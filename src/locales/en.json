@@ -156,7 +156,22 @@
       "productivity": "Productivity",
       "leadership": "Leadership",
       "professional": "Professional Development",
-      "development": "Professional Development"
+      "development": "Professional Development",
+      "programming": "Programming",
+      "roadmap": "Roadmap",
+      "multiplatform": "Multiplatform",
+      "mobile": "Mobile Development",
+      "industry": "Industry",
+      "sports": "Sports",
+      "tech": "Technology",
+      "sportstech": "Sports Tech",
+      "web": "Web Development",
+      "skills": "Skills",
+      "interview": "Interview",
+      "linkedin": "LinkedIn",
+      "salary": "Salary",
+      "jest": "Jest",
+      "work-life": "Work life balance"
     },
     "noResults": "No articles found for this category.",
     "showingResults": "Showing {count} articles"

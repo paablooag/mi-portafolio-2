@@ -2,7 +2,7 @@
 title: "Crecimiento Profesional en Desarrollo: Guía Estratégica"
 description: "Estrategias comprobadas para acelerar tu crecimiento profesional como desarrollador, desde junior hasta senior y más allá."
 pubDate: 2025-01-15T00:00:00.000Z
-tags: ["Career", "Professional Development", "Tech Career", "Leadership", "Skills"]
+tags: ["Career", "Professional Development", "Tech", "Leadership", "Skills"]
 ---
 
 # Crecimiento Profesional en Desarrollo: Guía Estratégica

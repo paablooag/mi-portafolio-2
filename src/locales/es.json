@@ -155,7 +155,22 @@
       "productivity": "Productividad",
       "leadership": "Liderazgo",
       "professional": "Desarrollo Profesional",
-      "development": "Desarrollo Profesional"
+      "development": "Desarrollo Profesional",
+      "programming": "Programación",
+      "roadmap": "Roadmap",
+      "multiplatform": "Multiplataforma",
+      "mobile": "Desarrollo Móvil",
+      "industry": "Industria",
+      "sports": "Deportes",
+      "tech": "Tecnología",
+      "sportstech": "Tecnología Deportiva",
+      "web": "Desarrollo Web",
+      "skills": "Habilidades",
+      "interview": "Entrevistas",
+      "linkedin": "LinkedIn",
+      "salary": "Salario",
+      "jest": "Jest",
+      "work-life": "Equilibrio Laboral"
     },
     "noResults": "No se encontraron artículos para esta categoría.",
     "showingResults": "Mostrando {count} artículos"

@@ -323,6 +323,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
+"roadmap-desarrollador-sector-deportivo.md": {
+	id: "roadmap-desarrollador-sector-deportivo.md";
+  slug: "roadmap-desarrollador-sector-deportivo";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
 "scrum-desarrollo-web.md": {
 	id: "scrum-desarrollo-web.md";
   slug: "scrum-desarrollo-web";

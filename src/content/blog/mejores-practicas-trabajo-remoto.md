@@ -2,7 +2,7 @@
 title: "Mejores Prácticas para Trabajo Remoto en Tech"
 description: "Guía completa para ser productivo, mantener el equilibrio y crecer profesionalmente trabajando desde casa en la industria tecnológica."
 pubDate: 2025-01-15T00:00:00.000Z
-tags: ["Remote Work", "Productivity", "Work-Life Balance", "Tech Career", "Best Practices"]
+tags: ["Remote Work", "Productivity", "Work-Life", "Tech", "Best Practices"]
 ---
 
 # Mejores Prácticas para Trabajo Remoto en Tech

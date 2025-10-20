@@ -2,7 +2,7 @@
 title: "Networking en la Industria Tech: Guía Completa para Desarrolladores"
 description: "Estrategias efectivas para construir una red profesional sólida en la industria tecnológica y acelerar tu carrera."
 pubDate: 2025-01-15T00:00:00.000Z
-tags: ["Networking", "Career", "Tech Industry", "Professional Development", "Community"]
+tags: ["Networking", "Career", "Tech", "Professional Development", "Community"]
 ---
 
 # Networking en la Industria Tech: Guía Completa para Desarrolladores
