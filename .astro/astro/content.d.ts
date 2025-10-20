@@ -146,161 +146,231 @@ declare module 'astro:content' {
   slug: "api-composition-patterns";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
+} & { render(): Render[".md"] };
+"barney-paginas-web-vida-real.md": {
+	id: "barney-paginas-web-vida-real.md";
+  slug: "barney-paginas-web-vida-real";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
+"como-empezar-freelance-developer.md": {
+	id: "como-empezar-freelance-developer.md";
+  slug: "como-empezar-freelance-developer";
+  body: string;
+  collection: "blog";
+  data: any
 } & { render(): Render[".md"] };
 "componentes-reutilizables-vue.md": {
 	id: "componentes-reutilizables-vue.md";
   slug: "componentes-reutilizables-vue";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "composables-vue3.md": {
 	id: "composables-vue3.md";
   slug: "composables-vue3";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "core-web-vitals-guia.md": {
 	id: "core-web-vitals-guia.md";
   slug: "core-web-vitals-guia";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
+} & { render(): Render[".md"] };
+"crecimiento-profesional-desarrollo.md": {
+	id: "crecimiento-profesional-desarrollo.md";
+  slug: "crecimiento-profesional-desarrollo";
+  body: string;
+  collection: "blog";
+  data: any
 } & { render(): Render[".md"] };
 "css-grid-layout.md": {
 	id: "css-grid-layout.md";
   slug: "css-grid-layout";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
+} & { render(): Render[".md"] };
+"dam-vs-daw-desarrollo-web.md": {
+	id: "dam-vs-daw-desarrollo-web.md";
+  slug: "dam-vs-daw-desarrollo-web";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
+"estrategias-buscar-trabajo-tech.md": {
+	id: "estrategias-buscar-trabajo-tech.md";
+  slug: "estrategias-buscar-trabajo-tech";
+  body: string;
+  collection: "blog";
+  data: any
 } & { render(): Render[".md"] };
 "figma-para-desarrolladores.md": {
 	id: "figma-para-desarrolladores.md";
   slug: "figma-para-desarrolladores";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "git-workflow-eficiente.md": {
 	id: "git-workflow-eficiente.md";
   slug: "git-workflow-eficiente";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "javascript-moderno-2024.md": {
 	id: "javascript-moderno-2024.md";
   slug: "javascript-moderno-2024";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "lighthouse-optimizacion.md": {
 	id: "lighthouse-optimizacion.md";
   slug: "lighthouse-optimizacion";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
+} & { render(): Render[".md"] };
+"linkedin-desarrolladores-guia.md": {
+	id: "linkedin-desarrolladores-guia.md";
+  slug: "linkedin-desarrolladores-guia";
+  body: string;
+  collection: "blog";
+  data: any
 } & { render(): Render[".md"] };
 "mejores-practicas-frontend.md": {
 	id: "mejores-practicas-frontend.md";
   slug: "mejores-practicas-frontend";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
+} & { render(): Render[".md"] };
+"mejores-practicas-trabajo-remoto.md": {
+	id: "mejores-practicas-trabajo-remoto.md";
+  slug: "mejores-practicas-trabajo-remoto";
+  body: string;
+  collection: "blog";
+  data: any
 } & { render(): Render[".md"] };
 "migracion-vue-a-nuxt.md": {
 	id: "migracion-vue-a-nuxt.md";
   slug: "migracion-vue-a-nuxt";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
+} & { render(): Render[".md"] };
+"negociacion-salarial-tech.md": {
+	id: "negociacion-salarial-tech.md";
+  slug: "negociacion-salarial-tech";
+  body: string;
+  collection: "blog";
+  data: any
+} & { render(): Render[".md"] };
+"networking-industria-tech.md": {
+	id: "networking-industria-tech.md";
+  slug: "networking-industria-tech";
+  body: string;
+  collection: "blog";
+  data: any
 } & { render(): Render[".md"] };
 "nuxt-deployment-guia.md": {
 	id: "nuxt-deployment-guia.md";
   slug: "nuxt-deployment-guia";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "nuxt-modules-esenciales.md": {
 	id: "nuxt-modules-esenciales.md";
   slug: "nuxt-modules-esenciales";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "optimizacion-seo-nuxt.md": {
 	id: "optimizacion-seo-nuxt.md";
   slug: "optimizacion-seo-nuxt";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "pinia-vs-vuex.md": {
 	id: "pinia-vs-vuex.md";
   slug: "pinia-vs-vuex";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
+} & { render(): Render[".md"] };
+"portafolio-desarrollador-efectivo.md": {
+	id: "portafolio-desarrollador-efectivo.md";
+  slug: "portafolio-desarrollador-efectivo";
+  body: string;
+  collection: "blog";
+  data: any
 } & { render(): Render[".md"] };
 "responsive-design-2024.md": {
 	id: "responsive-design-2024.md";
   slug: "responsive-design-2024";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "scrum-desarrollo-web.md": {
 	id: "scrum-desarrollo-web.md";
   slug: "scrum-desarrollo-web";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "seo-contenido-estrategia.md": {
 	id: "seo-contenido-estrategia.md";
   slug: "seo-contenido-estrategia";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "seo-tecnico-checklist.md": {
 	id: "seo-tecnico-checklist.md";
   slug: "seo-tecnico-checklist";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "tailwind-tips-avanzados.md": {
 	id: "tailwind-tips-avanzados.md";
   slug: "tailwind-tips-avanzados";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "vscode-setup-2024.md": {
 	id: "vscode-setup-2024.md";
   slug: "vscode-setup-2024";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "vue-testing-jest.md": {
 	id: "vue-testing-jest.md";
   slug: "vue-testing-jest";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 "web-accessibility-a11y.md": {
 	id: "web-accessibility-a11y.md";
   slug: "web-accessibility-a11y";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 };
 
@@ -317,5 +387,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("./../../src/content/config.js");
+	export type ContentConfig = never;
 }
