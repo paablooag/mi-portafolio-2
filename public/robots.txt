@@ -16,6 +16,8 @@ Allow: /sitemap*.xml
 Crawl-delay: 1
 
 # Sitemaps
+Sitemap: https://pabloalcalde.dev/sitemap.xml
+Sitemap: https://pabloalcalde.dev/blog-sitemap.xml
+Sitemap: https://pabloalcalde.dev/projects-sitemap.xml
 Sitemap: https://pabloalcalde.dev/sitemap-index.xml
-Sitemap: https://pabloalcalde.dev/sitemap-0.xml
 
