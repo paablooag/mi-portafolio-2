@@ -67,9 +67,9 @@ const imageURL = new URL(image, Astro.site);
     
     <!-- Language -->
     <meta name="language" content={lang === 'es' ? 'Spanish' : 'English'} />
-    <link rel="alternate" hreflang="es" href="https://pabloalcalde.dev/" />
-    <link rel="alternate" hreflang="en" href="https://pabloalcalde.dev/en/" />
-    <link rel="alternate" hreflang="x-default" href="https://pabloalcalde.dev/" />
+    <link rel="alternate" hreflang="es" href={`https://pabloalcalde.dev${Astro.url.pathname.replace('/en', '')}`} />
+    <link rel="alternate" hreflang="en" href={`https://pabloalcalde.dev/en${Astro.url.pathname.replace('/en', '')}`} />
+    <link rel="alternate" hreflang="x-default" href={`https://pabloalcalde.dev${Astro.url.pathname.replace('/en', '')}`} />
     <meta name="geo.region" content="ES-AN" />
     <meta name="geo.placename" content="Granada" />
     <meta name="geo.position" content="37.1773;-3.5986" />

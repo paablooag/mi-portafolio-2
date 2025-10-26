@@ -1,0 +1,37 @@
+{
+  "site": {
+    "name": "Pablo Alcalde - Front-end Developer",
+    "url": "https://pabloalcalde.dev",
+    "defaultLanguage": "es",
+    "languages": ["es", "en"],
+    "description": {
+      "es": "Desarrollador front-end especializado en Vue.js, Nuxt.js y optimización SEO. Trabajando en Wegow con experiencia en migración de aplicaciones y mejora del rendimiento web.",
+      "en": "Front-end Developer specialized in Vue.js, Nuxt.js and SEO optimization. Working at Wegow with experience in application migration and web performance improvement."
+    }
+  },
+  "seo": {
+    "defaultLanguage": "es",
+    "canonicalBase": "https://pabloalcalde.dev",
+    "hreflang": {
+      "es": "https://pabloalcalde.dev",
+      "en": "https://pabloalcalde.dev/en",
+      "x-default": "https://pabloalcalde.dev"
+    },
+    "sitemaps": [
+      "https://pabloalcalde.dev/sitemap.xml",
+      "https://pabloalcalde.dev/blog-sitemap.xml",
+      "https://pabloalcalde.dev/projects-sitemap.xml",
+      "https://pabloalcalde.dev/sitemap-index.xml"
+    ],
+    "robots": "https://pabloalcalde.dev/robots.txt"
+  },
+  "social": {
+    "twitter": "@pabloalcalde",
+    "linkedin": "https://www.linkedin.com/in/pabloalcaldegarcia",
+    "github": "https://github.com/paablooag"
+  },
+  "analytics": {
+    "googleAnalytics": "G-XXXXXXXXXX",
+    "googleSearchConsole": "https://pabloalcalde.dev"
+  }
+}
