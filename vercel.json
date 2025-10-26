@@ -1,0 +1,43 @@
+{
+  "rewrites": [
+    {
+      "source": "/blog/componentes-reutilizabasdnles-vue",
+      "destination": "/blog/componentes-reutilizables-vue"
+    },
+    {
+      "source": "/blog/componentes-reutilizabasdnles-vue/(.*)",
+      "destination": "/blog/componentes-reutilizables-vue/$1"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/blog/componentes-reutilizabasdnles-vue",
+      "destination": "/blog/componentes-reutilizables-vue",
+      "permanent": true
+    }
+  ],
+  "functions": {
+    "src/pages/404.astro": {
+      "maxDuration": 10
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ]
+}

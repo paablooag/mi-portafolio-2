@@ -6,6 +6,24 @@ import { getLangFromUrl, useTranslations } from '../utils/i18n';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+// Obtener la URL que causó el error
+const requestedUrl = Astro.url.pathname;
+const isBlogUrl = requestedUrl.includes('/blog/');
+const isEnUrl = requestedUrl.startsWith('/en/');
+
+// Sugerir URLs similares para blogs
+let suggestedUrls: string[] = [];
+if (isBlogUrl) {
+  // Si es una URL de blog mal escrita, sugerir algunos blogs populares
+  suggestedUrls = [
+    '/blog/javascript-moderno-2024',
+    '/blog/vue-testing-jest',
+    '/blog/nuxt-modules-esenciales',
+    '/blog/tailwind-tips-avanzados',
+    '/blog/core-web-vitals-guia'
+  ];
+}
 ---
 
 <Layout 
@@ -40,12 +58,39 @@ const t = useTranslations(lang);
               : 'The page you are looking for does not exist or has been moved.'
             }
           </p>
-          <p class="text-gray-500">
+          <p class="text-gray-500 mb-4">
             {lang === 'es'
               ? 'Puede que hayas escrito mal la URL o que el enlace esté desactualizado.'
               : 'You may have mistyped the URL or the link is outdated.'
             }
           </p>
+          
+          <!-- Mostrar URL solicitada -->
+          <div class="bg-gray-800 rounded-lg p-4 mb-4">
+            <p class="text-sm text-gray-400 mb-2">
+              {lang === 'es' ? 'URL solicitada:' : 'Requested URL:'}
+            </p>
+            <code class="text-primary break-all">{requestedUrl}</code>
+          </div>
+
+          <!-- Sugerencias específicas para blogs -->
+          {isBlogUrl && suggestedUrls.length > 0 && (
+            <div class="bg-blue-900/20 border border-blue-500/30 rounded-lg p-4">
+              <h3 class="text-lg font-semibold text-blue-300 mb-3">
+                {lang === 'es' ? '¿Buscabas algún artículo del blog?' : 'Looking for a blog article?'}
+              </h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {suggestedUrls.map((url) => (
+                  <a 
+                    href={isEnUrl ? `/en${url}` : url}
+                    class="text-blue-300 hover:text-blue-200 transition-colors text-sm block p-2 bg-blue-900/30 rounded hover:bg-blue-900/50"
+                  >
+                    {url.replace('/blog/', '').replace(/-/g, ' ')}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         <!-- Acciones -->

@@ -1,0 +1,14 @@
+# Netlify redirects file
+# Handle 404 and 500 errors
+/*    /404.html   404
+
+# Handle common blog URL mistakes
+/blog/componentes-reutilizabasdnles-vue/*    /blog/componentes-reutilizables-vue/    301
+/blog/componentes-reutilizables-vue/*       /blog/componentes-reutilizables-vue/    301
+
+# Handle trailing slashes for blog posts
+/blog/*    /blog/:splat/    301
+
+# Force HTTPS
+http://pabloalcalde.dev/*    https://pabloalcalde.dev/:splat    301!
+https://www.pabloalcalde.dev/*    https://pabloalcalde.dev/:splat    301!

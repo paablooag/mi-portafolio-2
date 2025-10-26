@@ -70,3 +70,26 @@ RewriteRule ^(.*)$ /$1 [L]
     AddType image/svg+xml .svg
     AddType image/webp .webp
 </IfModule>
+
+# Manejo de errores personalizado
+ErrorDocument 404 /404.html
+ErrorDocument 500 /404.html
+ErrorDocument 403 /404.html
+
+# Redirecciones para URLs comunes mal escritas
+RewriteRule ^blog/componentes-reutilizabasdnles-vue/?$ /blog/componentes-reutilizables-vue/ [R=301,L]
+RewriteRule ^blog/componentes-reutilizables-vue/?$ /blog/componentes-reutilizables-vue/ [R=301,L]
+
+# Manejo de URLs de blog mal formateadas
+RewriteCond %{REQUEST_URI} ^/blog/[^/]+/?$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/([^/]+)/?$ /404.html [L]
+
+# Headers de seguridad adicionales
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
