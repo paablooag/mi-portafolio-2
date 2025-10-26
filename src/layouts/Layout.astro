@@ -1,5 +1,6 @@
 ---
 import { getLangFromUrl } from '../utils/i18n';
+import '../styles/global.css';
 
 interface Props {
   title: string;
@@ -118,8 +119,6 @@ const imageURL = new URL(image, Astro.site);
     <link rel="dns-prefetch" href="//formspree.io" />
     <link rel="dns-prefetch" href="//wa.me" />
     
-    <!-- Estilos globales -->
-    <link rel="stylesheet" href="/src/styles/global.css" />
     
     <!-- Structured Data -->
     <script type="application/ld+json">
