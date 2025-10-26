@@ -96,7 +96,66 @@ const categoryMap: Record<string, string> = {
   'Sports': 'sports',
   'Technology': 'tech',
   'Sports Tech': 'sportstech',
-  'Web Development': 'web'
+  'Web Development': 'web',
+  // Nuevos tags agregados
+  'Angular': 'angular',
+  'React': 'react',
+  'TypeScript': 'typescript',
+  'Docker': 'docker',
+  'GraphQL': 'graphql',
+  'REST API': 'rest',
+  'WebAssembly': 'webassembly',
+  'PWA': 'pwa',
+  'Serverless': 'serverless',
+  'JAMstack': 'jamstack',
+  'Cypress': 'cypress',
+  'Core Web Vitals': 'corewebvitals',
+  'Microservicios': 'microservicios',
+  'Monolito': 'monolito',
+  'Backend': 'backend',
+  'Escalabilidad': 'escalabilidad',
+  'Contratación': 'contratacion',
+  'Desarrollo': 'desarrollo',
+  'Empresa': 'empresa',
+  'ROI': 'roi',
+  'Optimización': 'optimizacion',
+  'Progressive Web Apps': 'progressivewebapps',
+  'Service Workers': 'serviceworkers',
+  'Offline': 'offline',
+  'Mobile': 'mobile',
+  'CV': 'cv',
+  'ATS': 'ats',
+  'Trabajo': 'trabajo',
+  'Carrera': 'carrera',
+  'Recursos Humanos': 'recursoshumanos',
+  'Independiente': 'independiente',
+  'Negocio': 'negocio',
+  'Inteligencia Artificial': 'inteligenciaartificial',
+  'IA': 'ia',
+  'Machine Learning': 'machinelearning',
+  'Clientes': 'clients',
+  'Cómo Conseguir': 'como-conseguir',
+  'Cómo Ser': 'como-ser',
+  'Cómo Encontrar': 'como-encontrar',
+  'Salarios': 'salarios',
+  'Frontend vs Backend': 'frontend-backend',
+  'Por Qué Estudiarlo': 'por-que-estudiarlo',
+  'React vs Vue': 'react-vs-vue',
+  'Vue vs Angular': 'vue-vs-angular',
+  'Comparación': 'comparacion',
+  'Para Principiantes': 'para-principiantes',
+  'Desarrolladores': 'desarrolladores',
+  'Influencers': 'influencers',
+  'Mejores': 'mejores',
+  '2024': '2024',
+  'Por Qué Contratar': 'por-que-contratar',
+  'Desarrollador': 'desarrollador',
+  'Medios': 'medios',
+  'Guía Completa': 'guia-completa',
+  'Docker para Desarrolladores': 'docker-desarrolladores',
+  'WebAssembly Frontend': 'webassembly-frontend',
+  'Testing Frontend': 'testing-frontend',
+  'Performance Web': 'performance-web'
 };
 
 function formatDate(date: Date): string {
@@ -255,100 +314,103 @@ function formatDate(date: Date): string {
 </Layout>
 
 <script>
-  const categoryFilter = document.getElementById('category-filter') as HTMLSelectElement;
-  const searchInput = document.getElementById('search-input') as HTMLInputElement;
-  const blogPosts = document.querySelectorAll('.blog-post');
-  const resultsCount = document.getElementById('results-count');
-  const noResults = document.getElementById('no-results');
-  const articlesGrid = document.getElementById('articles-grid');
-  const resetButton = document.getElementById('reset-filters');
-  
-  // Textos de traducción (inyectados desde el servidor)
-  const lang = document.documentElement.lang || 'es';
-  const showingText = lang === 'es' ? 'Mostrando {count} artículos' : 'Showing {count} articles';
-
-  function filterPosts() {
-    const category = categoryFilter ? categoryFilter.value : 'all';
-    const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
-    let visibleCount = 0;
+  // Esperar a que el DOM esté completamente cargado
+  document.addEventListener('DOMContentLoaded', function() {
+    const categoryFilter = document.getElementById('category-filter') as HTMLSelectElement;
+    const searchInput = document.getElementById('search-input') as HTMLInputElement;
+    const blogPosts = document.querySelectorAll('.blog-post');
+    const resultsCount = document.getElementById('results-count');
+    const noResults = document.getElementById('no-results');
+    const articlesGrid = document.getElementById('articles-grid');
+    const resetButton = document.getElementById('reset-filters');
     
-    blogPosts.forEach((post) => {
-      const element = post as HTMLElement;
-      const tags = element.dataset.tags?.split(',') || [];
-      const title = element.dataset.title || '';
-      const description = element.dataset.description || '';
+    // Textos de traducción (inyectados desde el servidor)
+    const lang = document.documentElement.lang || 'es';
+    const showingText = lang === 'es' ? 'Mostrando {count} artículos' : 'Showing {count} articles';
+
+    function filterPosts() {
+      const category = categoryFilter ? categoryFilter.value : 'all';
+      const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
+      let visibleCount = 0;
       
-      // Filtrar por categoría
-      const matchesCategory = category === 'all' || tags.includes(category);
-      
-      // Filtrar por búsqueda (título o descripción)
-      const matchesSearch = searchTerm === '' || 
-        title.includes(searchTerm) || 
-        description.includes(searchTerm);
-      
-      if (matchesCategory && matchesSearch) {
-        element.style.display = 'block';
-        setTimeout(() => {
+      blogPosts.forEach((post) => {
+        const element = post as HTMLElement;
+        const tags = element.dataset.tags?.split(',') || [];
+        const title = element.dataset.title || '';
+        const description = element.dataset.description || '';
+        
+        // Filtrar por categoría
+        const matchesCategory = category === 'all' || tags.includes(category);
+        
+        // Filtrar por búsqueda (título o descripción)
+        const matchesSearch = searchTerm === '' || 
+          title.includes(searchTerm) || 
+          description.includes(searchTerm);
+        
+        if (matchesCategory && matchesSearch) {
+          element.style.display = 'block';
           element.style.opacity = '1';
           element.style.transform = 'scale(1)';
-        }, 10);
-        visibleCount++;
-      } else {
-        element.style.opacity = '0';
-        element.style.transform = 'scale(0.95)';
-        setTimeout(() => {
-          element.style.display = 'none';
-        }, 300);
+          visibleCount++;
+        } else {
+          element.style.opacity = '0';
+          element.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            element.style.display = 'none';
+          }, 300);
+        }
+      });
+      
+      // Actualizar contador
+      if (resultsCount) {
+        resultsCount.textContent = showingText.replace('{count}', visibleCount.toString());
       }
-    });
-    
-    // Actualizar contador
-    if (resultsCount) {
-      resultsCount.textContent = showingText.replace('{count}', visibleCount.toString());
+      
+      // Mostrar/ocultar mensaje de sin resultados
+      if (noResults && articlesGrid) {
+        if (visibleCount === 0) {
+          articlesGrid.style.display = 'none';
+          noResults.classList.remove('hidden');
+        } else {
+          articlesGrid.style.display = 'grid';
+          noResults.classList.add('hidden');
+        }
+      }
     }
-    
-    // Mostrar/ocultar mensaje de sin resultados
-    if (noResults && articlesGrid) {
-      if (visibleCount === 0) {
-        articlesGrid.style.display = 'none';
-        noResults.classList.remove('hidden');
-      } else {
-        articlesGrid.style.display = 'grid';
-        noResults.classList.add('hidden');
-      }
+
+    // Event listener para el selector de categorías
+    if (categoryFilter) {
+      categoryFilter.addEventListener('change', filterPosts);
     }
-  }
 
-  // Event listener para el selector de categorías
-  if (categoryFilter) {
-    categoryFilter.addEventListener('change', () => {
-      filterPosts();
+    // Event listener para el buscador
+    if (searchInput) {
+      searchInput.addEventListener('input', filterPosts);
+    }
+
+    // Event listener para botón reset
+    if (resetButton) {
+      resetButton.addEventListener('click', () => {
+        if (categoryFilter) {
+          categoryFilter.value = 'all';
+        }
+        if (searchInput) {
+          searchInput.value = '';
+        }
+        filterPosts();
+      });
+    }
+
+    // Estilos para transiciones suaves
+    blogPosts.forEach((post) => {
+      const element = post as HTMLElement;
+      element.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+      element.style.opacity = '1';
+      element.style.transform = 'scale(1)';
     });
-  }
 
-  // Event listener para el buscador
-  if (searchInput) {
-    searchInput.addEventListener('input', () => {
-      filterPosts();
-    });
-  }
-
-  // Event listener para botón reset
-  if (resetButton) {
-    resetButton.addEventListener('click', () => {
-      if (categoryFilter) {
-        categoryFilter.value = 'all';
-      }
-      if (searchInput) {
-        searchInput.value = '';
-      }
-      filterPosts();
-    });
-  }
-
-  // Estilos para transiciones suaves
-  blogPosts.forEach((post) => {
-    (post as HTMLElement).style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    // Inicializar el filtrado
+    filterPosts();
   });
 </script>
 
