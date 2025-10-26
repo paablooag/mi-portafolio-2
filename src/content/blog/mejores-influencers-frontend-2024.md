@@ -1,13 +1,13 @@
 ---
-title: "Los mejores influencers de frontend 2024: A quién seguir para estar actualizado"
-description: "Lista completa de los mejores influencers, desarrolladores y expertos de frontend que debes seguir en 2024 para mantenerte actualizado con las últimas tendencias."
+title: "Los mejores influencers de frontend 2025: A quién seguir para estar actualizado"
+description: "Lista completa de los mejores influencers, desarrolladores y expertos de frontend que debes seguir en 2025 para mantenerte actualizado con las últimas tendencias."
 pubDate: 2025-01-15T00:00:00.000Z
 tags: ["Frontend", "Influencers", "Desarrollo", "Tendencias", "Comunidad"]
 ---
 
-# Los mejores influencers de frontend 2024: A quién seguir para estar actualizado
+# Los mejores influencers de frontend 2025: A quién seguir para estar actualizado
 
-La comunidad frontend está llena de talentos increíbles que comparten conocimiento valioso. Te presento los influencers más influyentes del 2024 que debes seguir.
+La comunidad frontend está llena de talentos increíbles que comparten conocimiento valioso. Te presento los influencers más influyentes del 2025 que debes seguir.
 
 ## Top 10 influencers globales
 
@@ -269,7 +269,7 @@ GESTIÓN DE CONTENIDO:
 
 ## Eventos y conferencias importantes
 
-### Conferencias virtuales 2024
+### Conferencias virtuales 2025
 
 ```markdown
 REACT ECOSYSTEM:

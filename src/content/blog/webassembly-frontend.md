@@ -568,7 +568,7 @@ SEGURIDAD:
 ### 1. Evolución de WebAssembly
 
 ```markdown
-2024-2025:
+2025-2025:
 - WASI (WebAssembly System Interface)
 - Threading support
 - SIMD instructions

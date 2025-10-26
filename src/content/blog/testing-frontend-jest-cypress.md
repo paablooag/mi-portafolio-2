@@ -132,8 +132,8 @@ import { formatDate, validateEmail, debounce } from './utils';
 describe('Utils', () => {
   describe('formatDate', () => {
     it('should format date correctly', () => {
-      const date = new Date('2024-01-15');
-      expect(formatDate(date)).toBe('15/01/2024');
+      const date = new Date('2025-01-15');
+      expect(formatDate(date)).toBe('15/01/2025');
     });
 
     it('should handle invalid date', () => {

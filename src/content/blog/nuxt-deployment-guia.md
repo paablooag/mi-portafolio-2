@@ -168,7 +168,7 @@ export default defineEventHandler(async (event) => {
 ```toml
 # wrangler.toml
 name = "mi-app-nuxt"
-compatibility_date = "2024-01-01"
+compatibility_date = "2025-01-01"
 
 [build]
 command = "npm run build"

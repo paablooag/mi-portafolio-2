@@ -549,7 +549,7 @@ PRÁCTICOS:
 ### Tecnologías emergentes
 
 ```markdown
-2024-2025:
+2025-2025:
 - Large Language Models (LLMs)
 - Multimodal AI
 - Edge AI

@@ -1,13 +1,13 @@
 ---
-title: "React vs Vue vs Angular 2024: Comparación completa de frameworks frontend"
-description: "Análisis detallado de React, Vue y Angular en 2024: rendimiento, ecosistema, curva de aprendizaje, casos de uso y cuál elegir para tu proyecto."
+title: "React vs Vue vs Angular 2025: Comparación completa de frameworks frontend"
+description: "Análisis detallado de React, Vue y Angular en 2025: rendimiento, ecosistema, curva de aprendizaje, casos de uso y cuál elegir para tu proyecto."
 pubDate: 2025-01-15T00:00:00.000Z
 tags: ["React", "Vue", "Angular", "Frontend", "Frameworks", "Comparación"]
 ---
 
-# React vs Vue vs Angular 2024: Comparación completa de frameworks frontend
+# React vs Vue vs Angular 2025: Comparación completa de frameworks frontend
 
-La elección del framework frontend correcto puede definir el éxito de tu proyecto. Te presento un análisis completo de los tres frameworks más populares en 2024.
+La elección del framework frontend correcto puede definir el éxito de tu proyecto. Te presento un análisis completo de los tres frameworks más populares en 2025.
 
 ## Resumen ejecutivo
 
@@ -415,7 +415,7 @@ ANGULAR:
 
 ## Tendencias y futuro
 
-### Evolución 2024-2025
+### Evolución 2025-2025
 
 ```markdown
 REACT:

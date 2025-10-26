@@ -1,11 +1,11 @@
 ---
-title: "SEO Técnico: Checklist completa 2024"
+title: "SEO Técnico: Checklist completa 2025"
 description: "Checklist definitiva de SEO técnico que uso para auditar y optimizar sitios web antes de lanzarlos a producción."
 pubDate: 2025-10-20T00:00:00.000Z
 tags: ["SEO", "Web Development", "Performance", "Best Practices"]
 ---
 
-# SEO Técnico: Checklist completa 2024
+# SEO Técnico: Checklist completa 2025
 
 Esta es la checklist que uso en cada proyecto antes de lanzar a producción.
 

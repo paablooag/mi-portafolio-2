@@ -278,7 +278,7 @@ HERRAMIENTAS DE DESARROLLO:
 ### Tecnologías emergentes
 
 ```markdown
-TENDENCIAS 2024:
+TENDENCIAS 2025:
 - WebAssembly
 - Progressive Web Apps
 - Micro-frontends

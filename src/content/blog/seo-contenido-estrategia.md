@@ -1,11 +1,11 @@
 ---
-title: "Estrategia de contenido SEO que funciona en 2024"
+title: "Estrategia de contenido SEO que funciona en 2025"
 description: "Cómo planificar y ejecutar una estrategia de contenido SEO efectiva para aumentar tráfico orgánico."
 pubDate: 2025-10-18T00:00:00.000Z
 tags: ["SEO", "Content Strategy", "Marketing", "Growth"]
 ---
 
-# Estrategia de contenido SEO que funciona en 2024
+# Estrategia de contenido SEO que funciona en 2025
 
 Así es como aumentamos el tráfico orgánico en un 60% en [Wegow](https://wegow.com).
 
@@ -53,7 +53,7 @@ Cuatro tipos principales:
 
 ### Commercial
 *Usuario investiga antes de comprar*
-- "mejor framework javascript 2024"
+- "mejor framework javascript 2025"
 - "vue vs react comparación"
 - Formato: Comparativas, reviews, listas
 
@@ -114,7 +114,7 @@ Cuatro tipos principales:
 <title>Blog Post</title>
 
 <!-- ✅ Bueno -->
-<title>Optimización SEO en Nuxt.js: Guía Completa 2024</title>
+<title>Optimización SEO en Nuxt.js: Guía Completa 2025</title>
 ```
 
 **Fórmula**: `Keyword Principal | Benefit | Brand`
@@ -301,7 +301,7 @@ Monitorear:
 
 ```markdown
 <!-- Añadir al principio -->
-**Actualizado:** Diciembre 2024
+**Actualizado:** Diciembre 2025
 
 ## Últimas actualizaciones
 - ✅ Nuevas features de Nuxt 4

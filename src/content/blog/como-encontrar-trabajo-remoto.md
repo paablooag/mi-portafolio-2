@@ -546,7 +546,7 @@ BENEFICIOS PREMIUM:
 ### 1. Evolución del trabajo remoto
 
 ```markdown
-2024-2025:
+2025-2025:
 - Híbrido como estándar
 - Herramientas mejoradas
 - Realidad virtual

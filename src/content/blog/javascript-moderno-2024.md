@@ -1,11 +1,11 @@
 ---
-title: "JavaScript moderno: Features que uso en 2024"
+title: "JavaScript moderno: Features que uso en 2025"
 description: "Las características de JavaScript moderno (ES6+) que uso diariamente y que todo desarrollador debería dominar."
 pubDate: 2025-10-19T00:00:00.000Z
 tags: ["JavaScript", "ES6+", "Frontend", "Best Practices"]
 ---
 
-# JavaScript moderno: Features que uso en 2024
+# JavaScript moderno: Features que uso en 2025
 
 Estas son las características de JavaScript que uso todos los días.
 

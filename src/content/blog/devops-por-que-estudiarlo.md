@@ -1,6 +1,6 @@
 ---
 title: "DevOps y por qué estudiarlo: Guía completa para desarrolladores"
-description: "Todo sobre DevOps: qué es, por qué es importante, herramientas esenciales, salarios, y cómo empezar tu carrera en DevOps en 2024."
+description: "Todo sobre DevOps: qué es, por qué es importante, herramientas esenciales, salarios, y cómo empezar tu carrera en DevOps en 2025."
 pubDate: 2025-01-15T00:00:00.000Z
 tags: ["DevOps", "Desarrollo", "Infraestructura", "Carrera", "Herramientas"]
 ---
@@ -568,7 +568,7 @@ EXPERIENCIA:
 ### Tecnologías emergentes
 
 ```markdown
-2024-2025:
+2025-2025:
 - GitOps adoption
 - Edge computing
 - AI/ML in DevOps

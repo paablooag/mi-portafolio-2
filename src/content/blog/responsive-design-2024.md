@@ -1,11 +1,11 @@
 ---
-title: "Responsive Design en 2024: Más allá de los breakpoints"
+title: "Responsive Design en 2025: Más allá de los breakpoints"
 description: "Técnicas modernas de diseño responsive: container queries, fluid typography, y layouts intrínsecos."
 pubDate: 2025-10-18T00:00:00.000Z
 tags: ["CSS", "Responsive Design", "Frontend", "Modern CSS"]
 ---
 
-# Responsive Design en 2024: Más allá de los breakpoints
+# Responsive Design en 2025: Más allá de los breakpoints
 
 El responsive design ha evolucionado. Estas son las técnicas que uso hoy.
 

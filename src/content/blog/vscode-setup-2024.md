@@ -1,11 +1,11 @@
 ---
-title: "Mi setup de VS Code para desarrollo frontend 2024"
+title: "Mi setup de VS Code para desarrollo frontend 2025"
 description: "Configuración completa de VS Code: extensiones, atajos y configuración que uso diariamente para desarrollo frontend."
 pubDate: 2025-10-18T00:00:00.000Z
 tags: ["VS Code", "Tools", "Productivity", "Frontend"]
 ---
 
-# Mi setup de VS Code para desarrollo frontend 2024
+# Mi setup de VS Code para desarrollo frontend 2025
 
 La configuración de VS Code que me hace 10x más productivo.
 

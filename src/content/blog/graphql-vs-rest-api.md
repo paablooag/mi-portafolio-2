@@ -572,7 +572,7 @@ const typeDefs = gql`
 ### Evolución de APIs
 
 ```markdown
-2024-2025:
+2025-2025:
 - GraphQL adoption creciente
 - REST sigue siendo dominante
 - APIs híbridas

@@ -1,6 +1,6 @@
 ---
 title: "Microservicios vs Monolito: Cuándo elegir cada arquitectura"
-description: "Comparación completa entre microservicios y arquitectura monolítica: ventajas, desventajas, casos de uso y guía para decidir cuál elegir en 2024."
+description: "Comparación completa entre microservicios y arquitectura monolítica: ventajas, desventajas, casos de uso y guía para decidir cuál elegir en 2025."
 pubDate: 2025-01-15T00:00:00.000Z
 tags: ["Microservicios", "Monolito", "Arquitectura", "Backend", "Escalabilidad"]
 ---
@@ -446,7 +446,7 @@ MICROSERVICIOS:
 ### Evolución de arquitecturas
 
 ```markdown
-2024-2025:
+2025-2025:
 - Serverless adoption
 - Edge computing
 - AI/ML integration

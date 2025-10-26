@@ -235,7 +235,7 @@ self.addEventListener('fetch', (event) => {
         </main>
         
         <footer>
-            <p>&copy; 2024 Mi PWA. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Mi PWA. Todos los derechos reservados.</p>
         </footer>
     </div>
     

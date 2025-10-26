@@ -1,15 +1,15 @@
 ---
-title: "Salarios medios desarrollador frontend y backend 2024: Guía completa de remuneración"
-description: "Análisis detallado de salarios de desarrolladores frontend y backend en España y Europa 2024, factores que influyen en la remuneración y cómo negociar tu salario."
+title: "Salarios medios desarrollador frontend y backend 2025: Guía completa de remuneración"
+description: "Análisis detallado de salarios de desarrolladores frontend y backend en España y Europa 2025, factores que influyen en la remuneración y cómo negociar tu salario."
 pubDate: 2025-01-15T00:00:00.000Z
 tags: ["Salarios", "Desarrollo", "Frontend", "Backend", "Carrera", "Negociación"]
 ---
 
-# Salarios medios desarrollador frontend y backend 2024: Guía completa de remuneración
+# Salarios medios desarrollador frontend y backend 2025: Guía completa de remuneración
 
 Los salarios en desarrollo web han evolucionado significativamente. Te presento un análisis completo de las remuneraciones actuales y cómo maximizar tu potencial salarial.
 
-## Salarios por experiencia - España 2024
+## Salarios por experiencia - España 2025
 
 ### Desarrollador Frontend
 
@@ -411,7 +411,7 @@ AÑO 9+: €75,000 - €120,000+
 - Innovación
 ```
 
-## Tendencias futuras 2024-2025
+## Tendencias futuras 2025-2025
 
 ### Tecnologías emergentes
 
@@ -433,7 +433,7 @@ CRECIMIENTO MODERADO:
 ### Mercado laboral
 
 ```markdown
-TENDENCIAS 2024:
+TENDENCIAS 2025:
 - Mayor demanda remoto
 - Salarios más competitivos
 - Especialización valorada
