@@ -20,10 +20,12 @@ const sortedPosts = allPosts.sort(
 // Obtener todas las categorías únicas
 const allCategories = [...new Set(allPosts.flatMap(post => post.data.tags))].sort();
 
-// Mapeo de categorías a las claves de traducción
+// Mapeo de categorías a las claves de traducción - COMPLETO
 const categoryMap: Record<string, string> = {
+  // Tags principales
   'Vue.js': 'vue',
   'Nuxt.js': 'nuxt',
+  'Nuxt': 'nuxt',
   'JavaScript': 'javascript',
   'SEO': 'seo',
   'Frontend': 'frontend',
@@ -37,11 +39,11 @@ const categoryMap: Record<string, string> = {
   'Best Practices': 'bestpractices',
   'Deployment': 'deployment',
   'API': 'api',
-  'Composition API': 'composition',
+  'Composition API': 'compositionapi',
   'ES6+': 'es6+',
   'A11Y': 'a11y',
   'Figma': 'figma',
-  'Tailwind CSS': 'tailwind',
+  'Tailwind CSS': 'tailwindcss',
   'VS Code': 'vscode',
   'Tips': 'tips',
   'Content Strategy': 'contentstrategy',
@@ -59,8 +61,11 @@ const categoryMap: Record<string, string> = {
   'Migración': 'migracion',
   'Google': 'google',
   'Architecture': 'architecture',
+  'Arquitectura': 'arquitectura',
   'Quality': 'quality',
+  'Calidad': 'calidad',
   'Components': 'components',
+  'Componentes': 'components',
   'Grid': 'grid',
   'Layout': 'layout',
   'Responsive Design': 'responsivedesign',
@@ -68,43 +73,61 @@ const categoryMap: Record<string, string> = {
   'Productivity': 'productivity',
   'Lighthouse': 'lighthouse',
   'Optimization': 'optimization',
+  'Optimización': 'optimization',
   'Career': 'career',
+  'Carrera': 'carrera',
   'Life Lessons': 'life',
   'Motivation': 'motivation',
   'Strategy': 'strategy',
-  'Personal Branding': 'personal',
+  'Personal Branding': 'personalbranding',
   'Portfolio': 'portfolio',
-  'Job Search': 'job',
+  'Job Search': 'jobsearch',
   'Digital Assets': 'assets',
   'Audio': 'audio',
   'Networking': 'networking',
   'Community': 'community',
+  'Comunidad': 'comunidad',
   'Freelance': 'freelance',
   'Business': 'business',
   'Entrepreneurship': 'entrepreneurship',
   'Salary': 'salary',
+  'Salarios': 'salarios',
   'Compensation': 'compensation',
   'Negotiation': 'negotiation',
-  'Remote Work': 'remote',
+  'Negociación': 'negociacion',
+  'Remote Work': 'trabajoremoto',
+  'Trabajo Remoto': 'trabajoremoto',
   'Leadership': 'leadership',
   'Professional Development': 'professional',
   'Programming': 'programming',
   'Roadmap': 'roadmap',
   'Multiplatform': 'multiplatform',
   'Mobile Development': 'mobile',
+  'Mobile': 'mobile',
   'Industry': 'industry',
   'Sports': 'sports',
   'Technology': 'tech',
+  'Tech': 'tech',
   'Sports Tech': 'sportstech',
-  'Web Development': 'web',
+  'Skills': 'skills',
+  'Interview': 'interview',
+  'Entrevista': 'interview',
+  'LinkedIn': 'linkedin',
+  'Jest': 'jest',
+  'Work-life': 'work-life',
+  'Work-Life': 'work-life',
   // Nuevos tags agregados
   'Angular': 'angular',
+  'Vue': 'angular', // Nota: parece ser un error, debería ser vue
   'React': 'react',
   'TypeScript': 'typescript',
+  'Tipos': 'tipos',
   'Docker': 'docker',
   'GraphQL': 'graphql',
+  'REST': 'rest',
   'REST API': 'rest',
   'WebAssembly': 'webassembly',
+  'WASM': 'wasm',
   'PWA': 'pwa',
   'Serverless': 'serverless',
   'JAMstack': 'jamstack',
@@ -118,15 +141,13 @@ const categoryMap: Record<string, string> = {
   'Desarrollo': 'desarrollo',
   'Empresa': 'empresa',
   'ROI': 'roi',
-  'Optimización': 'optimizacion',
   'Progressive Web Apps': 'progressivewebapps',
   'Service Workers': 'serviceworkers',
   'Offline': 'offline',
-  'Mobile': 'mobile',
   'CV': 'cv',
   'ATS': 'ats',
   'Trabajo': 'trabajo',
-  'Carrera': 'carrera',
+  'Empleo': 'empleo',
   'Recursos Humanos': 'recursoshumanos',
   'Independiente': 'independiente',
   'Negocio': 'negocio',
@@ -134,39 +155,13 @@ const categoryMap: Record<string, string> = {
   'IA': 'ia',
   'Machine Learning': 'machinelearning',
   'Clientes': 'clients',
-  'Cómo Conseguir': 'como-conseguir',
-  'Cómo Ser': 'como-ser',
-  'Cómo Encontrar': 'como-encontrar',
-  'Salarios': 'salarios',
-  'Frontend vs Backend': 'frontend-backend',
-  'Por Qué Estudiarlo': 'por-que-estudiarlo',
-  'React vs Vue': 'react-vs-vue',
-  'Vue vs Angular': 'vue-vs-angular',
-  'Comparación': 'comparacion',
-  'Para Principiantes': 'para-principiantes',
-  'Desarrolladores': 'desarrolladores',
-  'Influencers': 'influencers',
-  'Mejores': 'mejores',
-  '2024': '2024',
-  'Por Qué Contratar': 'por-que-contratar',
-  'Desarrollador': 'desarrollador',
-  'Medios': 'medios',
-  'Guía Completa': 'guia-completa',
-  'Docker para Desarrolladores': 'docker-desarrolladores',
-  'WebAssembly Frontend': 'webassembly-frontend',
-  'Testing Frontend': 'testing-frontend',
-  'Performance Web': 'performance-web',
-  'Arquitectura': 'arquitectura',
-  'Calidad': 'calidad',
-  'Comunidad': 'comunidad',
-  'Contenedores': 'contenedores',
-  'E2E Testing': 'e2e',
-  'Cloud': 'cloud',
   'Framework': 'framework',
   'Frameworks': 'frameworks',
+  'Contenedores': 'contenedores',
   'Containers': 'containers',
-  'End-to-End': 'end-to-end',
-  'Testing E2E': 'testing-e2e',
+  'E2E': 'e2e',
+  'E2E Testing': 'e2e',
+  'Cloud': 'cloud',
   'Cloud Computing': 'cloud-computing',
   'AWS': 'aws',
   'Azure': 'azure',
@@ -176,6 +171,7 @@ const categoryMap: Record<string, string> = {
   'Monolith': 'monolith',
   'Scalability': 'scalability',
   'Infrastructure': 'infrastructure',
+  'Infraestructura': 'infrastructure',
   'CI/CD': 'cicd',
   'Automation': 'automation',
   'Monitoring': 'monitoring',
@@ -191,7 +187,10 @@ const categoryMap: Record<string, string> = {
   'PostgreSQL': 'postgresql',
   'MySQL': 'mysql',
   'Redis': 'redis',
-  'Elasticsearch': 'elasticsearch'
+  'Elasticsearch': 'elasticsearch',
+  'Herramientas': 'herramientas',
+  'Tendencias': 'tendencias',
+  'Comparación': 'comparacion'
 };
 
 function formatDate(date: Date): string {
@@ -259,7 +258,7 @@ function formatDate(date: Date): string {
                   <option value="all">{t('blog.filters.all')} ({sortedPosts.length})</option>
                   {allCategories.map((category: string) => {
                     const count = sortedPosts.filter(post => post.data.tags.includes(category)).length;
-                    const filterKey = categoryMap[category as keyof typeof categoryMap] || category.toLowerCase();
+                    const filterKey = categoryMap[category as keyof typeof categoryMap] || category.toLowerCase().replace(/\s+/g, '');
                     return (
                       <option value={category}>
                         {t(`blog.filters.${filterKey}`) || category} ({count})
@@ -270,6 +269,30 @@ function formatDate(date: Date): string {
                 <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-400">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Filtro por fecha -->
+            <div class="w-full md:w-auto md:min-w-[250px]">
+              <label for="date-filter" class="block text-sm font-medium text-gray-300 mb-2">
+                {t('blog.filters.date-filter')}
+              </label>
+              <div class="relative">
+                <select 
+                  id="date-filter"
+                  class="w-full appearance-none bg-gray-800 border border-gray-700 text-white px-4 py-3 pr-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 cursor-pointer hover:border-gray-600"
+                >
+                  <option value="all">{t('blog.filters.all-time')}</option>
+                  <option value="month">{t('blog.filters.last-month')}</option>
+                  <option value="3months">{t('blog.filters.last-3-months')}</option>
+                  <option value="6months">{t('blog.filters.last-6-months')}</option>
+                  <option value="year">{t('blog.filters.last-year')}</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-400">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                   </svg>
                 </div>
               </div>
@@ -292,6 +315,7 @@ function formatDate(date: Date): string {
               data-tags={post.data.tags.join(',')}
               data-title={post.data.title.toLowerCase()}
               data-description={post.data.description.toLowerCase()}
+              data-date={post.data.pubDate.toISOString()}
             >
               <div class="mb-4">
                 <div class="flex flex-wrap gap-2 mb-3">
@@ -349,59 +373,90 @@ function formatDate(date: Date): string {
   <FloatingButtons />
 </Layout>
 
-<script>
-  // Script mejorado para producción
+<script is:inline>
+  // Script optimizado para producción con filtro por fecha
   (function() {
     'use strict';
     
-    // Función para inicializar cuando el DOM esté listo
     function init() {
-      const categoryFilter = document.getElementById('category-filter');
-      const searchInput = document.getElementById('search-input');
-      const blogPosts = document.querySelectorAll('.blog-post');
-      const resultsCount = document.getElementById('results-count');
-      const noResults = document.getElementById('no-results');
-      const articlesGrid = document.getElementById('articles-grid');
-      const resetButton = document.getElementById('reset-filters');
+      var categoryFilter = document.getElementById('category-filter');
+      var searchInput = document.getElementById('search-input');
+      var dateFilter = document.getElementById('date-filter');
+      var blogPosts = document.querySelectorAll('.blog-post');
+      var resultsCount = document.getElementById('results-count');
+      var noResults = document.getElementById('no-results');
+      var articlesGrid = document.getElementById('articles-grid');
+      var resetButton = document.getElementById('reset-filters');
       
       if (!blogPosts.length) return;
       
-      // Textos de traducción
-      const lang = document.documentElement.lang || 'es';
-      const showingText = lang === 'es' ? 'Mostrando {count} artículos' : 'Showing {count} articles';
+      var lang = document.documentElement.lang || 'es';
+      var showingText = lang === 'es' ? 'Mostrando {count} artículos' : 'Showing {count} articles';
+
+      function getDateRange(period) {
+        var now = new Date();
+        var range = new Date();
+        
+        switch(period) {
+          case 'month':
+            range.setMonth(now.getMonth() - 1);
+            break;
+          case '3months':
+            range.setMonth(now.getMonth() - 3);
+            break;
+          case '6months':
+            range.setMonth(now.getMonth() - 6);
+            break;
+          case 'year':
+            range.setFullYear(now.getFullYear() - 1);
+            break;
+          default:
+            return null;
+        }
+        
+        return range;
+      }
 
       function filterPosts() {
-        const category = categoryFilter ? categoryFilter.value : 'all';
-        const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
-        let visibleCount = 0;
+        var category = categoryFilter ? categoryFilter.value : 'all';
+        var searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
+        var datePeriod = dateFilter ? dateFilter.value : 'all';
+        var dateRange = getDateRange(datePeriod);
+        var visibleCount = 0;
         
-        blogPosts.forEach(function(post) {
-          const element = post;
-          const tags = element.dataset.tags ? element.dataset.tags.split(',') : [];
-          const title = element.dataset.title || '';
-          const description = element.dataset.description || '';
+        for (var i = 0; i < blogPosts.length; i++) {
+          var post = blogPosts[i];
+          var tags = post.dataset.tags ? post.dataset.tags.split(',') : [];
+          var title = post.dataset.title || '';
+          var description = post.dataset.description || '';
+          var postDate = post.dataset.date ? new Date(post.dataset.date) : null;
           
           // Filtrar por categoría
-          const matchesCategory = category === 'all' || tags.indexOf(category) !== -1;
+          var matchesCategory = category === 'all' || tags.indexOf(category) !== -1;
           
           // Filtrar por búsqueda
-          const matchesSearch = searchTerm === '' || 
+          var matchesSearch = searchTerm === '' || 
             title.indexOf(searchTerm) !== -1 || 
             description.indexOf(searchTerm) !== -1;
           
-          if (matchesCategory && matchesSearch) {
-            element.style.display = 'block';
-            element.style.opacity = '1';
-            element.style.transform = 'scale(1)';
+          // Filtrar por fecha
+          var matchesDate = !dateRange || !postDate || postDate >= dateRange;
+          
+          if (matchesCategory && matchesSearch && matchesDate) {
+            post.style.display = 'block';
+            post.style.opacity = '1';
+            post.style.transform = 'scale(1)';
             visibleCount++;
           } else {
-            element.style.opacity = '0';
-            element.style.transform = 'scale(0.95)';
-            setTimeout(function() {
-              element.style.display = 'none';
-            }, 300);
+            post.style.opacity = '0';
+            post.style.transform = 'scale(0.95)';
+            setTimeout((function(p) {
+              return function() {
+                p.style.display = 'none';
+              };
+            })(post), 300);
           }
-        });
+        }
         
         // Actualizar contador
         if (resultsCount) {
@@ -429,24 +484,25 @@ function formatDate(date: Date): string {
         searchInput.addEventListener('input', filterPosts);
       }
 
+      if (dateFilter) {
+        dateFilter.addEventListener('change', filterPosts);
+      }
+
       if (resetButton) {
         resetButton.addEventListener('click', function() {
-          if (categoryFilter) {
-            categoryFilter.value = 'all';
-          }
-          if (searchInput) {
-            searchInput.value = '';
-          }
+          if (categoryFilter) categoryFilter.value = 'all';
+          if (searchInput) searchInput.value = '';
+          if (dateFilter) dateFilter.value = 'all';
           filterPosts();
         });
       }
 
       // Estilos para transiciones
-      blogPosts.forEach(function(post) {
-        post.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-        post.style.opacity = '1';
-        post.style.transform = 'scale(1)';
-      });
+      for (var i = 0; i < blogPosts.length; i++) {
+        blogPosts[i].style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        blogPosts[i].style.opacity = '1';
+        blogPosts[i].style.transform = 'scale(1)';
+      }
 
       // Inicializar
       filterPosts();
