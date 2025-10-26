@@ -155,7 +155,43 @@ const categoryMap: Record<string, string> = {
   'Docker para Desarrolladores': 'docker-desarrolladores',
   'WebAssembly Frontend': 'webassembly-frontend',
   'Testing Frontend': 'testing-frontend',
-  'Performance Web': 'performance-web'
+  'Performance Web': 'performance-web',
+  'Arquitectura': 'arquitectura',
+  'Calidad': 'calidad',
+  'Comunidad': 'comunidad',
+  'Contenedores': 'contenedores',
+  'E2E Testing': 'e2e',
+  'Cloud': 'cloud',
+  'Framework': 'framework',
+  'Frameworks': 'frameworks',
+  'Containers': 'containers',
+  'End-to-End': 'end-to-end',
+  'Testing E2E': 'testing-e2e',
+  'Cloud Computing': 'cloud-computing',
+  'AWS': 'aws',
+  'Azure': 'azure',
+  'Google Cloud': 'gcp',
+  'Kubernetes': 'kubernetes',
+  'Microservices': 'microservices',
+  'Monolith': 'monolith',
+  'Scalability': 'scalability',
+  'Infrastructure': 'infrastructure',
+  'CI/CD': 'cicd',
+  'Automation': 'automation',
+  'Monitoring': 'monitoring',
+  'Logging': 'logging',
+  'Security': 'security',
+  'Caching': 'caching',
+  'CDN': 'cdn',
+  'Load Balancing': 'load-balancing',
+  'Database': 'database',
+  'SQL': 'sql',
+  'NoSQL': 'nosql',
+  'MongoDB': 'mongodb',
+  'PostgreSQL': 'postgresql',
+  'MySQL': 'mysql',
+  'Redis': 'redis',
+  'Elasticsearch': 'elasticsearch'
 };
 
 function formatDate(date: Date): string {
@@ -314,104 +350,115 @@ function formatDate(date: Date): string {
 </Layout>
 
 <script>
-  // Esperar a que el DOM esté completamente cargado
-  document.addEventListener('DOMContentLoaded', function() {
-    const categoryFilter = document.getElementById('category-filter') as HTMLSelectElement;
-    const searchInput = document.getElementById('search-input') as HTMLInputElement;
-    const blogPosts = document.querySelectorAll('.blog-post');
-    const resultsCount = document.getElementById('results-count');
-    const noResults = document.getElementById('no-results');
-    const articlesGrid = document.getElementById('articles-grid');
-    const resetButton = document.getElementById('reset-filters');
+  // Script mejorado para producción
+  (function() {
+    'use strict';
     
-    // Textos de traducción (inyectados desde el servidor)
-    const lang = document.documentElement.lang || 'es';
-    const showingText = lang === 'es' ? 'Mostrando {count} artículos' : 'Showing {count} articles';
+    // Función para inicializar cuando el DOM esté listo
+    function init() {
+      const categoryFilter = document.getElementById('category-filter');
+      const searchInput = document.getElementById('search-input');
+      const blogPosts = document.querySelectorAll('.blog-post');
+      const resultsCount = document.getElementById('results-count');
+      const noResults = document.getElementById('no-results');
+      const articlesGrid = document.getElementById('articles-grid');
+      const resetButton = document.getElementById('reset-filters');
+      
+      if (!blogPosts.length) return;
+      
+      // Textos de traducción
+      const lang = document.documentElement.lang || 'es';
+      const showingText = lang === 'es' ? 'Mostrando {count} artículos' : 'Showing {count} articles';
 
-    function filterPosts() {
-      const category = categoryFilter ? categoryFilter.value : 'all';
-      const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
-      let visibleCount = 0;
-      
-      blogPosts.forEach((post) => {
-        const element = post as HTMLElement;
-        const tags = element.dataset.tags?.split(',') || [];
-        const title = element.dataset.title || '';
-        const description = element.dataset.description || '';
+      function filterPosts() {
+        const category = categoryFilter ? categoryFilter.value : 'all';
+        const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
+        let visibleCount = 0;
         
-        // Filtrar por categoría
-        const matchesCategory = category === 'all' || tags.includes(category);
+        blogPosts.forEach(function(post) {
+          const element = post;
+          const tags = element.dataset.tags ? element.dataset.tags.split(',') : [];
+          const title = element.dataset.title || '';
+          const description = element.dataset.description || '';
+          
+          // Filtrar por categoría
+          const matchesCategory = category === 'all' || tags.indexOf(category) !== -1;
+          
+          // Filtrar por búsqueda
+          const matchesSearch = searchTerm === '' || 
+            title.indexOf(searchTerm) !== -1 || 
+            description.indexOf(searchTerm) !== -1;
+          
+          if (matchesCategory && matchesSearch) {
+            element.style.display = 'block';
+            element.style.opacity = '1';
+            element.style.transform = 'scale(1)';
+            visibleCount++;
+          } else {
+            element.style.opacity = '0';
+            element.style.transform = 'scale(0.95)';
+            setTimeout(function() {
+              element.style.display = 'none';
+            }, 300);
+          }
+        });
         
-        // Filtrar por búsqueda (título o descripción)
-        const matchesSearch = searchTerm === '' || 
-          title.includes(searchTerm) || 
-          description.includes(searchTerm);
-        
-        if (matchesCategory && matchesSearch) {
-          element.style.display = 'block';
-          element.style.opacity = '1';
-          element.style.transform = 'scale(1)';
-          visibleCount++;
-        } else {
-          element.style.opacity = '0';
-          element.style.transform = 'scale(0.95)';
-          setTimeout(() => {
-            element.style.display = 'none';
-          }, 300);
+        // Actualizar contador
+        if (resultsCount) {
+          resultsCount.textContent = showingText.replace('{count}', visibleCount.toString());
         }
-      });
-      
-      // Actualizar contador
-      if (resultsCount) {
-        resultsCount.textContent = showingText.replace('{count}', visibleCount.toString());
+        
+        // Mostrar/ocultar mensaje de sin resultados
+        if (noResults && articlesGrid) {
+          if (visibleCount === 0) {
+            articlesGrid.style.display = 'none';
+            noResults.classList.remove('hidden');
+          } else {
+            articlesGrid.style.display = 'grid';
+            noResults.classList.add('hidden');
+          }
+        }
       }
-      
-      // Mostrar/ocultar mensaje de sin resultados
-      if (noResults && articlesGrid) {
-        if (visibleCount === 0) {
-          articlesGrid.style.display = 'none';
-          noResults.classList.remove('hidden');
-        } else {
-          articlesGrid.style.display = 'grid';
-          noResults.classList.add('hidden');
-        }
+
+      // Event listeners
+      if (categoryFilter) {
+        categoryFilter.addEventListener('change', filterPosts);
       }
-    }
 
-    // Event listener para el selector de categorías
-    if (categoryFilter) {
-      categoryFilter.addEventListener('change', filterPosts);
-    }
+      if (searchInput) {
+        searchInput.addEventListener('input', filterPosts);
+      }
 
-    // Event listener para el buscador
-    if (searchInput) {
-      searchInput.addEventListener('input', filterPosts);
-    }
+      if (resetButton) {
+        resetButton.addEventListener('click', function() {
+          if (categoryFilter) {
+            categoryFilter.value = 'all';
+          }
+          if (searchInput) {
+            searchInput.value = '';
+          }
+          filterPosts();
+        });
+      }
 
-    // Event listener para botón reset
-    if (resetButton) {
-      resetButton.addEventListener('click', () => {
-        if (categoryFilter) {
-          categoryFilter.value = 'all';
-        }
-        if (searchInput) {
-          searchInput.value = '';
-        }
-        filterPosts();
+      // Estilos para transiciones
+      blogPosts.forEach(function(post) {
+        post.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        post.style.opacity = '1';
+        post.style.transform = 'scale(1)';
       });
+
+      // Inicializar
+      filterPosts();
     }
-
-    // Estilos para transiciones suaves
-    blogPosts.forEach((post) => {
-      const element = post as HTMLElement;
-      element.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-      element.style.opacity = '1';
-      element.style.transform = 'scale(1)';
-    });
-
-    // Inicializar el filtrado
-    filterPosts();
-  });
+    
+    // Inicializar cuando el DOM esté listo
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
 </script>
 
 
