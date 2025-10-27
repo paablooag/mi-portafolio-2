@@ -141,9 +141,23 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"analytics-medicion-resultados.md": {
+	id: "analytics-medicion-resultados.md";
+  slug: "analytics-medicion-resultados";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "api-composition-patterns.md": {
 	id: "api-composition-patterns.md";
   slug: "api-composition-patterns";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"aplicaciones-web-personalizadas.md": {
+	id: "aplicaciones-web-personalizadas.md";
+  slug: "aplicaciones-web-personalizadas";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -155,9 +169,37 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"auditoria-web-completa.md": {
+	id: "auditoria-web-completa.md";
+  slug: "auditoria-web-completa";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "barney-paginas-web-vida-real.md": {
 	id: "barney-paginas-web-vida-real.md";
   slug: "barney-paginas-web-vida-real";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"branding-identidad-digital.md": {
+	id: "branding-identidad-digital.md";
+  slug: "branding-identidad-digital";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"chatbots-atencion-cliente.md": {
+	id: "chatbots-atencion-cliente.md";
+  slug: "chatbots-atencion-cliente";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"cms-wordpress-vs-custom.md": {
+	id: "cms-wordpress-vs-custom.md";
+  slug: "cms-wordpress-vs-custom";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -204,6 +246,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"copywriting-web-efectivo.md": {
+	id: "copywriting-web-efectivo.md";
+  slug: "copywriting-web-efectivo";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "core-web-vitals-guia.md": {
 	id: "core-web-vitals-guia.md";
   slug: "core-web-vitals-guia";
@@ -246,6 +295,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"diseno-web-profesional-2025.md": {
+	id: "diseno-web-profesional-2025.md";
+  slug: "diseno-web-profesional-2025";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "docker-desarrolladores-frontend.md": {
 	id: "docker-desarrolladores-frontend.md";
   slug: "docker-desarrolladores-frontend";
@@ -267,6 +323,27 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"formularios-contacto-efectivos.md": {
+	id: "formularios-contacto-efectivos.md";
+  slug: "formularios-contacto-efectivos";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"gdpr-cookies-cumplimiento.md": {
+	id: "gdpr-cookies-cumplimiento.md";
+  slug: "gdpr-cookies-cumplimiento";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"generacion-leads-web.md": {
+	id: "generacion-leads-web.md";
+  slug: "generacion-leads-web";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "git-workflow-eficiente.md": {
 	id: "git-workflow-eficiente.md";
   slug: "git-workflow-eficiente";
@@ -281,9 +358,30 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"hosting-dominio-guia-completa.md": {
+	id: "hosting-dominio-guia-completa.md";
+  slug: "hosting-dominio-guia-completa";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"integracion-pagos-web.md": {
+	id: "integracion-pagos-web.md";
+  slug: "integracion-pagos-web";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "javascript-moderno-2024.md": {
 	id: "javascript-moderno-2024.md";
   slug: "javascript-moderno-2024";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"landing-pages-conversion-alta.md": {
+	id: "landing-pages-conversion-alta.md";
+  slug: "landing-pages-conversion-alta";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -298,6 +396,13 @@ declare module 'astro:content' {
 "linkedin-desarrolladores-guia.md": {
 	id: "linkedin-desarrolladores-guia.md";
   slug: "linkedin-desarrolladores-guia";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"marketing-digital-pymes.md": {
+	id: "marketing-digital-pymes.md";
+  slug: "marketing-digital-pymes";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -333,6 +438,13 @@ declare module 'astro:content' {
 "migracion-vue-a-nuxt.md": {
 	id: "migracion-vue-a-nuxt.md";
   slug: "migracion-vue-a-nuxt";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"multi-idioma-sitios-web.md": {
+	id: "multi-idioma-sitios-web.md";
+  slug: "multi-idioma-sitios-web";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -407,6 +519,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"presupuesto-desarrollo-web.md": {
+	id: "presupuesto-desarrollo-web.md";
+  slug: "presupuesto-desarrollo-web";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "progressive-web-apps-pwa.md": {
 	id: "progressive-web-apps-pwa.md";
   slug: "progressive-web-apps-pwa";
@@ -417,6 +536,13 @@ declare module 'astro:content' {
 "react-vs-vue-vs-angular-2024.md": {
 	id: "react-vs-vue-vs-angular-2024.md";
   slug: "react-vs-vue-vs-angular-2024";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"rediseno-web-modernizacion.md": {
+	id: "rediseno-web-modernizacion.md";
+  slug: "rediseno-web-modernizacion";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -449,9 +575,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"seguridad-web-empresarial.md": {
+	id: "seguridad-web-empresarial.md";
+  slug: "seguridad-web-empresarial";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "seo-contenido-estrategia.md": {
 	id: "seo-contenido-estrategia.md";
   slug: "seo-contenido-estrategia";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"seo-local-negocios.md": {
+	id: "seo-local-negocios.md";
+  slug: "seo-local-negocios";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -470,9 +610,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"sistemas-reservas-online.md": {
+	id: "sistemas-reservas-online.md";
+  slug: "sistemas-reservas-online";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "tailwind-tips-avanzados.md": {
 	id: "tailwind-tips-avanzados.md";
   slug: "tailwind-tips-avanzados";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"testimonios-casos-exito-web.md": {
+	id: "testimonios-casos-exito-web.md";
+  slug: "testimonios-casos-exito-web";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -484,9 +638,30 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"tiempo-desarrollo-web-profesional.md": {
+	id: "tiempo-desarrollo-web-profesional.md";
+  slug: "tiempo-desarrollo-web-profesional";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"tiendas-online-ecommerce-exitoso.md": {
+	id: "tiendas-online-ecommerce-exitoso.md";
+  slug: "tiendas-online-ecommerce-exitoso";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "typescript-para-principiantes.md": {
 	id: "typescript-para-principiantes.md";
   slug: "typescript-para-principiantes";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"velocidad-web-impacto-ventas.md": {
+	id: "velocidad-web-impacto-ventas.md";
+  slug: "velocidad-web-impacto-ventas";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -505,6 +680,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"web-accesibilidad-inclusiva.md": {
+	id: "web-accesibilidad-inclusiva.md";
+  slug: "web-accesibilidad-inclusiva";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "web-accessibility-a11y.md": {
 	id: "web-accessibility-a11y.md";
   slug: "web-accessibility-a11y";
@@ -512,9 +694,30 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"web-mantenimiento-soporte.md": {
+	id: "web-mantenimiento-soporte.md";
+  slug: "web-mantenimiento-soporte";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"web-responsive-mobile-first.md": {
+	id: "web-responsive-mobile-first.md";
+  slug: "web-responsive-mobile-first";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "webassembly-frontend.md": {
 	id: "webassembly-frontend.md";
   slug: "webassembly-frontend";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"webs-corporativas-empresas.md": {
+	id: "webs-corporativas-empresas.md";
+  slug: "webs-corporativas-empresas";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
