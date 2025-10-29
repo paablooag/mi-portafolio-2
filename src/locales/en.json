@@ -376,7 +376,9 @@
       "last-month": "Last month",
       "last-3-months": "Last 3 months",
       "last-6-months": "Last 6 months",
-      "last-year": "Last year"
+      "last-year": "Last year",
+      "decisionesempresariales": "Business Decisions",
+      "marketingdigital": "Digital Marketing"
     },
     "noResults": "No articles found for this category.",
     "showingResults": "Showing {count} articles"
