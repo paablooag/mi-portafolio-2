@@ -4,13 +4,11 @@ import Layout from '../../../layouts/Layout.astro';
 import Header from '../../../components/Header.astro';
 import Footer from '../../../components/Footer.astro';
 import FloatingButtons from '../../../components/FloatingButtons.astro';
-import { getLangFromUrl, useTranslations } from '../../../utils/i18n';
-
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog', ({ data }) => {
     return data.draft !== true;
   });
-  
+
   return blogEntries.map(entry => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -19,9 +17,6 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 
 function formatDate(date: Date): string {
   return new Date(date).toLocaleDateString('en-US', {
@@ -33,7 +28,7 @@ function formatDate(date: Date): string {
 ---
 
 <Layout
-  title={`${entry.data.title} - Blog Pablo Alcalde`}
+  title={`${entry.data.title} - Pablo Alcalde García | Software Engineer`}
   description={entry.data.description}
   image={entry.data.image}
   type="article"
@@ -42,6 +37,49 @@ function formatDate(date: Date): string {
   lang="en"
 >
   <Header />
+
+  <!-- Structured Data for Article -->
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": entry.data.title,
+    "description": entry.data.description,
+    "image": "https://pabloalcalde.dev/og-image.svg",
+    "author": {
+      "@type": "Person",
+      "name": "Pablo Alcalde García",
+      "jobTitle": "Software Engineer",
+      "url": "https://pabloalcalde.dev",
+      "sameAs": [
+        "https://www.linkedin.com/in/pabloalcaldegarcia",
+        "https://github.com/paablooag"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "UST",
+        "url": "https://www.ust.com"
+      }
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Pablo Alcalde García",
+      "url": "https://pabloalcalde.dev"
+    },
+    "datePublished": entry.data.pubDate.toISOString(),
+    "dateModified": entry.data.pubDate.toISOString(),
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": Astro.url.href
+    },
+    "keywords": entry.data.tags.join(', '),
+    "articleSection": "Technology",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Blog by Pablo Alcalde García",
+      "url": "https://pabloalcalde.dev/en/blog"
+    }
+  })} />
   
   <main class="pt-24">
     <article class="section">
@@ -70,7 +108,7 @@ function formatDate(date: Date): string {
         <!-- Header del artículo -->
         <header class="mb-12">
           <div class="flex flex-wrap gap-2 mb-4">
-            {entry.data.tags.map((tag) => (
+            {entry.data.tags.map((tag: string) => (
               <span class="text-xs px-3 py-1 bg-primary/20 text-primary rounded-full">
                 {tag}
               </span>

@@ -29,7 +29,7 @@ function formatDate(date: Date): string {
 ---
 
 <Layout 
-  title={`${entry.data.title} - Pablo Alcalde | Front-end Developer`}
+  title={`${entry.data.title} - Pablo Alcalde | Software Engineer`}
   description={entry.data.description}
   type="article"
   publishedTime={entry.data.pubDate.toISOString()}
@@ -39,34 +39,53 @@ function formatDate(date: Date): string {
   <Header />
   
   <!-- Structured Data for Article -->
-  <script type="application/ld+json">
-  {
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "{entry.data.title}",
-    "description": "{entry.data.description}",
+    "headline": entry.data.title,
+    "description": entry.data.description,
     "image": "https://pabloalcalde.dev/og-image.svg",
     "author": {
       "@type": "Person",
       "name": "Pablo Alcalde García",
-      "url": "https://pabloalcalde.dev"
+      "jobTitle": "Software Engineer",
+      "url": "https://pabloalcalde.dev",
+      "sameAs": [
+        "https://www.linkedin.com/in/pabloalcaldegarcia",
+        "https://github.com/paablooag"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "UST",
+        "url": "https://www.ust.com"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Granada",
+        "addressRegion": "Andalucía",
+        "addressCountry": "ES"
+      }
     },
     "publisher": {
       "@type": "Person",
       "name": "Pablo Alcalde García",
       "url": "https://pabloalcalde.dev"
     },
-    "datePublished": "{entry.data.pubDate.toISOString()}",
-    "dateModified": "{entry.data.pubDate.toISOString()}",
+    "datePublished": entry.data.pubDate.toISOString(),
+    "dateModified": entry.data.pubDate.toISOString(),
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "{Astro.url.href}"
+      "@id": Astro.url.href
     },
-    "keywords": "{entry.data.tags.join(', ')}",
+    "keywords": entry.data.tags.join(', '),
     "articleSection": "Technology",
-    "wordCount": "{entry.body.split(' ').length}"
-  }
-  </script>
+    "inLanguage": "es-ES",
+    "isPartOf": {
+      "@type": "Blog",
+      "name": "Blog de Pablo Alcalde García",
+      "url": "https://pabloalcalde.dev/blog"
+    }
+  })} />
   
   <main class="pt-24">
     <article class="section">
@@ -85,7 +104,7 @@ function formatDate(date: Date): string {
         <!-- Header del artículo -->
         <header class="mb-12">
           <div class="flex flex-wrap gap-2 mb-4">
-            {entry.data.tags.map((tag) => (
+            {entry.data.tags.map((tag: string) => (
               <span class="text-xs px-3 py-1 bg-primary/20 text-primary rounded-full">
                 {tag}
               </span>

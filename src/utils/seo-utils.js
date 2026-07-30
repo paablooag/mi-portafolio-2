@@ -14,7 +14,7 @@ export function generateHreflangLinks(currentPath, baseUrl = 'https://pabloalcal
 export function generateStructuredDataBlog(post, lang = 'es') {
   const baseUrl = 'https://pabloalcalde.dev';
   const url = lang === 'es' ? `${baseUrl}/blog/${post.slug}` : `${baseUrl}/en/blog/${post.slug}`;
-  
+
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -26,6 +26,7 @@ export function generateStructuredDataBlog(post, lang = 'es') {
     "author": {
       "@type": "Person",
       "name": "Pablo Alcalde García",
+      "jobTitle": "Software Engineer",
       "url": baseUrl,
       "sameAs": [
         "https://www.linkedin.com/in/pabloalcaldegarcia",

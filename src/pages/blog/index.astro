@@ -206,13 +206,50 @@ function formatDate(date: Date): string {
 }
 ---
 
-<Layout 
-  title="Blog - Pablo Alcalde | Frontend & SEO | Artículos sobre Vue.js, Nuxt.js y Desarrollo Web"
-  description="Artículos sobre desarrollo frontend, Vue.js, Nuxt.js, SEO y las últimas tendencias en tecnología web. Experiencias reales de desarrollo en Wegow y mejores prácticas."
-  tags={["blog", "desarrollo frontend", "Vue.js", "Nuxt.js", "SEO", "JavaScript", "TypeScript", "tutoriales", "mejores prácticas"]}
+<Layout
+  title="Blog de Pablo Alcalde García | IA, LLMs, Frontend y SEO | España"
+  description="Artículos técnicos sobre IA aplicada, LLMs, Ollama, desarrollo frontend con Vue.js, Nuxt y Astro, SEO y entrevistas tech. Por Pablo Alcalde García, Software Engineer en España."
+  tags={["Pablo Alcalde García", "blog tecnología España", "inteligencia artificial", "LLMs", "Ollama", "desarrollo frontend", "Vue.js", "Nuxt.js", "Astro", "SEO", "JavaScript", "TypeScript", "software engineer España"]}
 >
   <Header />
-  
+
+  <!-- Structured Data: Blog -->
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog de Pablo Alcalde García",
+    "description": "Artículos técnicos sobre IA aplicada, LLMs, desarrollo frontend, SEO y entrevistas tech por Pablo Alcalde García, Software Engineer en España.",
+    "url": "https://pabloalcalde.dev/blog",
+    "author": {
+      "@type": "Person",
+      "name": "Pablo Alcalde García",
+      "jobTitle": "Software Engineer",
+      "url": "https://pabloalcalde.dev",
+      "sameAs": [
+        "https://www.linkedin.com/in/pabloalcaldegarcia",
+        "https://github.com/paablooag"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "UST",
+        "url": "https://www.ust.com"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Granada",
+        "addressRegion": "Andalucía",
+        "addressCountry": "ES"
+      }
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Pablo Alcalde García",
+      "url": "https://pabloalcalde.dev"
+    },
+    "inLanguage": "es-ES",
+    "about": ["Inteligencia Artificial", "LLMs", "Ollama", "FastAPI", "Vue.js", "Nuxt.js", "Astro", "SEO", "Desarrollo Frontend", "Entrevistas Tech"]
+  })} />
+
   <main class="pt-24">
     <section class="section">
       <div class="container-custom">
