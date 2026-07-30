@@ -11,10 +11,10 @@
   "hero": {
     "greeting": "Hola, soy",
     "name": "Pablo Alcalde",
-    "role": "Front-end Developer & SEO Specialist",
+    "role": "Software Engineer | IA & Full-Stack",
     "location": "📍 Granada, Andalucía, España",
-    "description": "Desarrollador especializado en <span class='text-primary font-semibold'>Vue.js</span> y <span class='text-primary font-semibold'>Nuxt.js</span>, con pasión por crear interfaces intuitivas y optimizadas para SEO. Actualmente trabajando en",
-    "company": "Wegow",
+    "description": "Ingeniero de Software especializado en <span class='text-primary font-semibold'>IA aplicada</span>, <span class='text-primary font-semibold'>LLMs</span> y desarrollo full-stack con Astro y FastAPI. Actualmente trabajando en",
+    "company": "UST",
     "cta": {
       "contact": "Contáctame",
       "experience": "Ver experiencia"
@@ -24,25 +24,25 @@
     "title": "Sobre",
     "titleHighlight": "mí",
     "greeting": "¡Hola! 👋",
-    "paragraph1": "Soy Pablo, tengo 21 años y soy un desarrollador front-end apasionado por crear experiencias web excepcionales. Me especializo en <strong class='text-white'>Vue.js</strong> y <strong class='text-white'>Nuxt.js</strong>, y tengo una sólida experiencia en <strong class='text-white'>optimización SEO</strong>.",
-    "paragraph2": "La programación y el desarrollo front-end son mi verdadera pasión. Me encanta crear interfaces intuitivas y visualmente atractivas que proporcionen una experiencia de usuario excelente.",
-    "paragraph3": "Siempre estoy motivado por aprender nuevas tecnologías y frameworks que me permitan llevar mis proyectos al siguiente nivel. Ver cómo un diseño cobra vida a través del código es algo que siempre me inspira y me reta a seguir mejorando.",
+    "paragraph1": "Soy Pablo, Software Engineer en <strong class='text-white'>UST</strong> donde desarrollo soluciones basadas en <strong class='text-white'>IA y LLMs</strong> para automatizar la generación y validación de Test Plans, usando <strong class='text-white'>Ollama</strong>, <strong class='text-white'>FastAPI</strong> y <strong class='text-white'>Astro</strong>.",
+    "paragraph2": "Anteriormente trabajé como Desarrollador Frontend en Wegow, donde lideré el frontend de la plataforma durante 5 meses con Vue.js y Nuxt.js, enfocándome en SEO y rendimiento.",
+    "paragraph3": "Me apasiona la intersección entre el desarrollo de software y la inteligencia artificial. Siempre busco optimizar pipelines, mejorar la calidad del código y explorar nuevas tecnologías que generen impacto real.",
     "cards": {
       "experience": {
         "title": "Experiencia",
-        "description": "Desarrollador en <a href='https://wegow.com' target='_blank' rel='noopener noreferrer' class='text-primary hover:text-secondary transition-colors duration-300'>Wegow</a>, migrando aplicaciones de Vue.js a Nuxt.js y optimizando el SEO para mejorar el posicionamiento."
+        "description": "Software Engineer en <a href='https://www.ust.com' target='_blank' rel='noopener noreferrer' class='text-primary hover:text-secondary transition-colors duration-300'>UST</a>, desarrollando pipelines de IA con LLMs y Ollama. Anteriormente Frontend Developer en Wegow."
       },
       "education": {
         "title": "Formación",
-        "description": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma + Máster en SEO y Posicionamiento Web."
+        "description": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (EAG) + certificaciones en SEO, Agile y Ciberseguridad."
       },
       "methodologies": {
         "title": "Metodologías",
-        "description": "Experiencia en SCRUM, trabajando con herramientas como Jira, Taiga, Git y Slack en equipos ágiles."
+        "description": "Experiencia en SCRUM y Agile, trabajando con herramientas como Jira, Taiga, Git y Slack en equipos multidisciplinares."
       },
       "learning": {
         "title": "Aprendizaje Continuo",
-        "description": "Comprometido con el aprendizaje constante a través de cursos online en nuevas tecnologías y mejores prácticas."
+        "description": "Comprometido con el aprendizaje constante en IA, prompt engineering y las últimas tecnologías de desarrollo web y backend."
       }
     }
   },
@@ -425,7 +425,7 @@
     }
   },
   "footer": {
-    "about": "Front-end Developer y SEO Specialist apasionado por crear experiencias web excepcionales.",
+    "about": "Software Engineer especializado en IA aplicada, LLMs y desarrollo full-stack con Astro y FastAPI.",
     "links": "Enlaces",
     "contact": "Contacto",
     "email": "Email",

@@ -141,618 +141,352 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"analytics-medicion-resultados.md": {
-	id: "analytics-medicion-resultados.md";
-  slug: "analytics-medicion-resultados";
+"astro-guia-completa-2025.md": {
+	id: "astro-guia-completa-2025.md";
+  slug: "astro-guia-completa-2025";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"api-composition-patterns.md": {
-	id: "api-composition-patterns.md";
-  slug: "api-composition-patterns";
+"astro-seo-optimizacion.md": {
+	id: "astro-seo-optimizacion.md";
+  slug: "astro-seo-optimizacion";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"aplicaciones-web-personalizadas.md": {
-	id: "aplicaciones-web-personalizadas.md";
-  slug: "aplicaciones-web-personalizadas";
+"claude-code-guia-desarrolladores.md": {
+	id: "claude-code-guia-desarrolladores.md";
+  slug: "claude-code-guia-desarrolladores";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"ats-cv-optimizacion.md": {
-	id: "ats-cv-optimizacion.md";
-  slug: "ats-cv-optimizacion";
+"claude-guia-completa-2025.md": {
+	id: "claude-guia-completa-2025.md";
+  slug: "claude-guia-completa-2025";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"auditoria-web-completa.md": {
-	id: "auditoria-web-completa.md";
-  slug: "auditoria-web-completa";
+"como-encontrar-trabajo-frontend-2025.md": {
+	id: "como-encontrar-trabajo-frontend-2025.md";
+  slug: "como-encontrar-trabajo-frontend-2025";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"barney-paginas-web-vida-real.md": {
-	id: "barney-paginas-web-vida-real.md";
-  slug: "barney-paginas-web-vida-real";
+"como-funciona-el-algoritmo-google.md": {
+	id: "como-funciona-el-algoritmo-google.md";
+  slug: "como-funciona-el-algoritmo-google";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"branding-identidad-digital.md": {
-	id: "branding-identidad-digital.md";
-  slug: "branding-identidad-digital";
+"como-preparar-entrevista-tecnica.md": {
+	id: "como-preparar-entrevista-tecnica.md";
+  slug: "como-preparar-entrevista-tecnica";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"chatbots-atencion-cliente.md": {
-	id: "chatbots-atencion-cliente.md";
-  slug: "chatbots-atencion-cliente";
+"core-web-vitals-2025.md": {
+	id: "core-web-vitals-2025.md";
+  slug: "core-web-vitals-2025";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"cms-wordpress-vs-custom.md": {
-	id: "cms-wordpress-vs-custom.md";
-  slug: "cms-wordpress-vs-custom";
+"cuanto-cuesta-ia-empresa.md": {
+	id: "cuanto-cuesta-ia-empresa.md";
+  slug: "cuanto-cuesta-ia-empresa";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"como-conseguir-clientes-desarrollador.md": {
-	id: "como-conseguir-clientes-desarrollador.md";
-  slug: "como-conseguir-clientes-desarrollador";
+"cursor-vs-copilot-vs-claude-code.md": {
+	id: "cursor-vs-copilot-vs-claude-code.md";
+  slug: "cursor-vs-copilot-vs-claude-code";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"como-empezar-freelance-developer.md": {
-	id: "como-empezar-freelance-developer.md";
-  slug: "como-empezar-freelance-developer";
+"de-junior-a-mid-senior.md": {
+	id: "de-junior-a-mid-senior.md";
+  slug: "de-junior-a-mid-senior";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"como-encontrar-trabajo-remoto.md": {
-	id: "como-encontrar-trabajo-remoto.md";
-  slug: "como-encontrar-trabajo-remoto";
+"documentar-proyectos-con-ia.md": {
+	id: "documentar-proyectos-con-ia.md";
+  slug: "documentar-proyectos-con-ia";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"como-ser-freelance-frontend.md": {
-	id: "como-ser-freelance-frontend.md";
-  slug: "como-ser-freelance-frontend";
+"errores-entrevista-tecnica.md": {
+	id: "errores-entrevista-tecnica.md";
+  slug: "errores-entrevista-tecnica";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"componentes-reutilizables-vue.md": {
-	id: "componentes-reutilizables-vue.md";
-  slug: "componentes-reutilizables-vue";
+"errores-seo-que-matan-tu-web.md": {
+	id: "errores-seo-que-matan-tu-web.md";
+  slug: "errores-seo-que-matan-tu-web";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"composables-vue3.md": {
-	id: "composables-vue3.md";
-  slug: "composables-vue3";
+"fable-5-anthropic.md": {
+	id: "fable-5-anthropic.md";
+  slug: "fable-5-anthropic";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"copywriting-web-efectivo.md": {
-	id: "copywriting-web-efectivo.md";
-  slug: "copywriting-web-efectivo";
+"futuro-ecosistema-vue-nuxt.md": {
+	id: "futuro-ecosistema-vue-nuxt.md";
+  slug: "futuro-ecosistema-vue-nuxt";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"core-web-vitals-guia.md": {
-	id: "core-web-vitals-guia.md";
-  slug: "core-web-vitals-guia";
+"github-para-la-busqueda-de-empleo.md": {
+	id: "github-para-la-busqueda-de-empleo.md";
+  slug: "github-para-la-busqueda-de-empleo";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"crecimiento-profesional-desarrollo.md": {
-	id: "crecimiento-profesional-desarrollo.md";
-  slug: "crecimiento-profesional-desarrollo";
+"habilidades-frontend-demandadas-2025.md": {
+	id: "habilidades-frontend-demandadas-2025.md";
+  slug: "habilidades-frontend-demandadas-2025";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"css-grid-layout.md": {
-	id: "css-grid-layout.md";
-  slug: "css-grid-layout";
+"ia-en-flujo-de-trabajo-dev.md": {
+	id: "ia-en-flujo-de-trabajo-dev.md";
+  slug: "ia-en-flujo-de-trabajo-dev";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"dam-vs-daw-desarrollo-web.md": {
-	id: "dam-vs-daw-desarrollo-web.md";
-  slug: "dam-vs-daw-desarrollo-web";
+"ia-open-source-vs-cloud.md": {
+	id: "ia-open-source-vs-cloud.md";
+  slug: "ia-open-source-vs-cloud";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"desarrollador-ia-guia-completa.md": {
-	id: "desarrollador-ia-guia-completa.md";
-  slug: "desarrollador-ia-guia-completa";
+"ia-para-generar-tests.md": {
+	id: "ia-para-generar-tests.md";
+  slug: "ia-para-generar-tests";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"devops-por-que-estudiarlo.md": {
-	id: "devops-por-que-estudiarlo.md";
-  slug: "devops-por-que-estudiarlo";
+"ia-para-refactoring-codigo.md": {
+	id: "ia-para-refactoring-codigo.md";
+  slug: "ia-para-refactoring-codigo";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"diseno-web-profesional-2025.md": {
-	id: "diseno-web-profesional-2025.md";
-  slug: "diseno-web-profesional-2025";
+"investigacion-palabras-clave.md": {
+	id: "investigacion-palabras-clave.md";
+  slug: "investigacion-palabras-clave";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"docker-desarrolladores-frontend.md": {
-	id: "docker-desarrolladores-frontend.md";
-  slug: "docker-desarrolladores-frontend";
+"link-building-estrategias-2025.md": {
+	id: "link-building-estrategias-2025.md";
+  slug: "link-building-estrategias-2025";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"estrategias-buscar-trabajo-tech.md": {
-	id: "estrategias-buscar-trabajo-tech.md";
-  slug: "estrategias-buscar-trabajo-tech";
+"linkedin-para-desarrolladores-frontend.md": {
+	id: "linkedin-para-desarrolladores-frontend.md";
+  slug: "linkedin-para-desarrolladores-frontend";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"figma-para-desarrolladores.md": {
-	id: "figma-para-desarrolladores.md";
-  slug: "figma-para-desarrolladores";
+"live-coding-como-destacar.md": {
+	id: "live-coding-como-destacar.md";
+  slug: "live-coding-como-destacar";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"formularios-contacto-efectivos.md": {
-	id: "formularios-contacto-efectivos.md";
-  slug: "formularios-contacto-efectivos";
+"llm-para-desarrolladores.md": {
+	id: "llm-para-desarrolladores.md";
+  slug: "llm-para-desarrolladores";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"gdpr-cookies-cumplimiento.md": {
-	id: "gdpr-cookies-cumplimiento.md";
-  slug: "gdpr-cookies-cumplimiento";
+"mejores-ias-para-programar-2025.md": {
+	id: "mejores-ias-para-programar-2025.md";
+  slug: "mejores-ias-para-programar-2025";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"generacion-leads-web.md": {
-	id: "generacion-leads-web.md";
-  slug: "generacion-leads-web";
+"mejores-prompts-para-programar.md": {
+	id: "mejores-prompts-para-programar.md";
+  slug: "mejores-prompts-para-programar";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"git-workflow-eficiente.md": {
-	id: "git-workflow-eficiente.md";
-  slug: "git-workflow-eficiente";
+"migracion-nuxt3-nuxt4.md": {
+	id: "migracion-nuxt3-nuxt4.md";
+  slug: "migracion-nuxt3-nuxt4";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"graphql-vs-rest-api.md": {
-	id: "graphql-vs-rest-api.md";
-  slug: "graphql-vs-rest-api";
+"migrar-proyectos-con-ia.md": {
+	id: "migrar-proyectos-con-ia.md";
+  slug: "migrar-proyectos-con-ia";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"hosting-dominio-guia-completa.md": {
-	id: "hosting-dominio-guia-completa.md";
-  slug: "hosting-dominio-guia-completa";
+"migrar-vue-a-astro-con-ia.md": {
+	id: "migrar-vue-a-astro-con-ia.md";
+  slug: "migrar-vue-a-astro-con-ia";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"integracion-pagos-web.md": {
-	id: "integracion-pagos-web.md";
-  slug: "integracion-pagos-web";
+"negociar-salario-oferta-tech.md": {
+	id: "negociar-salario-oferta-tech.md";
+  slug: "negociar-salario-oferta-tech";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"javascript-moderno-2024.md": {
-	id: "javascript-moderno-2024.md";
-  slug: "javascript-moderno-2024";
+"nuxt4-novedades-guia.md": {
+	id: "nuxt4-novedades-guia.md";
+  slug: "nuxt4-novedades-guia";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"landing-pages-conversion-alta.md": {
-	id: "landing-pages-conversion-alta.md";
-  slug: "landing-pages-conversion-alta";
+"nuxt5-que-esperar.md": {
+	id: "nuxt5-que-esperar.md";
+  slug: "nuxt5-que-esperar";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"lighthouse-optimizacion.md": {
-	id: "lighthouse-optimizacion.md";
-  slug: "lighthouse-optimizacion";
+"ollama-guia-completa.md": {
+	id: "ollama-guia-completa.md";
+  slug: "ollama-guia-completa";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"linkedin-desarrolladores-guia.md": {
-	id: "linkedin-desarrolladores-guia.md";
-  slug: "linkedin-desarrolladores-guia";
+"portfolio-frontend-que-impresiona.md": {
+	id: "portfolio-frontend-que-impresiona.md";
+  slug: "portfolio-frontend-que-impresiona";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"marketing-digital-pymes.md": {
-	id: "marketing-digital-pymes.md";
-  slug: "marketing-digital-pymes";
+"precios-apis-ia-2025.md": {
+	id: "precios-apis-ia-2025.md";
+  slug: "precios-apis-ia-2025";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"mejor-framework-frontend-para-tu-negocio.md": {
-	id: "mejor-framework-frontend-para-tu-negocio.md";
-  slug: "mejor-framework-frontend-para-tu-negocio";
+"preguntas-javascript-entrevista.md": {
+	id: "preguntas-javascript-entrevista.md";
+  slug: "preguntas-javascript-entrevista";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"mejores-influencers-frontend-2024.md": {
-	id: "mejores-influencers-frontend-2024.md";
-  slug: "mejores-influencers-frontend-2024";
+"preguntas-vue-nuxt-entrevista.md": {
+	id: "preguntas-vue-nuxt-entrevista.md";
+  slug: "preguntas-vue-nuxt-entrevista";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"mejores-practicas-frontend.md": {
-	id: "mejores-practicas-frontend.md";
-  slug: "mejores-practicas-frontend";
+"prompt-engineering-guia.md": {
+	id: "prompt-engineering-guia.md";
+  slug: "prompt-engineering-guia";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"mejores-practicas-trabajo-remoto.md": {
-	id: "mejores-practicas-trabajo-remoto.md";
-  slug: "mejores-practicas-trabajo-remoto";
+"proyectos-personales-para-encontrar-trabajo.md": {
+	id: "proyectos-personales-para-encontrar-trabajo.md";
+  slug: "proyectos-personales-para-encontrar-trabajo";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"microservicios-vs-monolito.md": {
-	id: "microservicios-vs-monolito.md";
-  slug: "microservicios-vs-monolito";
+"que-es-el-seo.md": {
+	id: "que-es-el-seo.md";
+  slug: "que-es-el-seo";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"migracion-vue-a-nuxt.md": {
-	id: "migracion-vue-a-nuxt.md";
-  slug: "migracion-vue-a-nuxt";
+"que-es-un-llm.md": {
+	id: "que-es-un-llm.md";
+  slug: "que-es-un-llm";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"multi-idioma-sitios-web.md": {
-	id: "multi-idioma-sitios-web.md";
-  slug: "multi-idioma-sitios-web";
+"rag-sistemas-recuperacion.md": {
+	id: "rag-sistemas-recuperacion.md";
+  slug: "rag-sistemas-recuperacion";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"negociacion-salarial-tech.md": {
-	id: "negociacion-salarial-tech.md";
-  slug: "negociacion-salarial-tech";
+"seo-local-negocio.md": {
+	id: "seo-local-negocio.md";
+  slug: "seo-local-negocio";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"networking-industria-tech.md": {
-	id: "networking-industria-tech.md";
-  slug: "networking-industria-tech";
+"seo-on-page-checklist.md": {
+	id: "seo-on-page-checklist.md";
+  slug: "seo-on-page-checklist";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"nuxt-deployment-guia.md": {
-	id: "nuxt-deployment-guia.md";
-  slug: "nuxt-deployment-guia";
+"seo-para-desarrolladores-web.md": {
+	id: "seo-para-desarrolladores-web.md";
+  slug: "seo-para-desarrolladores-web";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"nuxt-modules-esenciales.md": {
-	id: "nuxt-modules-esenciales.md";
-  slug: "nuxt-modules-esenciales";
+"seo-tecnico-guia.md": {
+	id: "seo-tecnico-guia.md";
+  slug: "seo-tecnico-guia";
   body: string;
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"nuxt3-vs-nuxt4-guia-empresarial.md": {
-	id: "nuxt3-vs-nuxt4-guia-empresarial.md";
-  slug: "nuxt3-vs-nuxt4-guia-empresarial";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"nuxt4-vs-nuxt3-comparacion.md": {
-	id: "nuxt4-vs-nuxt3-comparacion.md";
-  slug: "nuxt4-vs-nuxt3-comparacion";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"optimizacion-seo-como-mejorar-visibilidad-online-2025.md": {
-	id: "optimizacion-seo-como-mejorar-visibilidad-online-2025.md";
-  slug: "optimizacion-seo-como-mejorar-visibilidad-online-2025";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"optimizacion-seo-nuxt.md": {
-	id: "optimizacion-seo-nuxt.md";
-  slug: "optimizacion-seo-nuxt";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"performance-web-core-web-vitals.md": {
-	id: "performance-web-core-web-vitals.md";
-  slug: "performance-web-core-web-vitals";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"pinia-vs-vuex.md": {
-	id: "pinia-vs-vuex.md";
-  slug: "pinia-vs-vuex";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"por-que-contratar-desarrollador-frontend.md": {
-	id: "por-que-contratar-desarrollador-frontend.md";
-  slug: "por-que-contratar-desarrollador-frontend";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"portafolio-desarrollador-efectivo.md": {
-	id: "portafolio-desarrollador-efectivo.md";
-  slug: "portafolio-desarrollador-efectivo";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"presupuesto-desarrollo-web.md": {
-	id: "presupuesto-desarrollo-web.md";
-  slug: "presupuesto-desarrollo-web";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"progressive-web-apps-pwa.md": {
-	id: "progressive-web-apps-pwa.md";
-  slug: "progressive-web-apps-pwa";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"react-vs-vue-vs-angular-2024.md": {
-	id: "react-vs-vue-vs-angular-2024.md";
-  slug: "react-vs-vue-vs-angular-2024";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"rediseno-web-modernizacion.md": {
-	id: "rediseno-web-modernizacion.md";
-  slug: "rediseno-web-modernizacion";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"rendimiento-web-impacto-conversiones-empresariales.md": {
-	id: "rendimiento-web-impacto-conversiones-empresariales.md";
-  slug: "rendimiento-web-impacto-conversiones-empresariales";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"responsive-design-2024.md": {
-	id: "responsive-design-2024.md";
-  slug: "responsive-design-2024";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"roadmap-desarrollador-sector-deportivo.md": {
-	id: "roadmap-desarrollador-sector-deportivo.md";
-  slug: "roadmap-desarrollador-sector-deportivo";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"salarios-desarrolladores-frontend-backend-2024.md": {
-	id: "salarios-desarrolladores-frontend-backend-2024.md";
-  slug: "salarios-desarrolladores-frontend-backend-2024";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"scrum-desarrollo-web.md": {
-	id: "scrum-desarrollo-web.md";
-  slug: "scrum-desarrollo-web";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"seguridad-web-empresarial.md": {
-	id: "seguridad-web-empresarial.md";
-  slug: "seguridad-web-empresarial";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"seo-contenido-estrategia.md": {
-	id: "seo-contenido-estrategia.md";
-  slug: "seo-contenido-estrategia";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"seo-local-negocios.md": {
-	id: "seo-local-negocios.md";
-  slug: "seo-local-negocios";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"seo-tecnico-checklist.md": {
-	id: "seo-tecnico-checklist.md";
-  slug: "seo-tecnico-checklist";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"seo-tecnico-por-que-tu-desarrollador-debe-entender-seo.md": {
-	id: "seo-tecnico-por-que-tu-desarrollador-debe-entender-seo.md";
-  slug: "seo-tecnico-por-que-tu-desarrollador-debe-entender-seo";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"serverless-jamstack.md": {
-	id: "serverless-jamstack.md";
-  slug: "serverless-jamstack";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"sistemas-reservas-online.md": {
-	id: "sistemas-reservas-online.md";
-  slug: "sistemas-reservas-online";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"tailwind-tips-avanzados.md": {
-	id: "tailwind-tips-avanzados.md";
-  slug: "tailwind-tips-avanzados";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"testimonios-casos-exito-web.md": {
-	id: "testimonios-casos-exito-web.md";
-  slug: "testimonios-casos-exito-web";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"testing-frontend-jest-cypress.md": {
-	id: "testing-frontend-jest-cypress.md";
-  slug: "testing-frontend-jest-cypress";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"tiempo-desarrollo-web-profesional.md": {
-	id: "tiempo-desarrollo-web-profesional.md";
-  slug: "tiempo-desarrollo-web-profesional";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"tiendas-online-ecommerce-exitoso.md": {
-	id: "tiendas-online-ecommerce-exitoso.md";
-  slug: "tiendas-online-ecommerce-exitoso";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"typescript-para-principiantes.md": {
-	id: "typescript-para-principiantes.md";
-  slug: "typescript-para-principiantes";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"velocidad-web-impacto-ventas.md": {
-	id: "velocidad-web-impacto-ventas.md";
-  slug: "velocidad-web-impacto-ventas";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"vscode-setup-2024.md": {
-	id: "vscode-setup-2024.md";
-  slug: "vscode-setup-2024";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"vue-testing-jest.md": {
-	id: "vue-testing-jest.md";
-  slug: "vue-testing-jest";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"web-accesibilidad-inclusiva.md": {
-	id: "web-accesibilidad-inclusiva.md";
-  slug: "web-accesibilidad-inclusiva";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"web-accessibility-a11y.md": {
-	id: "web-accessibility-a11y.md";
-  slug: "web-accessibility-a11y";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"web-mantenimiento-soporte.md": {
-	id: "web-mantenimiento-soporte.md";
-  slug: "web-mantenimiento-soporte";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"web-responsive-mobile-first.md": {
-	id: "web-responsive-mobile-first.md";
-  slug: "web-responsive-mobile-first";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"webassembly-frontend.md": {
-	id: "webassembly-frontend.md";
-  slug: "webassembly-frontend";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
-"webs-corporativas-empresas.md": {
-	id: "webs-corporativas-empresas.md";
-  slug: "webs-corporativas-empresas";
+"soft-skills-desarrollador.md": {
+	id: "soft-skills-desarrollador.md";
+  slug: "soft-skills-desarrollador";
   body: string;
   collection: "blog";
   data: any

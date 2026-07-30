@@ -1,9 +1,25 @@
 ---
 const experiences = [
   {
+    company: "UST",
+    companyUrl: "https://www.ust.com",
+    position: "Software Engineer",
+    period: "Marzo 2026 - Presente",
+    location: "Granada, Andalucía, España",
+    description: [
+      "Desarrollo y mantenimiento del sistema de orquestación del cliente, automatizando la creación de Test Plans para mejorar la eficiencia operativa.",
+      "Diseño e implementación de soluciones basadas en IA utilizando LLMs para la generación, validación y gestión de artefactos de testing.",
+      "Uso de Ollama para ejecutar y orquestar modelos localmente, garantizando flexibilidad, privacidad y rendimiento.",
+      "Prompt engineering, evaluación de resultados y optimización continua de pipelines de IA.",
+      "Desarrollo frontend con Astro y backend escalable con FastAPI."
+    ],
+    current: true
+  },
+  {
     company: "Wegow",
+    companyUrl: "https://wegow.com",
     position: "Desarrollador de Front-end",
-    period: "Noviembre 2024 - Presente",
+    period: "Noviembre 2024 - Marzo 2026",
     location: "Granada, Andalucía, España",
     description: [
       "Desarrollo frontend utilizando Vue.js y Nuxt.js, creando interfaces orientadas al usuario y herramientas internas de backoffice.",
@@ -12,10 +28,11 @@ const experiences = [
       "Implementación de píxeles de seguimiento para redes sociales (Meta, TikTok) para optimizar campañas y mejorar trazabilidad.",
       "Integración de Stay22, aumentando la rentabilidad y mejorando la conversión de usuarios a ventas."
     ],
-    current: true
+    current: false
   },
   {
     company: "BuyBack s.l.",
+    companyUrl: null,
     position: "Desarrollador Full Stack",
     period: "Febrero 2024 - Mayo 2024 / Prácticas",
     location: "Granada, Andalucía, España",
@@ -49,10 +66,10 @@ const experiences = [
           <div class="flex flex-col md:flex-row md:items-start gap-4 mb-4">
             <div class="flex-1">
               <h3 class="text-2xl font-bold text-white mb-1">{exp.position}</h3>
-              {exp.company === "Wegow" ? (
-                <a 
-                  href="https://wegow.com" 
-                  target="_blank" 
+              {exp.companyUrl ? (
+                <a
+                  href={exp.companyUrl}
+                  target="_blank"
                   rel="noopener noreferrer"
                   class="text-xl text-primary font-semibold mb-2 hover:text-secondary transition-colors duration-300"
                 >
